@@ -16,19 +16,19 @@ jobs:
       packages: write
 
     strategy:
-      fail-fast: false # <-- Tambahkan ini agar jika satu gagal, yang lain tetap lanjut
+      fail-fast: false
       matrix:
         service: [backend, frontend, ml-service]
         include:
           - service: backend
-            context: ./backend
-            dockerfile: ./docker/php/Dockerfile # Pastikan path ini benar
+            context: ./docker/php
+            dockerfile: ./docker/php/Dockerfile
           - service: frontend
             context: ./frontend
-            dockerfile: ./Dockerfile # Diperbaiki: karena context sudah di ./frontend
+            dockerfile: ./frontend/Dockerfile
           - service: ml-service
             context: ./ml-service
-            dockerfile: ./Dockerfile # Diperbaiki: karena context sudah di ./ml-service
+            dockerfile: ./ml-service/Dockerfile
 
     steps:
       - name: Checkout repository
