@@ -23,9 +23,12 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.3'
+        php-version: '8.4' # <-- Diperbarui dari 8.3 ke 8.4
         extensions: pdo, pdo_pgsql, pgsql, mbstring, exif, pcntl, bcmath, gd, zip
         coverage: none
+
+    - name: Verify PHP Version
+      run: php -v # <-- Tambahan untuk memastikan versi PHP benar
 
     - name: Copy .env
       run: cp .env.example .env
