@@ -1,40 +1,19 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-import datetime
+from routers import kependudukan, kesehatan, pendidikan, pertanian, kebencanaan
 
 app = FastAPI(
     title="Geoportal Aceh ML Service",
-    description="Layanan Machine Learning untuk Geoportal Aceh",
-    version="0.1.0",
+    description="Layanan Machine Learning untuk analisis spasial dan prediksi data Geoportal Aceh",
+    version="1.0.0"
 )
 
-class PredictionRequest(BaseModel):
-    latitude: float
-    longitude: float
-    features: dict = {}
-
-class PredictionResponse(BaseModel):
-    status: str
-    prediction: float
-    model_version: str
+# Mendaftarkan semua router domain
+app.include_router(kependudukan.router, prefix="/api/ml/kependudukan", tags=["Kependudukan"])
+app.include_router(kesehatan.router, prefix="/api/ml/kesehatan", tags=["Kesehatan"])
+app.include_router(pendidikan.router, prefix="/api/ml/pendidikan", tags=["Pendidikan"])
+app.include_router(pertanian.router, prefix="/api/ml/pertanian", tags=["Pertanian"])
+app.include_router(kebencanaan.router, prefix="/api/ml/kebencanaan", tags=["Kebencanaan"])
 
 @app.get("/")
 def root():
-    return {"service": "ml-service", "status": "running"}
-
-@app.get("/health")
-def health():
-    return {
-        "status": "healthy",
-        "timestamp": datetime.datetime.utcnow().isoformat(),
-    }
-
-@app.post("/predict", response_model=PredictionResponse)
-def predict(payload: PredictionRequest):
-    # Placeholder — nanti diisi model ML sesungguhnya
-    dummy_score = 0.75
-    return PredictionResponse(
-        status="success",
-        prediction=dummy_score,
-        model_version="v0.1.0-dummy",
-    )
+    return {"status": "success", "message": "Geoportal ML Service is running!"}
