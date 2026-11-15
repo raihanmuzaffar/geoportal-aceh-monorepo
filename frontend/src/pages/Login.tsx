@@ -20,8 +20,9 @@ export default function Login() {
     try {
       await login(email, password);
       navigate('/dashboard');
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Email atau password salah');
+    } catch (err: unknown) {
+      const errorResponse = err as { response?: { data?: { message?: string } } };
+      setError(errorResponse.response?.data?.message || 'Email atau password salah');
     } finally {
       setLoading(false);
     }
