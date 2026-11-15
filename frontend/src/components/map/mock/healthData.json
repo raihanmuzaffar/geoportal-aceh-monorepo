@@ -1,0 +1,139 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "health-01",
+      "properties": {
+        "id": 201,
+        "name": "RSUD dr. Zainoel Abidin (RSUDZA)",
+        "type": "Rumah Sakit",
+        "regency": "Kota Banda Aceh",
+        "district": "Kuta Alam",
+        "address": "Jl. Tgk Daud Beureueh No. 108, Banda Aceh",
+        "capacity": 750,
+        "phone": "(0651) 34565",
+        "emergency_ready": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3378, 5.5654]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "health-02",
+      "properties": {
+        "id": 202,
+        "name": "RSUD Meuraxa",
+        "type": "Rumah Sakit",
+        "regency": "Kota Banda Aceh",
+        "district": "Banda Raya",
+        "address": "Jl. Soekarno-Hatta No. 1, Banda Aceh",
+        "capacity": 250,
+        "phone": "(0651) 45678",
+        "emergency_ready": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3120, 5.5280]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "health-03",
+      "properties": {
+        "id": 203,
+        "name": "Puskesmas Kuta Alam",
+        "type": "Puskesmas",
+        "regency": "Kota Banda Aceh",
+        "district": "Kuta Alam",
+        "address": "Jl. Syiah Kuala No. 24, Banda Aceh",
+        "capacity": 20,
+        "phone": "(0651) 23411",
+        "emergency_ready": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3289, 5.5621]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "health-04",
+      "properties": {
+        "id": 204,
+        "name": "RSUD Cut Nyak Dhien Meulaboh",
+        "type": "Rumah Sakit",
+        "regency": "Kabupaten Aceh Barat",
+        "district": "Johan Pahlawan",
+        "address": "Jl. Gajah Mada No. 23, Meulaboh",
+        "capacity": 210,
+        "phone": "(0655) 7551011",
+        "emergency_ready": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [96.1265, 4.1489]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "health-05",
+      "properties": {
+        "id": 205,
+        "name": "RSUD Cut Meutia",
+        "type": "Rumah Sakit",
+        "regency": "Kota Lhokseumawe",
+        "district": "Muara Batu",
+        "address": "Jl. Medan - Banda Aceh Km. 274, Buket Rata",
+        "capacity": 320,
+        "phone": "(0645) 43012",
+        "emergency_ready": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [97.1350, 5.1740]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "health-06",
+      "properties": {
+        "id": 206,
+        "name": "RSUD Datu Beru Takengon",
+        "type": "Rumah Sakit",
+        "regency": "Kabupaten Aceh Tengah",
+        "district": "Bebesen",
+        "address": "Jl. Qurata Aini No. 153, Takengon",
+        "capacity": 240,
+        "phone": "(0643) 21254",
+        "emergency_ready": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [96.8410, 4.6320]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "health-07",
+      "properties": {
+        "id": 207,
+        "name": "Klinik Pratama Cempaka",
+        "type": "Klinik",
+        "regency": "Kabupaten Aceh Besar",
+        "district": "Darul Imarah",
+        "address": "Jl. Lampeuneurut No. 4, Aceh Besar",
+        "capacity": 10,
+        "phone": "(0651) 78912",
+        "emergency_ready": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3050, 5.5150]
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,118 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "agri-01",
+      "properties": {
+        "id": 401,
+        "land_name": "Sentra Padi Sawah Lembah Seulimeum",
+        "commodity": "Padi",
+        "land_use_type": "Sawah Irigasi",
+        "area_ha": 4250,
+        "regency": "Kabupaten Aceh Besar",
+        "district": "Seulimeum",
+        "estimated_yield_ton": 25500,
+        "soil_type": "Aluvial & Inceptisol",
+        "suitability_class": "S1 (Sangat Sesuai)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.580, 5.380],
+            [95.660, 5.390],
+            [95.680, 5.320],
+            [95.610, 5.310],
+            [95.580, 5.380]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "agri-02",
+      "properties": {
+        "id": 402,
+        "land_name": "Kawasan Perkebunan Kopi Arabika Gayo",
+        "commodity": "Kopi Gayo",
+        "land_use_type": "Perkebunan Rakyat",
+        "area_ha": 8600,
+        "regency": "Kabupaten Aceh Tengah",
+        "district": "Bebesen & Pegasing",
+        "estimated_yield_ton": 6880,
+        "soil_type": "Andosol Vulkanik",
+        "suitability_class": "S1 (Sangat Sesuai)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [96.780, 4.670],
+            [96.840, 4.680],
+            [96.850, 4.590],
+            [96.790, 4.580],
+            [96.780, 4.670]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "agri-03",
+      "properties": {
+        "id": 403,
+        "land_name": "Area Perkebunan Kelapa Sawit Pesisir Barat",
+        "commodity": "Kelapa Sawit",
+        "land_use_type": "Perkebunan Besar",
+        "area_ha": 12400,
+        "regency": "Kabupaten Aceh Barat",
+        "district": "Samatiga & Kaway XVI",
+        "estimated_yield_ton": 210800,
+        "soil_type": "Organosol / Gambut Dangkal",
+        "suitability_class": "S2 (Cukup Sesuai)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.980, 4.250],
+            [96.090, 4.280],
+            [96.110, 4.200],
+            [96.010, 4.180],
+            [95.980, 4.250]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "agri-04",
+      "properties": {
+        "id": 404,
+        "land_name": "Lahan Jagung & Palawija Pidie",
+        "commodity": "Jagung",
+        "land_use_type": "Ladang/Tegalan",
+        "area_ha": 3100,
+        "regency": "Kabupaten Pidie",
+        "district": "Padang Tiji",
+        "estimated_yield_ton": 18600,
+        "soil_type": "Litosol & Regosol",
+        "suitability_class": "S2 (Cukup Sesuai)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.780, 5.320],
+            [95.860, 5.340],
+            [95.880, 5.270],
+            [95.800, 5.250],
+            [95.780, 5.320]
+          ]
+        ]
+      }
+    }
+  ]
+}
+

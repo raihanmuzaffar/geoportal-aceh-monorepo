@@ -1,0 +1,146 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "sch-01",
+      "properties": {
+        "id": 101,
+        "name": "SD Negeri 1 Banda Aceh",
+        "npsn": "10105321",
+        "level": "SD",
+        "status": "Negeri",
+        "district": "Baiturrahman",
+        "regency": "Kota Banda Aceh",
+        "students_count": 420,
+        "teachers_count": 28,
+        "address": "Jl. Teuku Umar No. 12, Banda Aceh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3185, 5.5482]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sch-02",
+      "properties": {
+        "id": 102,
+        "name": "SMP Negeri 1 Banda Aceh",
+        "npsn": "10105412",
+        "level": "SMP",
+        "status": "Negeri",
+        "district": "Kuta Alam",
+        "regency": "Kota Banda Aceh",
+        "students_count": 680,
+        "teachers_count": 45,
+        "address": "Jl. Nyak Adam Kamil No. 3, Banda Aceh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3242, 5.5568]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sch-03",
+      "properties": {
+        "id": 103,
+        "name": "SMA Negeri 1 Banda Aceh",
+        "npsn": "10105501",
+        "level": "SMA",
+        "status": "Negeri",
+        "district": "Syiah Kuala",
+        "regency": "Kota Banda Aceh",
+        "students_count": 890,
+        "teachers_count": 62,
+        "address": "Jl. Prof. Dr. Syarif Thayeb No. 1, Banda Aceh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3412, 5.5684]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sch-04",
+      "properties": {
+        "id": 104,
+        "name": "Universitas Syiah Kuala (USK)",
+        "npsn": "001001",
+        "level": "Perguruan Tinggi",
+        "status": "Negeri",
+        "district": "Syiah Kuala",
+        "regency": "Kota Banda Aceh",
+        "students_count": 32000,
+        "teachers_count": 1850,
+        "address": "Kopelma Darussalam, Banda Aceh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3701, 5.5721]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sch-05",
+      "properties": {
+        "id": 105,
+        "name": "SMK Negeri 1 Lhokseumawe",
+        "npsn": "10107821",
+        "level": "SMK",
+        "status": "Negeri",
+        "district": "Banda Sakti",
+        "regency": "Kota Lhokseumawe",
+        "students_count": 740,
+        "teachers_count": 52,
+        "address": "Jl. Samudera No. 45, Lhokseumawe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [97.1425, 5.1824]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sch-06",
+      "properties": {
+        "id": 106,
+        "name": "SMA Negeri 1 Takengon",
+        "npsn": "10106202",
+        "level": "SMA",
+        "status": "Negeri",
+        "district": "Lut Tawar",
+        "regency": "Kabupaten Aceh Tengah",
+        "students_count": 620,
+        "teachers_count": 44,
+        "address": "Jl. Lebe Kader No. 8, Takengon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [96.8452, 4.6289]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sch-07",
+      "properties": {
+        "id": 107,
+        "name": "SMP Negeri 1 Meulaboh",
+        "npsn": "10104101",
+        "level": "SMP",
+        "status": "Negeri",
+        "district": "Johan Pahlawan",
+        "regency": "Kabupaten Aceh Barat",
+        "students_count": 510,
+        "teachers_count": 38,
+        "address": "Jl. Teuku Umar No. 22, Meulaboh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [96.1287, 4.1451]
+      }
+    }
+  ]
+}
+
