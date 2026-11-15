@@ -1,0 +1,158 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "disaster-pt-01",
+      "properties": {
+        "id": 301,
+        "disaster_type": "Banjir",
+        "date": "2026-10-14",
+        "location_name": "Krueng Meureubo, Johan Pahlawan",
+        "regency": "Kabupaten Aceh Barat",
+        "district": "Johan Pahlawan",
+        "impact_level": "Tinggi",
+        "casualties": 0,
+        "displaced_people": 1250,
+        "damage_summary": "Genangan air setinggi 1.2 meter merendam 450 unit rumah warga dan jalan protokol."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [96.1350, 4.1520]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "disaster-pt-02",
+      "properties": {
+        "id": 302,
+        "disaster_type": "Tanah Longsor",
+        "date": "2026-09-28",
+        "location_name": "Jalan Lintas Takengon - Bireuen Km 34",
+        "regency": "Kabupaten Aceh Tengah",
+        "district": "Kebayakan",
+        "impact_level": "Sedang",
+        "casualties": 0,
+        "displaced_people": 0,
+        "damage_summary": "Material longsor menimbun badan jalan sepanjang 40 meter, lalu lintas terputus 12 jam."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [96.8620, 4.6750]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "disaster-pt-03",
+      "properties": {
+        "id": 303,
+        "disaster_type": "Banjir",
+        "date": "2026-11-02",
+        "location_name": "Bantaran Krueng Aceh, Kuta Alam",
+        "regency": "Kota Banda Aceh",
+        "district": "Kuta Alam",
+        "impact_level": "Rendah",
+        "casualties": 0,
+        "displaced_people": 120,
+        "damage_summary": "Luapan air pasang purnama (Rob) menggenangi permukiman setinggi 30 cm."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.3310, 5.5710]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "disaster-zone-01",
+      "properties": {
+        "id": 351,
+        "zone_name": "Zona Rawan Banjir Krueng Meureubo",
+        "disaster_type": "Banjir",
+        "susceptibility_level": "Tinggi",
+        "regency": "Kabupaten Aceh Barat",
+        "district": "Johan Pahlawan",
+        "area_ha": 3450,
+        "is_ml_prediction": true,
+        "ml_metadata": {
+          "model_name": "Disaster Susceptibility Classifier",
+          "model_version": "v1.2.0-rf",
+          "prediction_date": "2026-11-10",
+          "algorithm": "Random Forest + Digital Elevation Model",
+          "confidence_score": 0.89
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [96.110, 4.170],
+            [96.155, 4.180],
+            [96.160, 4.130],
+            [96.120, 4.120],
+            [96.110, 4.170]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "disaster-zone-02",
+      "properties": {
+        "id": 352,
+        "zone_name": "Zona Rawan Longsor Lereng Danau Lut Tawar",
+        "disaster_type": "Tanah Longsor",
+        "susceptibility_level": "Sangat Tinggi",
+        "regency": "Kabupaten Aceh Tengah",
+        "district": "Lut Tawar",
+        "area_ha": 1820,
+        "is_ml_prediction": true,
+        "ml_metadata": {
+          "model_name": "Landslide Hazard XGBoost",
+          "model_version": "v1.0.4",
+          "prediction_date": "2026-11-12",
+          "algorithm": "XGBoost Classifier (Slope + Rainfall + Soil)",
+          "confidence_score": 0.93
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [96.860, 4.650],
+            [96.930, 4.640],
+            [96.920, 4.590],
+            [96.850, 4.600],
+            [96.860, 4.650]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "disaster-zone-03",
+      "properties": {
+        "id": 353,
+        "zone_name": "Zona Fluktuatif Banjir Krueng Aceh",
+        "disaster_type": "Banjir",
+        "susceptibility_level": "Sedang",
+        "regency": "Kabupaten Aceh Besar",
+        "district": "Ingin Jaya",
+        "area_ha": 2100,
+        "is_ml_prediction": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.340, 5.530],
+            [95.390, 5.540],
+            [95.410, 5.480],
+            [95.350, 5.470],
+            [95.340, 5.530]
+          ]
+        ]
+      }
+    }
+  ]
+}
+
