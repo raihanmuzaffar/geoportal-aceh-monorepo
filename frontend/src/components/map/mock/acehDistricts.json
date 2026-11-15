@@ -1,0 +1,182 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "aceh-01",
+      "properties": {
+        "id": 1,
+        "regency_name": "Kota Banda Aceh",
+        "district_name": "Kutaraja & Sekitarnya",
+        "total_population": 257850,
+        "male_population": 129300,
+        "female_population": 128550,
+        "area_km2": 61.36,
+        "density_per_km2": 4202,
+        "growth_rate_pct": 1.45,
+        "is_ml_forecast": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.280, 5.580],
+            [95.340, 5.590],
+            [95.365, 5.560],
+            [95.350, 5.520],
+            [95.300, 5.510],
+            [95.270, 5.540],
+            [95.280, 5.580]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aceh-02",
+      "properties": {
+        "id": 2,
+        "regency_name": "Kabupaten Aceh Besar",
+        "district_name": "Ingin Jaya & Darul Imarah",
+        "total_population": 428950,
+        "male_population": 216400,
+        "female_population": 212550,
+        "area_km2": 2903.50,
+        "density_per_km2": 147,
+        "growth_rate_pct": 1.82,
+        "is_ml_forecast": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.200, 5.600],
+            [95.550, 5.620],
+            [95.700, 5.400],
+            [95.500, 5.200],
+            [95.220, 5.250],
+            [95.150, 5.450],
+            [95.200, 5.600]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aceh-03",
+      "properties": {
+        "id": 3,
+        "regency_name": "Kabupaten Pidie",
+        "district_name": "Sigli & Sekitarnya",
+        "total_population": 435270,
+        "male_population": 215300,
+        "female_population": 219970,
+        "area_km2": 3184.45,
+        "density_per_km2": 136,
+        "growth_rate_pct": 0.98,
+        "is_ml_forecast": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.700, 5.400],
+            [96.050, 5.420],
+            [96.150, 5.150],
+            [95.850, 4.900],
+            [95.600, 5.100],
+            [95.700, 5.400]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aceh-04",
+      "properties": {
+        "id": 4,
+        "regency_name": "Kabupaten Aceh Tengah",
+        "district_name": "Takengon & Lut Tawar",
+        "total_population": 219500,
+        "male_population": 111200,
+        "female_population": 108300,
+        "area_km2": 4454.00,
+        "density_per_km2": 49,
+        "growth_rate_pct": 1.25,
+        "is_ml_forecast": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [96.650, 4.750],
+            [97.100, 4.800],
+            [97.200, 4.450],
+            [96.750, 4.300],
+            [96.500, 4.550],
+            [96.650, 4.750]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aceh-05",
+      "properties": {
+        "id": 5,
+        "regency_name": "Kabupaten Aceh Barat",
+        "district_name": "Meulaboh & Johan Pahlawan",
+        "total_population": 202450,
+        "male_population": 102500,
+        "female_population": 99950,
+        "area_km2": 2927.95,
+        "density_per_km2": 69,
+        "growth_rate_pct": 1.12,
+        "is_ml_forecast": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [95.900, 4.450],
+            [96.350, 4.400],
+            [96.300, 4.050],
+            [95.950, 4.000],
+            [95.800, 4.250],
+            [95.900, 4.450]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aceh-06",
+      "properties": {
+        "id": 6,
+        "regency_name": "Kota Lhokseumawe",
+        "district_name": "Banda Sakti & Muara Dua",
+        "total_population": 194800,
+        "male_population": 97100,
+        "female_population": 97700,
+        "area_km2": 181.06,
+        "density_per_km2": 1076,
+        "growth_rate_pct": 1.32,
+        "is_ml_forecast": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [97.080, 5.220],
+            [97.180, 5.210],
+            [97.190, 5.140],
+            [97.100, 5.120],
+            [97.060, 5.160],
+            [97.080, 5.220]
+          ]
+        ]
+      }
+    }
+  ]
+}
+
