@@ -1,0 +1,162 @@
+bps_kode_provinsi,bps_nama_provinsi,bps_kode_kabupaten_kota,bps_nama_kabupaten_kota,tahun,produksi_padi,satuan
+11,Aceh,1101,Kabupaten Simeulue,2018,20200.91,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2018,5430.41,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2018,57573.07,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2018,68651.03,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2018,174531.52,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2018,30429.76,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2018,58334.99,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2018,232540.64,ton
+11,Aceh,1109,Kabupaten Pidie,2018,259042.12,ton
+11,Aceh,1110,Kabupaten Bireuen,2018,166766.79,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2018,375153.85,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2018,91836.92,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2018,28778.99,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2018,58755.73,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2018,48442.91,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2018,65841.73,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2018,2435.45,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2018,98828.56,ton
+11,Aceh,1171,Kota Banda Aceh,2018,109.28,ton
+11,Aceh,1172,Kota Sabang,2018,0,ton
+11,Aceh,1173,Kota Langsa,2018,5157.95,ton
+11,Aceh,1174,Kota Lhokseumawe,2018,10283.57,ton
+11,Aceh,1175,Kota Subulussalam,2018,2440.92,ton
+11,Aceh,1101,Kabupaten Simeulue,2019,14017.31,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2019,5048.72,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2019,43980.43,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2019,70313.4,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2019,128126.1,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2019,24583.49,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2019,54072.16,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2019,187596.67,ton
+11,Aceh,1109,Kabupaten Pidie,2019,248059.62,ton
+11,Aceh,1110,Kabupaten Bireuen,2019,171161.97,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2019,396467.64,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2019,72980.53,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2019,28312.69,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2019,70958.62,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2019,37457.89,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2019,47252.94,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2019,2378.24,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2019,93110.71,ton
+11,Aceh,1171,Kota Banda Aceh,2019,69.88,ton
+11,Aceh,1172,Kota Sabang,2019,0,ton
+11,Aceh,1173,Kota Langsa,2019,6332.96,ton
+11,Aceh,1174,Kota Lhokseumawe,2019,10342.2,ton
+11,Aceh,1175,Kota Subulussalam,2019,1813.43,ton
+11,Aceh,1101,Kabupaten Simeulue,2020,16430.86,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2020,3808.19,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2020,53313.52,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2020,66956.46,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2020,147215.29,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2020,16649.77,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2020,62990.6,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2020,179856.23,ton
+11,Aceh,1109,Kabupaten Pidie,2020,246564.18,ton
+11,Aceh,1110,Kabupaten Bireuen,2020,184943.58,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2020,388190.19,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2020,68823.14,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2020,36309.25,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2020,70062.57,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2020,39168.32,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2020,54913.79,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2020,2132.65,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2020,99405.96,ton
+11,Aceh,1171,Kota Banda Aceh,2020,86.9,ton
+11,Aceh,1172,Kota Sabang,2020,0,ton
+11,Aceh,1173,Kota Langsa,2020,6489,ton
+11,Aceh,1174,Kota Lhokseumawe,2020,10844.51,ton
+11,Aceh,1175,Kota Subulussalam,2020,2158.11,ton
+11,Aceh,1101,Kabupaten Simeulue,2021,16728.21,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2021,3350.51,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2021,44839.8,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2021,65559.88,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2021,138347.01,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2021,14956.46,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2021,64355.17,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2021,201408.49,ton
+11,Aceh,1109,Kabupaten Pidie,2021,203344.76,ton
+11,Aceh,1110,Kabupaten Bireuen,2021,150400.84,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2021,360353.4,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2021,72985.18,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2021,24618.49,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2021,69164.58,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2021,41056.31,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2021,49550.64,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2021,1739.39,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2021,93842.7,ton
+11,Aceh,1171,Kota Banda Aceh,2021,70.32,ton
+11,Aceh,1172,Kota Sabang,2021,0,ton
+11,Aceh,1173,Kota Langsa,2021,6364.37,ton
+11,Aceh,1174,Kota Lhokseumawe,2021,10845.97,ton
+11,Aceh,1175,Kota Subulussalam,2021,757.12,ton
+11,Aceh,1101,Kabupaten Simeulue,2022,22185.88,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2022,2140.31,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2022,31840.87,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2022,71485.97,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2022,134829.08,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2022,15472.61,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2022,56345.82,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2022,200721.07,ton
+11,Aceh,1109,Kabupaten Pidie,2022,189258.37,ton
+11,Aceh,1110,Kabupaten Bireuen,2022,136931.69,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2022,318432.63,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2022,67842.29,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2022,27843.03,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2022,70979.5,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2022,33043.82,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2022,47682.61,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2022,1837.45,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2022,87555.9,ton
+11,Aceh,1171,Kota Banda Aceh,2022,72.69,ton
+11,Aceh,1172,Kota Sabang,2022,0,ton
+11,Aceh,1173,Kota Langsa,2022,6875.98,ton
+11,Aceh,1174,Kota Lhokseumawe,2022,9498.48,ton
+11,Aceh,1175,Kota Subulussalam,2022,262.03,ton
+11,Aceh,1101,Kabupaten Simeulue,2023,25805.55,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2023,2775.11,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2023,49504.18,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2023,67761.65,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2023,107275.12,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2023,14793.04,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2023,52366.64,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2023,155477.39,ton
+11,Aceh,1109,Kabupaten Pidie,2023,220582.38,ton
+11,Aceh,1110,Kabupaten Bireuen,2023,131436.31,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2023,238087.58,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2023,54743.27,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2023,24815.72,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2023,62428.72,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2023,42266.15,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2023,46061.66,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2023,1726.42,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2023,79480.06,ton
+11,Aceh,1171,Kota Banda Aceh,2023,50.14,ton
+11,Aceh,1172,Kota Sabang,2023,0,ton
+11,Aceh,1173,Kota Langsa,2023,7137.31,ton
+11,Aceh,1174,Kota Lhokseumawe,2023,8796.74,ton
+11,Aceh,1175,Kota Subulussalam,2023,102.97,ton
+11,Aceh,1101,Kabupaten Simeulue,2024,23304.21,ton
+11,Aceh,1102,Kabupaten Aceh Singkil,2024,1809.06,ton
+11,Aceh,1103,Kabupaten Aceh Selatan,2024,40220.59,ton
+11,Aceh,1104,Kabupaten Aceh Tenggara,2024,73335.46,ton
+11,Aceh,1105,Kabupaten Aceh Timur,2024,146792.05,ton
+11,Aceh,1106,Kabupaten Aceh Tengah,2024,16301.49,ton
+11,Aceh,1107,Kabupaten Aceh Barat,2024,67942.01,ton
+11,Aceh,1108,Kabupaten Aceh Besar,2024,178318.81,ton
+11,Aceh,1109,Kabupaten Pidie,2024,239555.09,ton
+11,Aceh,1110,Kabupaten Bireuen,2024,160178.81,ton
+11,Aceh,1111,Kabupaten Aceh Utara,2024,344303.81,ton
+11,Aceh,1112,Kabupaten Aceh Barat Daya,2024,65264.23,ton
+11,Aceh,1113,Kabupaten Gayo Lues,2024,22961.01,ton
+11,Aceh,1114,Kabupaten Aceh Tamiang,2024,71172.21,ton
+11,Aceh,1115,Kabupaten Nagan Raya,2024,35701.39,ton
+11,Aceh,1116,Kabupaten Aceh Jaya,2024,52636.91,ton
+11,Aceh,1117,Kabupaten Bener Meriah,2024,1408.35,ton
+11,Aceh,1118,Kabupaten Pidie Jaya,2024,102934.34,ton
+11,Aceh,1171,Kota Banda Aceh,2024,65.49,ton
+11,Aceh,1172,Kota Sabang,2024,0,ton
+11,Aceh,1173,Kota Langsa,2024,7956.06,ton
+11,Aceh,1174,Kota Lhokseumawe,2024,7690.1,ton
+11,Aceh,1175,Kota Subulussalam,2024,11.48,ton

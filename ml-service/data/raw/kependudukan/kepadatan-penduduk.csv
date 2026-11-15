@@ -1,0 +1,346 @@
+bps_kode_provinsi,bps_nama_provinsi,bps_kode_kabupaten,bps_nama_kabupaten,tahun,kepadatan_penduduk_per_km^2
+11,Aceh,1101,Kabupaten Simeulue,2010,40
+11,Aceh,1102,Kabupaten Aceh Singkil,2010,47
+11,Aceh,1103,Kabupaten Aceh Selatan,2010,53
+11,Aceh,1104,Kabupaten Aceh Tenggara,2010,43
+11,Aceh,1105,Kabupaten Aceh Timur,2010,58
+11,Aceh,1106,Kabupaten Aceh Tengah,2010,41
+11,Aceh,1107,Kabupaten Aceh Barat,2010,60
+11,Aceh,1108,Kabupaten Aceh Besar,2010,119
+11,Aceh,1109,Kabupaten Pidie,2010,124
+11,Aceh,1110,Kabupaten Bireuen,2010,206
+11,Aceh,1111,Kabupaten Aceh Utara,2010,165
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2010,85
+11,Aceh,1113,Kabupaten Gayo Lues,2010,14
+11,Aceh,1114,Kabupaten Aceh Tamiang,2010,130
+11,Aceh,1115,Kabupaten Nagan Raya,2010,42
+11,Aceh,1116,Kabupaten Aceh Jaya,2010,20
+11,Aceh,1117,Kabupaten Bener Meriah,2010,85
+11,Aceh,1118,Kabupaten Pidie Jaya,2010,125
+11,Aceh,1171,Kota Banda Aceh,2010,"3,669"
+11,Aceh,1172,Kota Sabang,2010,202
+11,Aceh,1173,Kota Langsa,2010,570
+11,Aceh,1174,Kota Lhokseumawe,2010,950
+11,Aceh,1175,Kota Subulussalam,2010,49
+11,Aceh,1101,Kabupaten Simeulue,2011,45
+11,Aceh,1102,Kabupaten Aceh Singkil,2011,57
+11,Aceh,1103,Kabupaten Aceh Selatan,2011,50
+11,Aceh,1104,Kabupaten Aceh Tenggara,2011,44
+11,Aceh,1105,Kabupaten Aceh Timur,2011,68
+11,Aceh,1106,Kabupaten Aceh Tengah,2011,40
+11,Aceh,1107,Kabupaten Aceh Barat,2011,65
+11,Aceh,1108,Kabupaten Aceh Besar,2011,124
+11,Aceh,1109,Kabupaten Pidie,2011,123
+11,Aceh,1110,Kabupaten Bireuen,2011,223
+11,Aceh,1111,Kabupaten Aceh Utara,2011,202
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2011,69
+11,Aceh,1113,Kabupaten Gayo Lues,2011,15
+11,Aceh,1114,Kabupaten Aceh Tamiang,2011,122
+11,Aceh,1115,Kabupaten Nagan Raya,2011,41
+11,Aceh,1116,Kabupaten Aceh Jaya,2011,20
+11,Aceh,1117,Kabupaten Bener Meriah,2011,66
+11,Aceh,1118,Kabupaten Pidie Jaya,2011,144
+11,Aceh,1171,Kota Banda Aceh,2011,"4,099"
+11,Aceh,1172,Kota Sabang,2011,257
+11,Aceh,1173,Kota Langsa,2011,754
+11,Aceh,1174,Kota Lhokseumawe,2011,"1,15"
+11,Aceh,1175,Kota Subulussalam,2011,59
+11,Aceh,1101,Kabupaten Simeulue,2012,46
+11,Aceh,1102,Kabupaten Aceh Singkil,2012,58
+11,Aceh,1103,Kabupaten Aceh Selatan,2012,51
+11,Aceh,1104,Kabupaten Aceh Tenggara,2012,45
+11,Aceh,1105,Kabupaten Aceh Timur,2012,70
+11,Aceh,1106,Kabupaten Aceh Tengah,2012,41
+11,Aceh,1107,Kabupaten Aceh Barat,2012,66
+11,Aceh,1108,Kabupaten Aceh Besar,2012,127
+11,Aceh,1109,Kabupaten Pidie,2012,125
+11,Aceh,1110,Kabupaten Bireuen,2012,228
+11,Aceh,1111,Kabupaten Aceh Utara,2012,206
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2012,70
+11,Aceh,1113,Kabupaten Gayo Lues,2012,15
+11,Aceh,1114,Kabupaten Aceh Tamiang,2012,125
+11,Aceh,1115,Kabupaten Nagan Raya,2012,41
+11,Aceh,1116,Kabupaten Aceh Jaya,2012,21
+11,Aceh,1117,Kabupaten Bener Meriah,2012,67
+11,Aceh,1118,Kabupaten Pidie Jaya,2012,147
+11,Aceh,1171,Kota Banda Aceh,2012,4
+11,Aceh,1172,Kota Sabang,2012,261
+11,Aceh,1173,Kota Langsa,2012,771
+11,Aceh,1174,Kota Lhokseumawe,2012,"1,172"
+11,Aceh,1175,Kota Subulussalam,2012,60
+11,Aceh,1101,Kabupaten Simeulue,2013,47
+11,Aceh,1102,Kabupaten Aceh Singkil,2013,59
+11,Aceh,1103,Kabupaten Aceh Selatan,2013,52
+11,Aceh,1104,Kabupaten Aceh Tenggara,2013,46
+11,Aceh,1105,Kabupaten Aceh Timur,2013,71
+11,Aceh,1106,Kabupaten Aceh Tengah,2013,42
+11,Aceh,1107,Kabupaten Aceh Barat,2013,67
+11,Aceh,1108,Kabupaten Aceh Besar,2013,130
+11,Aceh,1109,Kabupaten Pidie,2013,128
+11,Aceh,1110,Kabupaten Bireuen,2013,232
+11,Aceh,1111,Kabupaten Aceh Utara,2013,210
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2013,72
+11,Aceh,1113,Kabupaten Gayo Lues,2013,15
+11,Aceh,1114,Kabupaten Aceh Tamiang,2013,127
+11,Aceh,1115,Kabupaten Nagan Raya,2013,42
+11,Aceh,1116,Kabupaten Aceh Jaya,2013,21
+11,Aceh,1117,Kabupaten Bener Meriah,2013,69
+11,Aceh,1118,Kabupaten Pidie Jaya,2013,151
+11,Aceh,1171,Kota Banda Aceh,2013,4
+11,Aceh,1172,Kota Sabang,2013,264
+11,Aceh,1173,Kota Langsa,2013,787
+11,Aceh,1174,Kota Lhokseumawe,2013,"1,198"
+11,Aceh,1175,Kota Subulussalam,2013,61
+11,Aceh,1101,Kabupaten Simeulue,2014,48
+11,Aceh,1102,Kabupaten Aceh Singkil,2014,60
+11,Aceh,1103,Kabupaten Aceh Selatan,2014,53
+11,Aceh,1104,Kabupaten Aceh Tenggara,2014,47
+11,Aceh,1105,Kabupaten Aceh Timur,2014,73
+11,Aceh,1106,Kabupaten Aceh Tengah,2014,43
+11,Aceh,1107,Kabupaten Aceh Barat,2014,69
+11,Aceh,1108,Kabupaten Aceh Besar,2014,132
+11,Aceh,1109,Kabupaten Pidie,2014,130
+11,Aceh,1110,Kabupaten Bireuen,2014,236
+11,Aceh,1111,Kabupaten Aceh Utara,2014,213
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2014,73
+11,Aceh,1113,Kabupaten Gayo Lues,2014,16
+11,Aceh,1114,Kabupaten Aceh Tamiang,2014,128
+11,Aceh,1115,Kabupaten Nagan Raya,2014,43
+11,Aceh,1116,Kabupaten Aceh Jaya,2014,22
+11,Aceh,1117,Kabupaten Bener Meriah,2014,70
+11,Aceh,1118,Kabupaten Pidie Jaya,2014,154
+11,Aceh,1171,Kota Banda Aceh,2014,4
+11,Aceh,1172,Kota Sabang,2014,268
+11,Aceh,1173,Kota Langsa,2014,802
+11,Aceh,1174,Kota Lhokseumawe,2014,"1,225"
+11,Aceh,1175,Kota Subulussalam,2014,63
+11,Aceh,1101,Kabupaten Simeulue,2015,49
+11,Aceh,1102,Kabupaten Aceh Singkil,2015,62
+11,Aceh,1103,Kabupaten Aceh Selatan,2015,54
+11,Aceh,1104,Kabupaten Aceh Tenggara,2015,48
+11,Aceh,1105,Kabupaten Aceh Timur,2015,74
+11,Aceh,1106,Kabupaten Aceh Tengah,2015,44
+11,Aceh,1107,Kabupaten Aceh Barat,2015,70
+11,Aceh,1108,Kabupaten Aceh Besar,2015,135
+11,Aceh,1109,Kabupaten Pidie,2015,132
+11,Aceh,1110,Kabupaten Bireuen,2015,242
+11,Aceh,1111,Kabupaten Aceh Utara,2015,217
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2015,75
+11,Aceh,1113,Kabupaten Gayo Lues,2015,16
+11,Aceh,1114,Kabupaten Aceh Tamiang,2015,131
+11,Aceh,1115,Kabupaten Nagan Raya,2015,44
+11,Aceh,1116,Kabupaten Aceh Jaya,2015,22
+11,Aceh,1117,Kabupaten Bener Meriah,2015,72
+11,Aceh,1118,Kabupaten Pidie Jaya,2015,157
+11,Aceh,1171,Kota Banda Aceh,2015,4 470
+11,Aceh,1172,Kota Sabang,2015,272
+11,Aceh,1173,Kota Langsa,2015,817
+11,Aceh,1174,Kota Lhokseumawe,2015,251
+11,Aceh,1175,Kota Subulussalam,2015,64
+11,Aceh,1101,Kabupaten Simeulue,2016,49
+11,Aceh,1102,Kabupaten Aceh Singkil,2016,63
+11,Aceh,1103,Kabupaten Aceh Selatan,2016,55
+11,Aceh,1104,Kabupaten Aceh Tenggara,2016,49
+11,Aceh,1105,Kabupaten Aceh Timur,2016,76
+11,Aceh,1106,Kabupaten Aceh Tengah,2016,45
+11,Aceh,1107,Kabupaten Aceh Barat,2016,72
+11,Aceh,1108,Kabupaten Aceh Besar,2016,138
+11,Aceh,1109,Kabupaten Pidie,2016,134
+11,Aceh,1110,Kabupaten Bireuen,2016,247
+11,Aceh,1111,Kabupaten Aceh Utara,2016,220
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2016,76
+11,Aceh,1113,Kabupaten Gayo Lues,2016,16
+11,Aceh,1114,Kabupaten Aceh Tamiang,2016,133
+11,Aceh,1115,Kabupaten Nagan Raya,2016,45
+11,Aceh,1116,Kabupaten Aceh Jaya,2016,23
+11,Aceh,1117,Kabupaten Bener Meriah,2016,73
+11,Aceh,1118,Kabupaten Pidie Jaya,2016,160
+11,Aceh,1171,Kota Banda Aceh,2016,4552
+11,Aceh,1172,Kota Sabang,2016,276
+11,Aceh,1173,Kota Langsa,2016,832
+11,Aceh,1174,Kota Lhokseumawe,2016,1276
+11,Aceh,1175,Kota Subulussalam,2016,66
+11,Aceh,1101,Kabupaten Simeulue,2017,50
+11,Aceh,1102,Kabupaten Aceh Singkil,2017,64
+11,Aceh,1103,Kabupaten Aceh Selatan,2017,56
+11,Aceh,1104,Kabupaten Aceh Tenggara,2017,50
+11,Aceh,1105,Kabupaten Aceh Timur,2017,77
+11,Aceh,1106,Kabupaten Aceh Tengah,2017,46
+11,Aceh,1107,Kabupaten Aceh Barat,2017,73
+11,Aceh,1108,Kabupaten Aceh Besar,2017,141
+11,Aceh,1109,Kabupaten Pidie,2017,136
+11,Aceh,1110,Kabupaten Bireuen,2017,252
+11,Aceh,1111,Kabupaten Aceh Utara,2017,224
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2017,77
+11,Aceh,1113,Kabupaten Gayo Lues,2017,16
+11,Aceh,1114,Kabupaten Aceh Tamiang,2017,135
+11,Aceh,1115,Kabupaten Nagan Raya,2017,46
+11,Aceh,1116,Kabupaten Aceh Jaya,2017,23
+11,Aceh,1117,Kabupaten Bener Meriah,2017,75
+11,Aceh,1118,Kabupaten Pidie Jaya,2017,163
+11,Aceh,1171,Kota Banda Aceh,2017,4 641
+11,Aceh,1172,Kota Sabang,2017,279
+11,Aceh,1173,Kota Langsa,2017,845
+11,Aceh,1174,Kota Lhokseumawe,2017,1 301
+11,Aceh,1175,Kota Subulussalam,2017,67
+11,Aceh,1101,Kabupaten Simeulue,2018,45
+11,Aceh,1102,Kabupaten Aceh Singkil,2018,56
+11,Aceh,1103,Kabupaten Aceh Selatan,2018,61
+11,Aceh,1104,Kabupaten Aceh Tenggara,2018,50
+11,Aceh,1105,Kabupaten Aceh Timur,2018,68
+11,Aceh,1106,Kabupaten Aceh Tengah,2018,48
+11,Aceh,1107,Kabupaten Aceh Barat,2018,70
+11,Aceh,1108,Kabupaten Aceh Besar,2018,141
+11,Aceh,1109,Kabupaten Pidie,2018,142
+11,Aceh,1110,Kabupaten Bireuen,2018,243
+11,Aceh,1111,Kabupaten Aceh Utara,2018,189
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2018,99
+11,Aceh,1113,Kabupaten Gayo Lues,2018,16
+11,Aceh,1114,Kabupaten Aceh Tamiang,2018,149
+11,Aceh,1115,Kabupaten Nagan Raya,2018,49
+11,Aceh,1116,Kabupaten Aceh Jaya,2018,24
+11,Aceh,1117,Kabupaten Bener Meriah,2018,100
+11,Aceh,1118,Kabupaten Pidie Jaya,2018,147
+11,Aceh,1171,Kota Banda Aceh,2018,4321
+11,Aceh,1172,Kota Sabang,2018,226
+11,Aceh,1173,Kota Langsa,2018,664
+11,Aceh,1174,Kota Lhokseumawe,2018,1123
+11,Aceh,1175,Kota Subulussalam,2018,58
+11,Aceh,1101,Kabupaten Simeulue,2019,51
+11,Aceh,1102,Kabupaten Aceh Singkil,2019,67
+11,Aceh,1103,Kabupaten Aceh Selatan,2019,57
+11,Aceh,1104,Kabupaten Aceh Tenggara,2019,52
+11,Aceh,1105,Kabupaten Aceh Timur,2019,80
+11,Aceh,1106,Kabupaten Aceh Tengah,2019,48
+11,Aceh,1107,Kabupaten Aceh Barat,2019,76
+11,Aceh,1108,Kabupaten Aceh Besar,2019,146
+11,Aceh,1109,Kabupaten Pidie,2019,140
+11,Aceh,1110,Kabupaten Bireuen,2019,263
+11,Aceh,1111,Kabupaten Aceh Utara,2019,230
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2019,80
+11,Aceh,1113,Kabupaten Gayo Lues,2019,17
+11,Aceh,1114,Kabupaten Aceh Tamiang,2019,139
+11,Aceh,1115,Kabupaten Nagan Raya,2019,47
+11,Aceh,1116,Kabupaten Aceh Jaya,2019,24
+11,Aceh,1117,Kabupaten Bener Meriah,2019,78
+11,Aceh,1118,Kabupaten Pidie Jaya,2019,170
+11,Aceh,1171,Kota Banda Aceh,2019,4827
+11,Aceh,1172,Kota Sabang,2019,286
+11,Aceh,1173,Kota Langsa,2019,871
+11,Aceh,1174,Kota Lhokseumawe,2019,1354
+11,Aceh,1175,Kota Subulussalam,2019,69
+11,Aceh,1101,Kabupaten Simeulue,2020,45
+11,Aceh,1102,Kabupaten Aceh Singkil,2020,58
+11,Aceh,1103,Kabupaten Aceh Selatan,2020,61
+11,Aceh,1104,Kabupaten Aceh Tenggara,2020,52
+11,Aceh,1105,Kabupaten Aceh Timur,2020,67
+11,Aceh,1106,Kabupaten Aceh Tengah,2020,50
+11,Aceh,1107,Kabupaten Aceh Barat,2020,68
+11,Aceh,1108,Kabupaten Aceh Besar,2020,137
+11,Aceh,1109,Kabupaten Pidie,2020,141
+11,Aceh,1110,Kabupaten Bireuen,2020,230
+11,Aceh,1111,Kabupaten Aceh Utara,2020,186
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2020,101
+11,Aceh,1113,Kabupaten Gayo Lues,2020,17
+11,Aceh,1114,Kabupaten Aceh Tamiang,2020,150
+11,Aceh,1115,Kabupaten Nagan Raya,2020,50
+11,Aceh,1116,Kabupaten Aceh Jaya,2020,24
+11,Aceh,1117,Kabupaten Bener Meriah,2020,111
+11,Aceh,1118,Kabupaten Pidie Jaya,2020,148
+11,Aceh,1171,Kota Banda Aceh,2020,4 122
+11,Aceh,1172,Kota Sabang,2020,269
+11,Aceh,1173,Kota Langsa,2020,709
+11,Aceh,1174,Kota Lhokseumawe,2020,1 042
+11,Aceh,1175,Kota Subulussalam,2020,65
+11,Aceh,1101,Kabupaten Simeulue,2021,46
+11,Aceh,1102,Kabupaten Aceh Singkil,2021,59
+11,Aceh,1103,Kabupaten Aceh Selatan,2021,61
+11,Aceh,1104,Kabupaten Aceh Tenggara,2021,53
+11,Aceh,1105,Kabupaten Aceh Timur,2021,68
+11,Aceh,1106,Kabupaten Aceh Tengah,2021,51
+11,Aceh,1107,Kabupaten Aceh Barat,2021,69
+11,Aceh,1108,Kabupaten Aceh Besar,2021,138
+11,Aceh,1109,Kabupaten Pidie,2021,142
+11,Aceh,1110,Kabupaten Bireuen,2021,231
+11,Aceh,1111,Kabupaten Aceh Utara,2021,188
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2021,102
+11,Aceh,1113,Kabupaten Gayo Lues,2021,18
+11,Aceh,1114,Kabupaten Aceh Tamiang,2021,152
+11,Aceh,1115,Kabupaten Nagan Raya,2021,51
+11,Aceh,1116,Kabupaten Aceh Jaya,2021,25
+11,Aceh,1117,Kabupaten Bener Meriah,2021,113
+11,Aceh,1118,Kabupaten Pidie Jaya,2021,149
+11,Aceh,1171,Kota Banda Aceh,2021,4 156
+11,Aceh,1172,Kota Sabang,2021,275
+11,Aceh,1173,Kota Langsa,2021,720
+11,Aceh,1174,Kota Lhokseumawe,2021,1 049
+11,Aceh,1175,Kota Subulussalam,2021,67
+11,Aceh,1101,Kabupaten Simeulue,2022,46
+11,Aceh,1102,Kabupaten Aceh Singkil,2022,60
+11,Aceh,1103,Kabupaten Aceh Selatan,2022,62
+11,Aceh,1104,Kabupaten Aceh Tenggara,2022,54
+11,Aceh,1105,Kabupaten Aceh Timur,2022,69
+11,Aceh,1106,Kabupaten Aceh Tengah,2022,52
+11,Aceh,1107,Kabupaten Aceh Barat,2022,69
+11,Aceh,1108,Kabupaten Aceh Besar,2022,140
+11,Aceh,1109,Kabupaten Pidie,2022,144
+11,Aceh,1110,Kabupaten Bireuen,2022,233
+11,Aceh,1111,Kabupaten Aceh Utara,2022,190
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2022,104
+11,Aceh,1113,Kabupaten Gayo Lues,2022,18
+11,Aceh,1114,Kabupaten Aceh Tamiang,2022,154
+11,Aceh,1115,Kabupaten Nagan Raya,2022,52
+11,Aceh,1116,Kabupaten Aceh Jaya,2022,25
+11,Aceh,1117,Kabupaten Bener Meriah,2022,116
+11,Aceh,1118,Kabupaten Pidie Jaya,2022,152
+11,Aceh,1171,Kota Banda Aceh,2022,4199
+11,Aceh,1172,Kota Sabang,2022,282
+11,Aceh,1173,Kota Langsa,2022,734
+11,Aceh,1174,Kota Lhokseumawe,2022,1057
+11,Aceh,1175,Kota Subulussalam,2022,68
+11,Aceh,1101,Kabupaten Simeulue,2023,47
+11,Aceh,1102,Kabupaten Aceh Singkil,2023,61
+11,Aceh,1103,Kabupaten Aceh Selatan,2023,62
+11,Aceh,1104,Kabupaten Aceh Tenggara,2023,55
+11,Aceh,1105,Kabupaten Aceh Timur,2023,70
+11,Aceh,1106,Kabupaten Aceh Tengah,2023,52
+11,Aceh,1107,Kabupaten Aceh Barat,2023,70
+11,Aceh,1108,Kabupaten Aceh Besar,2023,142
+11,Aceh,1109,Kabupaten Pidie,2023,145
+11,Aceh,1110,Kabupaten Bireuen,2023,238
+11,Aceh,1111,Kabupaten Aceh Utara,2023,193
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2023,105
+11,Aceh,1113,Kabupaten Gayo Lues,2023,98
+11,Aceh,1114,Kabupaten Aceh Tamiang,2023,156
+11,Aceh,1115,Kabupaten Nagan Raya,2023,52
+11,Aceh,1116,Kabupaten Aceh Jaya,2023,26
+11,Aceh,1117,Kabupaten Bener Meriah,2023,116
+11,Aceh,1118,Kabupaten Pidie Jaya,2023,153
+11,Aceh,1171,Kota Banda Aceh,2023,4269
+11,Aceh,1172,Kota Sabang,2023,1439
+11,Aceh,1173,Kota Langsa,2023,742
+11,Aceh,1174,Kota Lhokseumawe,2023,1090
+11,Aceh,1175,Kota Subulussalam,2023,105
+11,Aceh,1101,Kabupaten Simeulue,2024,48
+11,Aceh,1102,Kabupaten Aceh Singkil,2024,62
+11,Aceh,1103,Kabupaten Aceh Selatan,2024,63
+11,Aceh,1104,Kabupaten Aceh Tenggara,2024,55
+11,Aceh,1105,Kabupaten Aceh Timur,2024,71
+11,Aceh,1106,Kabupaten Aceh Tengah,2024,53
+11,Aceh,1107,Kabupaten Aceh Barat,2024,71
+11,Aceh,1108,Kabupaten Aceh Besar,2024,144
+11,Aceh,1109,Kabupaten Pidie,2024,147
+11,Aceh,1110,Kabupaten Bireuen,2024,241
+11,Aceh,1111,Kabupaten Aceh Utara,2024,195
+11,Aceh,1112,Kabupatan Aceh Barat Daya,2024,107
+11,Aceh,1113,Kabupaten Gayo Lues,2024,99
+11,Aceh,1114,Kabupaten Aceh Tamiang,2024,158
+11,Aceh,1115,Kabupaten Nagan Raya,2024,52
+11,Aceh,1116,Kabupaten Aceh Jaya,2024,26
+11,Aceh,1117,Kabupaten Bener Meriah,2024,118
+11,Aceh,1118,Kabupaten Pidie Jaya,2024,155
+11,Aceh,1171,Kota Banda Aceh,2024,4319
+11,Aceh,1172,Kota Sabang,2024,1454
+11,Aceh,1173,Kota Langsa,2024,754
+11,Aceh,1174,Kota Lhokseumawe,2024,1107
+11,Aceh,1175,Kota Subulussalam,2024,107
