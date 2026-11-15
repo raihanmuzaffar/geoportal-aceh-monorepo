@@ -1,63 +1,221 @@
-import { Map as MapIcon, Database, Users, MapPin } from 'lucide-react';
+import { useEffect } from 'react';
+import { 
+  MapPin, 
+  Database, 
+  HeartPulse, 
+  GraduationCap, 
+  Sprout, 
+  AlertTriangle, 
+  Layers, 
+  RefreshCw, 
+  AlertCircle 
+} from 'lucide-react';
 import MapView from '../components/MapView';
+import { useDashboardStore } from '../store/dashboardStore';
 
 export default function Dashboard() {
+  const { stats, isLoading, error, fetchStats } = useDashboardStore();
+
+  useEffect(() => {
+    fetchStats();
+  }, [fetchStats]);
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Header Halaman */}
-      <div>
-        <h1 className="text-2xl font-bold text-slate-800">Ringkasan Sistem</h1>
-        <p className="text-slate-500 text-sm mt-1">Pantau aktivitas dan data spasial Provinsi Aceh.</p>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-bold text-slate-800">Ringkasan Sistem Geoportal</h1>
+          <p className="text-slate-500 text-sm mt-1">
+            Pemantauan data tematik terpadu dan sebaran spasial Provinsi Aceh.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => fetchStats()}
+          disabled={isLoading}
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-60 transition-colors shadow-sm self-start sm:self-auto"
+        >
+          <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-emerald-600' : 'text-slate-500'}`} />
+          <span>Perbarui Data</span>
+        </button>
       </div>
 
-      {/* Kartu Statistik */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-          <div className="flex justify-between items-start">
-            <div>
-              <p className="text-slate-500 text-sm font-medium">Total Peta</p>
-              <h3 className="text-3xl font-bold text-slate-800 mt-2">124</h3>
+      {/* Error Banner jika ada */}
+      {error && (
+        <div className="p-4 bg-rose-50 border border-rose-200 rounded-xl flex items-center justify-between gap-3 text-rose-700 text-sm">
+          <div className="flex items-center gap-2">
+            <AlertCircle className="w-5 h-5 shrink-0" />
+            <span>{error}</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => fetchStats()}
+            className="underline font-semibold hover:text-rose-900"
+          >
+            Coba lagi
+          </button>
+        </div>
+      )}
+
+      {/* Loading Skeleton / Kartu Metrik 5 Domain Utama */}
+      {isLoading && !stats ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm animate-pulse space-y-3">
+              <div className="w-8 h-8 bg-slate-200 rounded-lg" />
+              <div className="h-4 bg-slate-200 rounded w-1/2" />
+              <div className="h-6 bg-slate-200 rounded w-3/4" />
             </div>
-            <div className="p-3 bg-emerald-100 text-emerald-600 rounded-lg">
-              <MapIcon className="w-6 h-6" />
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+          {/* 1. Kependudukan */}
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-300 transition-colors">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Kependudukan</span>
+              <div className="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                <Database className="w-5 h-5" />
+              </div>
             </div>
+            <h3 className="text-2xl font-bold text-slate-800 mt-3">
+              {stats?.totalPenduduk ? stats.totalPenduduk.toLocaleString('id-ID') : '0'}
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">Total Jiwa Terdata</p>
+          </div>
+
+          {/* 2. Kesehatan */}
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-rose-300 transition-colors">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Kesehatan</span>
+              <div className="p-2 bg-rose-100 text-rose-600 rounded-lg">
+                <HeartPulse className="w-5 h-5" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800 mt-3">
+              {stats?.totalKesehatan ? stats.totalKesehatan.toLocaleString('id-ID') : '0'}
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">Fasilitas Kesehatan</p>
+          </div>
+
+          {/* 3. Pendidikan */}
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition-colors">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Pendidikan</span>
+              <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
+                <GraduationCap className="w-5 h-5" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800 mt-3">
+              {stats?.totalPendidikan ? stats.totalPendidikan.toLocaleString('id-ID') : '0'}
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">Sekolah Terdaftar</p>
+          </div>
+
+          {/* 4. Pertanian */}
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-amber-300 transition-colors">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Pertanian</span>
+              <div className="p-2 bg-amber-100 text-amber-600 rounded-lg">
+                <Sprout className="w-5 h-5" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800 mt-3">
+              {stats?.totalPertanianHa ? stats.totalPertanianHa.toLocaleString('id-ID') : '0'}
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">Hektar Luas Lahan</p>
+          </div>
+
+          {/* 5. Kebencanaan */}
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-orange-300 transition-colors">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Kebencanaan</span>
+              <div className="p-2 bg-orange-100 text-orange-600 rounded-lg">
+                <AlertTriangle className="w-5 h-5" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800 mt-3">
+              {stats?.totalKebencanaan ? stats.totalKebencanaan.toLocaleString('id-ID') : '0'}
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">Titik Riwayat Bencana</p>
+          </div>
+
+          {/* 6. Sistem & Layer */}
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-300 transition-colors">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">GIS Layer</span>
+              <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
+                <Layers className="w-5 h-5" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800 mt-3">
+              {stats?.totalLayerSpasial ?? 0}
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">
+              {stats?.totalPenggunaAktif ?? 0} Pengguna Aktif
+            </p>
           </div>
         </div>
+      )}
 
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-          <div className="flex justify-between items-start">
+      {/* Ringkasan Distribusi Wilayah */}
+      {stats?.distribusiWilayah && stats.distribusiWilayah.length > 0 && (
+        <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
             <div>
-              <p className="text-slate-500 text-sm font-medium">Data Spasial</p>
-              <h3 className="text-3xl font-bold text-slate-800 mt-2">1,842</h3>
-            </div>
-            <div className="p-3 bg-blue-100 text-blue-600 rounded-lg">
-              <Database className="w-6 h-6" />
+              <h2 className="text-base font-bold text-slate-800">Distribusi Data per Wilayah Prioritas</h2>
+              <p className="text-xs text-slate-500">Agregasi 5 domain utama di beberapa kota/kabupaten Provinsi Aceh.</p>
             </div>
           </div>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-          <div className="flex justify-between items-start">
-            <div>
-              <p className="text-slate-500 text-sm font-medium">Pengguna Aktif</p>
-              <h3 className="text-3xl font-bold text-slate-800 mt-2">18</h3>
-            </div>
-            <div className="p-3 bg-purple-100 text-purple-600 rounded-lg">
-              <Users className="w-6 h-6" />
-            </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm text-slate-700">
+              <thead className="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-600 uppercase">
+                <tr>
+                  <th className="py-3 px-6">Wilayah</th>
+                  <th className="py-3 px-6 text-right">Penduduk (Jiwa)</th>
+                  <th className="py-3 px-6 text-right">Faskes</th>
+                  <th className="py-3 px-6 text-right">Sekolah</th>
+                  <th className="py-3 px-6 text-right">Titik Bencana</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                {stats.distribusiWilayah.map((w, idx) => (
+                  <tr key={idx} className="hover:bg-slate-50/80 transition-colors">
+                    <td className="py-3 px-6 font-medium text-slate-800">{w.wilayah}</td>
+                    <td className="py-3 px-6 text-right font-mono text-xs">{w.penduduk.toLocaleString('id-ID')}</td>
+                    <td className="py-3 px-6 text-right font-mono text-xs">{w.faskes}</td>
+                    <td className="py-3 px-6 text-right font-mono text-xs">{w.sekolah}</td>
+                    <td className="py-3 px-6 text-right">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800">
+                        {w.bencana} kejadian
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
-      </div>
+      )}
 
-      {/* Area Peta */}
+      {/* Area Peta Geospasial */}
       <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-        <div className="flex items-center gap-2 mb-4">
-          <MapPin className="text-emerald-500" />
-          <h2 className="text-lg font-bold text-slate-800">Sebaran Data Spasial Terbaru</h2>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <MapPin className="text-emerald-500 w-5 h-5" />
+            <div>
+              <h2 className="text-lg font-bold text-slate-800">Sebaran Data Spasial Aceh</h2>
+              <p className="text-xs text-slate-500">Peta interaktif overview koordinat terpusat wilayah Aceh.</p>
+            </div>
+          </div>
         </div>
         
-        {/* Memanggil komponen MapView yang sudah kita buat sebelumnya */}
-        <MapView />
+        {/* Render MapView Leaflet */}
+        <div className="rounded-lg overflow-hidden border border-slate-200">
+          <MapView />
+        </div>
       </div>
     </div>
   );
