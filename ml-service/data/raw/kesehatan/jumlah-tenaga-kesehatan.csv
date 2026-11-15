@@ -1,0 +1,2071 @@
+bps_kode_provinsi;bps_nama_provinsi;bps_kode_kabupaten;bps_nama_kabupaten;tahun;tenaga_kesehatan;jumlah_tenaga_kesehatan;satuan
+11;Aceh;1101;Kabupaten Simeulue;2024;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;tenaga kesehatan masyarakat;119;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;tenaga kesehatan masyarakat;184;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;tenaga kesehatan masyarakat;149;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;tenaga kesehatan masyarakat;182;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;tenaga kesehatan masyarakat;2;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;tenaga kesehatan masyarakat;276;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;tenaga kesehatan masyarakat;276;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;tenaga kesehatan masyarakat;224;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;tenaga kesehatan masyarakat;246;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;tenaga kesehatan masyarakat;119;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;tenaga kesehatan masyarakat;58;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;tenaga kesehatan masyarakat;69;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;tenaga kesehatan masyarakat;164;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;tenaga kesehatan masyarakat;111;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;tenaga kesehatan masyarakat;168;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;tenaga kesehatan masyarakat;148;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;tenaga kesehatan masyarakat;192;jiwa
+11;Aceh;1172;Kota Sabang;2024;tenaga kesehatan masyarakat;45;jiwa
+11;Aceh;1173;Kota Langsa;2024;tenaga kesehatan masyarakat;16;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;tenaga kesehatan masyarakat;12;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;tenaga kesehatan masyarakat;57;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2024;kefarmasian ;59;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;kefarmasian ;64;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;kefarmasian ;61;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;kefarmasian ;7;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;kefarmasian ;111;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;kefarmasian ;72;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;kefarmasian ;65;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;kefarmasian ;11;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;kefarmasian ;172;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;kefarmasian ;149;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;kefarmasian ;113;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;kefarmasian ;56;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;kefarmasian ;47;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;kefarmasian ;56;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;kefarmasian ;94;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;kefarmasian ;38;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;kefarmasian ;63;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;kefarmasian ;12;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;kefarmasian ;383;jiwa
+11;Aceh;1172;Kota Sabang;2024;kefarmasian ;2;jiwa
+11;Aceh;1173;Kota Langsa;2024;kefarmasian ;67;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;kefarmasian ;51;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;kefarmasian ;49;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2024;perawat;194;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;perawat;225;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;perawat;323;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;perawat;299;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;perawat;548;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;perawat;557;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;perawat;379;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;perawat;226;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;perawat;115;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;perawat;868;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;perawat;513;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;perawat;284;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;perawat;185;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;perawat;356;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;perawat;322;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;perawat;173;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;perawat;262;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;perawat;342;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;perawat;3234;jiwa
+11;Aceh;1172;Kota Sabang;2024;perawat;138;jiwa
+11;Aceh;1173;Kota Langsa;2024;perawat;514;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;perawat;581;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;perawat;183;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2024;bidan;95;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;bidan;14;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;bidan;73;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;bidan;248;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;bidan;322;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;bidan;161;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;bidan;23;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;bidan;134;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;bidan;681;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;bidan;26;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;bidan;288;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;bidan;124;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;bidan;11;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;bidan;22;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;bidan;222;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;bidan;81;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;bidan;167;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;bidan;228;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;bidan;574;jiwa
+11;Aceh;1172;Kota Sabang;2024;bidan;45;jiwa
+11;Aceh;1173;Kota Langsa;2024;bidan;11;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;bidan;318;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;bidan;15;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2024;tenaga kesehatan lingkungan;26;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;tenaga kesehatan lingkungan;28;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;tenaga kesehatan lingkungan;42;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;tenaga kesehatan lingkungan;3;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;tenaga kesehatan lingkungan;42;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;tenaga kesehatan lingkungan;65;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;tenaga kesehatan lingkungan;34;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;tenaga kesehatan lingkungan;19;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;tenaga kesehatan lingkungan;35;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;tenaga kesehatan lingkungan;67;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;tenaga kesehatan lingkungan;77;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;tenaga kesehatan lingkungan;33;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;tenaga kesehatan lingkungan;18;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;tenaga kesehatan lingkungan;25;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;tenaga kesehatan lingkungan;44;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;tenaga kesehatan lingkungan;33;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;tenaga kesehatan lingkungan;32;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;tenaga kesehatan lingkungan;132;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;tenaga kesehatan lingkungan;93;jiwa
+11;Aceh;1172;Kota Sabang;2024;tenaga kesehatan lingkungan;16;jiwa
+11;Aceh;1173;Kota Langsa;2024;tenaga kesehatan lingkungan;16;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;tenaga kesehatan lingkungan;24;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;tenaga kesehatan lingkungan;13;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2024;tenaga kesehatan;37;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;tenaga kesehatan;41;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;tenaga kesehatan;64;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;tenaga kesehatan;24;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;tenaga kesehatan;68;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;tenaga kesehatan;78;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;tenaga kesehatan;114;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;tenaga kesehatan;18;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;tenaga kesehatan;12;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;tenaga kesehatan;85;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;tenaga kesehatan;72;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;tenaga kesehatan;54;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;tenaga kesehatan;29;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;tenaga kesehatan;35;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;tenaga kesehatan;59;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;tenaga kesehatan;35;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;tenaga kesehatan;32;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;tenaga kesehatan;56;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;tenaga kesehatan;121;jiwa
+11;Aceh;1172;Kota Sabang;2024;tenaga kesehatan;27;jiwa
+11;Aceh;1173;Kota Langsa;2024;tenaga kesehatan;36;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;tenaga kesehatan;3;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;tenaga kesehatan;12;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2024;ahli teknologi laboratorium medik;32;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2024;ahli teknologi laboratorium medik;34;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2024;ahli teknologi laboratorium medik;63;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2024;ahli teknologi laboratorium medik;52;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2024;ahli teknologi laboratorium medik;78;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2024;ahli teknologi laboratorium medik;72;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2024;ahli teknologi laboratorium medik;45;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2024;ahli teknologi laboratorium medik;81;jiwa
+11;Aceh;1109;Kabupaten Pidie;2024;ahli teknologi laboratorium medik;88;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2024;ahli teknologi laboratorium medik;13;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2024;ahli teknologi laboratorium medik;96;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2024;ahli teknologi laboratorium medik;37;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2024;ahli teknologi laboratorium medik;39;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2024;ahli teknologi laboratorium medik;48;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2024;ahli teknologi laboratorium medik;55;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2024;ahli teknologi laboratorium medik;18;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2024;ahli teknologi laboratorium medik;55;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2024;ahli teknologi laboratorium medik;54;jiwa
+11;Aceh;1171;Kota Banda Aceh;2024;ahli teknologi laboratorium medik;21;jiwa
+11;Aceh;1172;Kota Sabang;2024;ahli teknologi laboratorium medik;24;jiwa
+11;Aceh;1173;Kota Langsa;2024;ahli teknologi laboratorium medik;34;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2024;ahli teknologi laboratorium medik;51;jiwa
+11;Aceh;1175;Kota Subulussalam;2024;ahli teknologi laboratorium medik;32;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;tenaga kesehatan masyarakat;142;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;tenaga kesehatan masyarakat;98;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;tenaga kesehatan masyarakat;144;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;tenaga kesehatan masyarakat;178;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;tenaga kesehatan masyarakat;162;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;tenaga kesehatan masyarakat;189;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;tenaga kesehatan masyarakat;183;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;tenaga kesehatan masyarakat;239;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;tenaga kesehatan masyarakat;265;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;tenaga kesehatan masyarakat;229;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;tenaga kesehatan masyarakat;25;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;tenaga kesehatan masyarakat;98;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;tenaga kesehatan masyarakat;62;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;tenaga kesehatan masyarakat;58;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;tenaga kesehatan masyarakat;141;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;tenaga kesehatan masyarakat;115;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;tenaga kesehatan masyarakat;133;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;tenaga kesehatan masyarakat;199;jiwa
+11;Aceh;1172;Kota Sabang;2023;tenaga kesehatan masyarakat;41;jiwa
+11;Aceh;1173;Kota Langsa;2023;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;tenaga kesehatan masyarakat;139;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;tenaga kesehatan masyarakat;47;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;kefarmasian ;68;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;kefarmasian ;67;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;kefarmasian ;77;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;kefarmasian ;123;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;kefarmasian ;143;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;kefarmasian ;14;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;kefarmasian ;82;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;kefarmasian ;122;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;kefarmasian ;173;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;kefarmasian ;197;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;kefarmasian ;142;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;kefarmasian ;58;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;kefarmasian ;67;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;kefarmasian ;91;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;kefarmasian ;99;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;kefarmasian ;63;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;kefarmasian ;87;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;kefarmasian ;119;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;kefarmasian ;48;jiwa
+11;Aceh;1172;Kota Sabang;2023;kefarmasian ;27;jiwa
+11;Aceh;1173;Kota Langsa;2023;kefarmasian ;89;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;kefarmasian ;87;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;kefarmasian ;7;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;perawat;495;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;perawat;49;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;perawat;89;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;perawat;717;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;perawat;1126;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;perawat;88;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;perawat;716;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;perawat;489;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;perawat;198;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;perawat;1554;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;perawat;1714;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;perawat;436;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;perawat;343;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;perawat;729;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;perawat;559;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;perawat;347;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;perawat;598;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;perawat;752;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;perawat;311;jiwa
+11;Aceh;1172;Kota Sabang;2023;perawat;333;jiwa
+11;Aceh;1173;Kota Langsa;2023;perawat;638;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;perawat;124;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;perawat;33;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;bidan;461;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;bidan;42;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;bidan;633;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;bidan;17;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;bidan;178;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;bidan;17;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;bidan;887;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;bidan;141;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;bidan;2152;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;bidan;1924;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;bidan;271;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;bidan;491;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;bidan;397;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;bidan;776;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;bidan;747;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;bidan;369;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;bidan;867;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;bidan;14;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;bidan;716;jiwa
+11;Aceh;1172;Kota Sabang;2023;bidan;137;jiwa
+11;Aceh;1173;Kota Langsa;2023;bidan;347;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;bidan;792;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;bidan;421;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;tenaga kesehatan lingkungan;27;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;tenaga kesehatan lingkungan;24;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;tenaga kesehatan lingkungan;37;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;tenaga kesehatan lingkungan;25;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;tenaga kesehatan lingkungan;39;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;tenaga kesehatan lingkungan;52;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;tenaga kesehatan lingkungan;32;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;tenaga kesehatan lingkungan;91;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;tenaga kesehatan lingkungan;351;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;tenaga kesehatan lingkungan;67;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;tenaga kesehatan lingkungan;81;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;tenaga kesehatan lingkungan;25;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;tenaga kesehatan lingkungan;14;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;tenaga kesehatan lingkungan;21;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;tenaga kesehatan lingkungan;36;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;tenaga kesehatan lingkungan;31;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;tenaga kesehatan lingkungan;28;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;tenaga kesehatan lingkungan;135;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;tenaga kesehatan lingkungan;86;jiwa
+11;Aceh;1172;Kota Sabang;2023;tenaga kesehatan lingkungan;13;jiwa
+11;Aceh;1173;Kota Langsa;2023;tenaga kesehatan lingkungan;14;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;tenaga kesehatan lingkungan;26;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;tenaga kesehatan lingkungan;13;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;tenaga kesehatan;29;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;tenaga kesehatan;37;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;tenaga kesehatan;6;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;tenaga kesehatan;21;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;tenaga kesehatan;66;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;tenaga kesehatan;66;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;tenaga kesehatan;118;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;tenaga kesehatan;97;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;tenaga kesehatan;9;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;tenaga kesehatan;77;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;tenaga kesehatan;75;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;tenaga kesehatan;5;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;tenaga kesehatan;25;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;tenaga kesehatan;28;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;tenaga kesehatan;49;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;tenaga kesehatan;36;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;tenaga kesehatan;27;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;tenaga kesehatan;52;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;tenaga kesehatan;119;jiwa
+11;Aceh;1172;Kota Sabang;2023;tenaga kesehatan;23;jiwa
+11;Aceh;1173;Kota Langsa;2023;tenaga kesehatan;35;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;tenaga kesehatan;32;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;tenaga kesehatan;13;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2023;ahli teknologi laboratorium medik;31;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2023;ahli teknologi laboratorium medik;34;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2023;ahli teknologi laboratorium medik;57;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2023;ahli teknologi laboratorium medik;49;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2023;ahli teknologi laboratorium medik;71;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2023;ahli teknologi laboratorium medik;73;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2023;ahli teknologi laboratorium medik;43;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2023;ahli teknologi laboratorium medik;67;jiwa
+11;Aceh;1109;Kabupaten Pidie;2023;ahli teknologi laboratorium medik;75;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2023;ahli teknologi laboratorium medik;98;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2023;ahli teknologi laboratorium medik;85;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2023;ahli teknologi laboratorium medik;36;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2023;ahli teknologi laboratorium medik;37;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2023;ahli teknologi laboratorium medik;53;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2023;ahli teknologi laboratorium medik;51;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2023;ahli teknologi laboratorium medik;16;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2023;ahli teknologi laboratorium medik;47;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2023;ahli teknologi laboratorium medik;51;jiwa
+11;Aceh;1171;Kota Banda Aceh;2023;ahli teknologi laboratorium medik;199;jiwa
+11;Aceh;1172;Kota Sabang;2023;ahli teknologi laboratorium medik;21;jiwa
+11;Aceh;1173;Kota Langsa;2023;ahli teknologi laboratorium medik;28;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2023;ahli teknologi laboratorium medik;48;jiwa
+11;Aceh;1175;Kota Subulussalam;2023;ahli teknologi laboratorium medik;32;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;tenaga kesehatan masyarakat;115;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;tenaga kesehatan masyarakat;86;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;tenaga kesehatan masyarakat;143;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;tenaga kesehatan masyarakat;155;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;tenaga kesehatan masyarakat;172;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;tenaga kesehatan masyarakat;175;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;tenaga kesehatan masyarakat;181;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;tenaga kesehatan masyarakat;246;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;tenaga kesehatan masyarakat;259;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;tenaga kesehatan masyarakat;196;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;tenaga kesehatan masyarakat;249;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;tenaga kesehatan masyarakat;93;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;tenaga kesehatan masyarakat;47;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;tenaga kesehatan masyarakat;63;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;tenaga kesehatan masyarakat;137;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;tenaga kesehatan masyarakat;91;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;tenaga kesehatan masyarakat;12;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;tenaga kesehatan masyarakat;125;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1172;Kota Sabang;2022;tenaga kesehatan masyarakat;42;jiwa
+11;Aceh;1173;Kota Langsa;2022;tenaga kesehatan masyarakat;15;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;tenaga kesehatan masyarakat;11;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;tenaga kesehatan masyarakat;37;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;kefarmasian ;52;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;kefarmasian ;58;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;kefarmasian ;71;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;kefarmasian ;1;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;kefarmasian ;13;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;kefarmasian ;16;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;kefarmasian ;76;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;kefarmasian ;125;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;kefarmasian ;164;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;kefarmasian ;172;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;kefarmasian ;136;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;kefarmasian ;6;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;kefarmasian ;71;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;kefarmasian ;8;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;kefarmasian ;79;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;kefarmasian ;58;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;kefarmasian ;86;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;kefarmasian ;112;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;kefarmasian ;334;jiwa
+11;Aceh;1172;Kota Sabang;2022;kefarmasian ;31;jiwa
+11;Aceh;1173;Kota Langsa;2022;kefarmasian ;88;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;kefarmasian ;82;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;kefarmasian ;64;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;perawat;497;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;perawat;459;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;perawat;875;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;perawat;646;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;perawat;1116;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;perawat;823;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;perawat;661;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;perawat;533;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;perawat;1884;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;perawat;142;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;perawat;1719;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;perawat;418;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;perawat;331;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;perawat;749;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;perawat;55;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;perawat;353;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;perawat;568;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;perawat;751;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;perawat;2337;jiwa
+11;Aceh;1172;Kota Sabang;2022;perawat;356;jiwa
+11;Aceh;1173;Kota Langsa;2022;perawat;656;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;perawat;996;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;perawat;39;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;bidan;47;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;bidan;45;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;bidan;69;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;bidan;91;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;bidan;1695;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;bidan;11;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;bidan;789;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;bidan;133;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;bidan;2184;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;bidan;1899;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;bidan;2712;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;bidan;466;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;bidan;392;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;bidan;759;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;bidan;755;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;bidan;376;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;bidan;854;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;bidan;124;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;bidan;632;jiwa
+11;Aceh;1172;Kota Sabang;2022;bidan;13;jiwa
+11;Aceh;1173;Kota Langsa;2022;bidan;346;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;bidan;792;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;bidan;392;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;tenaga kesehatan lingkungan;19;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;tenaga kesehatan lingkungan;21;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;tenaga kesehatan lingkungan;46;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;tenaga kesehatan lingkungan;26;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;tenaga kesehatan lingkungan;42;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;tenaga kesehatan lingkungan;58;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;tenaga kesehatan lingkungan;3;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;tenaga kesehatan lingkungan;1;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;tenaga kesehatan lingkungan;34;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;tenaga kesehatan lingkungan;63;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;tenaga kesehatan lingkungan;88;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;tenaga kesehatan lingkungan;27;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;tenaga kesehatan lingkungan;19;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;tenaga kesehatan lingkungan;21;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;tenaga kesehatan lingkungan;29;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;tenaga kesehatan lingkungan;32;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;tenaga kesehatan lingkungan;29;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;tenaga kesehatan lingkungan;132;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;tenaga kesehatan lingkungan;75;jiwa
+11;Aceh;1172;Kota Sabang;2022;tenaga kesehatan lingkungan;15;jiwa
+11;Aceh;1173;Kota Langsa;2022;tenaga kesehatan lingkungan;14;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;tenaga kesehatan lingkungan;16;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;tenaga kesehatan lingkungan;7;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;tenaga kesehatan;28;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;tenaga kesehatan;29;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;tenaga kesehatan;54;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;tenaga kesehatan;23;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;tenaga kesehatan;69;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;tenaga kesehatan;69;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;tenaga kesehatan;113;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;tenaga kesehatan;13;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;tenaga kesehatan;78;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;tenaga kesehatan;71;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;tenaga kesehatan;78;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;tenaga kesehatan;49;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;tenaga kesehatan;24;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;tenaga kesehatan;28;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;tenaga kesehatan;47;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;tenaga kesehatan;33;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;tenaga kesehatan;27;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;tenaga kesehatan;48;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;tenaga kesehatan;97;jiwa
+11;Aceh;1172;Kota Sabang;2022;tenaga kesehatan;22;jiwa
+11;Aceh;1173;Kota Langsa;2022;tenaga kesehatan;35;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;tenaga kesehatan;26;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;tenaga kesehatan;1;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2022;ahli teknologi laboratorium medik;48;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2022;ahli teknologi laboratorium medik;43;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2022;ahli teknologi laboratorium medik;73;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2022;ahli teknologi laboratorium medik;46;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2022;ahli teknologi laboratorium medik;91;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2022;ahli teknologi laboratorium medik;13;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2022;ahli teknologi laboratorium medik;63;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2022;ahli teknologi laboratorium medik;77;jiwa
+11;Aceh;1109;Kabupaten Pidie;2022;ahli teknologi laboratorium medik;98;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2022;ahli teknologi laboratorium medik;128;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2022;ahli teknologi laboratorium medik;127;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2022;ahli teknologi laboratorium medik;61;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2022;ahli teknologi laboratorium medik;55;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2022;ahli teknologi laboratorium medik;79;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2022;ahli teknologi laboratorium medik;5;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2022;ahli teknologi laboratorium medik;32;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2022;ahli teknologi laboratorium medik;61;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2022;ahli teknologi laboratorium medik;63;jiwa
+11;Aceh;1171;Kota Banda Aceh;2022;ahli teknologi laboratorium medik;35;jiwa
+11;Aceh;1172;Kota Sabang;2022;ahli teknologi laboratorium medik;33;jiwa
+11;Aceh;1173;Kota Langsa;2022;ahli teknologi laboratorium medik;55;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2022;ahli teknologi laboratorium medik;59;jiwa
+11;Aceh;1175;Kota Subulussalam;2022;ahli teknologi laboratorium medik;39;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;dokter umum;3;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;dokter umum;7;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;dokter umum;98;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;dokter umum;76;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;dokter umum;118;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;dokter umum;92;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;dokter umum;81;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;dokter umum;117;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;dokter umum;159;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;dokter umum;165;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;dokter umum;135;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;dokter umum;71;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;dokter umum;34;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;dokter umum;91;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;dokter umum;74;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;dokter umum;55;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;dokter umum;7;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;dokter umum;69;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;dokter umum;718;jiwa
+11;Aceh;1172;Kota Sabang;2021;dokter umum;43;jiwa
+11;Aceh;1173;Kota Langsa;2021;dokter umum;81;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;dokter umum;131;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;dokter umum;44;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;dokter gigi;2;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;dokter gigi;12;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;dokter gigi;27;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;dokter gigi;11;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;dokter gigi;27;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;dokter gigi;15;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;dokter gigi;27;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;dokter gigi;45;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;dokter gigi;26;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;dokter gigi;41;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;dokter gigi;36;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;dokter gigi;13;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;dokter gigi;9;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;dokter gigi;16;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;dokter gigi;11;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;dokter gigi;18;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;dokter gigi;18;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;dokter gigi;2;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;dokter gigi;39;jiwa
+11;Aceh;1172;Kota Sabang;2021;dokter gigi;7;jiwa
+11;Aceh;1173;Kota Langsa;2021;dokter gigi;11;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;dokter gigi;3;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;dokter gigi;6;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;tenaga kesehatan masyarakat;96;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;tenaga kesehatan masyarakat;66;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;tenaga kesehatan masyarakat;126;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;tenaga kesehatan masyarakat;134;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;tenaga kesehatan masyarakat;161;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;tenaga kesehatan masyarakat;138;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;tenaga kesehatan masyarakat;161;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;tenaga kesehatan masyarakat;217;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;tenaga kesehatan masyarakat;234;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;tenaga kesehatan masyarakat;156;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;tenaga kesehatan masyarakat;236;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;tenaga kesehatan masyarakat;73;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;tenaga kesehatan masyarakat;6;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;tenaga kesehatan masyarakat;1;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;tenaga kesehatan masyarakat;94;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;tenaga kesehatan masyarakat;1;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;tenaga kesehatan masyarakat;114;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;tenaga kesehatan masyarakat;152;jiwa
+11;Aceh;1172;Kota Sabang;2021;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1173;Kota Langsa;2021;tenaga kesehatan masyarakat;83;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;tenaga kesehatan masyarakat;14;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;tenaga kesehatan masyarakat;35;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;kefarmasian ;33;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;kefarmasian ;49;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;kefarmasian ;7;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;kefarmasian ;71;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;kefarmasian ;124;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;kefarmasian ;7;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;kefarmasian ;69;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;kefarmasian ;71;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;kefarmasian ;164;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;kefarmasian ;176;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;kefarmasian ;97;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;kefarmasian ;48;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;kefarmasian ;44;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;kefarmasian ;77;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;kefarmasian ;53;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;kefarmasian ;45;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;kefarmasian ;81;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;kefarmasian ;88;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;kefarmasian ;26;jiwa
+11;Aceh;1172;Kota Sabang;2021;kefarmasian ;18;jiwa
+11;Aceh;1173;Kota Langsa;2021;kefarmasian ;71;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;kefarmasian ;74;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;kefarmasian ;62;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;perawat;441;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;perawat;424;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;perawat;782;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;perawat;519;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;perawat;147;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;perawat;683;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;perawat;526;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;perawat;374;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;perawat;1762;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;perawat;134;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;perawat;1568;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;perawat;38;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;perawat;233;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;perawat;685;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;perawat;435;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;perawat;313;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;perawat;51;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;perawat;635;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;perawat;214;jiwa
+11;Aceh;1172;Kota Sabang;2021;perawat;26;jiwa
+11;Aceh;1173;Kota Langsa;2021;perawat;614;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;perawat;955;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;perawat;268;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;bidan;49;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;bidan;334;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;bidan;552;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;bidan;722;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;bidan;1625;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;bidan;868;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;bidan;574;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;bidan;799;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;bidan;248;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;bidan;1869;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;bidan;2319;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;bidan;417;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;bidan;223;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;bidan;699;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;bidan;652;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;bidan;37;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;bidan;855;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;bidan;795;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;bidan;539;jiwa
+11;Aceh;1172;Kota Sabang;2021;bidan;67;jiwa
+11;Aceh;1173;Kota Langsa;2021;bidan;322;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;bidan;758;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;bidan;313;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;tenaga kesehatan lingkungan;18;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;tenaga kesehatan lingkungan;19;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;tenaga kesehatan lingkungan;32;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;tenaga kesehatan lingkungan;2;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;tenaga kesehatan lingkungan;34;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;tenaga kesehatan lingkungan;55;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;tenaga kesehatan lingkungan;26;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;tenaga kesehatan lingkungan;8;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;tenaga kesehatan lingkungan;342;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;tenaga kesehatan lingkungan;6;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;tenaga kesehatan lingkungan;68;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;tenaga kesehatan lingkungan;27;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;tenaga kesehatan lingkungan;17;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;tenaga kesehatan lingkungan;12;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;tenaga kesehatan lingkungan;17;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;tenaga kesehatan lingkungan;32;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;tenaga kesehatan lingkungan;29;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;tenaga kesehatan lingkungan;1;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;tenaga kesehatan lingkungan;69;jiwa
+11;Aceh;1172;Kota Sabang;2021;tenaga kesehatan lingkungan;7;jiwa
+11;Aceh;1173;Kota Langsa;2021;tenaga kesehatan lingkungan;11;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;tenaga kesehatan lingkungan;16;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;tenaga kesehatan lingkungan;8;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;tenaga kesehatan;21;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;tenaga kesehatan;21;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;tenaga kesehatan;43;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;tenaga kesehatan;21;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;tenaga kesehatan;6;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;tenaga kesehatan;56;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;tenaga kesehatan;1;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;tenaga kesehatan;89;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;tenaga kesehatan;73;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;tenaga kesehatan;69;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;tenaga kesehatan;57;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;tenaga kesehatan;43;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;tenaga kesehatan;22;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;tenaga kesehatan;24;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;tenaga kesehatan;35;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;tenaga kesehatan;37;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;tenaga kesehatan;31;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;tenaga kesehatan;34;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;tenaga kesehatan;9;jiwa
+11;Aceh;1172;Kota Sabang;2021;tenaga kesehatan;12;jiwa
+11;Aceh;1173;Kota Langsa;2021;tenaga kesehatan;28;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;tenaga kesehatan;26;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;tenaga kesehatan;8;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2021;ahli teknologi laboratorium medik;24;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2021;ahli teknologi laboratorium medik;23;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2021;ahli teknologi laboratorium medik;53;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2021;ahli teknologi laboratorium medik;15;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2021;ahli teknologi laboratorium medik;62;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2021;ahli teknologi laboratorium medik;46;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2021;ahli teknologi laboratorium medik;44;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2021;ahli teknologi laboratorium medik;51;jiwa
+11;Aceh;1109;Kabupaten Pidie;2021;ahli teknologi laboratorium medik;69;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2021;ahli teknologi laboratorium medik;91;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2021;ahli teknologi laboratorium medik;91;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2021;ahli teknologi laboratorium medik;2;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2021;ahli teknologi laboratorium medik;21;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2021;ahli teknologi laboratorium medik;41;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2021;ahli teknologi laboratorium medik;6;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2021;ahli teknologi laboratorium medik;23;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2021;ahli teknologi laboratorium medik;32;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2021;ahli teknologi laboratorium medik;31;jiwa
+11;Aceh;1171;Kota Banda Aceh;2021;ahli teknologi laboratorium medik;141;jiwa
+11;Aceh;1172;Kota Sabang;2021;ahli teknologi laboratorium medik;16;jiwa
+11;Aceh;1173;Kota Langsa;2021;ahli teknologi laboratorium medik;29;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2021;ahli teknologi laboratorium medik;39;jiwa
+11;Aceh;1175;Kota Subulussalam;2021;ahli teknologi laboratorium medik;21;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2020;dokter umum;25;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2020;dokter umum;44;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2020;dokter umum;8;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2020;dokter umum;72;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2020;dokter umum;9;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2020;dokter umum;83;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2020;dokter umum;71;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2020;dokter umum;125;jiwa
+11;Aceh;1109;Kabupaten Pidie;2020;dokter umum;144;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2020;dokter umum;14;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2020;dokter umum;134;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2020;dokter umum;53;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2020;dokter umum;36;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2020;dokter umum;72;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2020;dokter umum;64;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2020;dokter umum;53;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2020;dokter umum;61;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2020;dokter umum;68;jiwa
+11;Aceh;1171;Kota Banda Aceh;2020;dokter umum;284;jiwa
+11;Aceh;1172;Kota Sabang;2020;dokter umum;24;jiwa
+11;Aceh;1173;Kota Langsa;2020;dokter umum;79;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2020;dokter umum;1;jiwa
+11;Aceh;1175;Kota Subulussalam;2020;dokter umum;34;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2020;tenaga kesehatan masyarakat;32;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2020;tenaga kesehatan masyarakat;18;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2020;tenaga kesehatan masyarakat;43;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2020;tenaga kesehatan masyarakat;27;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2020;tenaga kesehatan masyarakat;52;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2020;tenaga kesehatan masyarakat;32;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2020;tenaga kesehatan masyarakat;89;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2020;tenaga kesehatan masyarakat;81;jiwa
+11;Aceh;1109;Kabupaten Pidie;2020;tenaga kesehatan masyarakat;71;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2020;tenaga kesehatan masyarakat;68;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2020;tenaga kesehatan masyarakat;43;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2020;tenaga kesehatan masyarakat;4;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2020;tenaga kesehatan masyarakat;26;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2020;tenaga kesehatan masyarakat;18;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2020;tenaga kesehatan masyarakat;38;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2020;tenaga kesehatan masyarakat;3;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2020;tenaga kesehatan masyarakat;25;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2020;tenaga kesehatan masyarakat;37;jiwa
+11;Aceh;1171;Kota Banda Aceh;2020;tenaga kesehatan masyarakat;75;jiwa
+11;Aceh;1172;Kota Sabang;2020;tenaga kesehatan masyarakat;1;jiwa
+11;Aceh;1173;Kota Langsa;2020;tenaga kesehatan masyarakat;24;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2020;tenaga kesehatan masyarakat;31;jiwa
+11;Aceh;1175;Kota Subulussalam;2020;tenaga kesehatan masyarakat;11;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2020;kefarmasian ;42;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2020;kefarmasian ;38;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2020;kefarmasian ;64;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2020;kefarmasian ;65;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2020;kefarmasian ;92;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2020;kefarmasian ;65;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2020;kefarmasian ;68;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2020;kefarmasian ;63;jiwa
+11;Aceh;1109;Kabupaten Pidie;2020;kefarmasian ;162;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2020;kefarmasian ;174;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2020;kefarmasian ;85;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2020;kefarmasian ;37;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2020;kefarmasian ;41;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2020;kefarmasian ;62;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2020;kefarmasian ;51;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2020;kefarmasian ;41;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2020;kefarmasian ;77;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2020;kefarmasian ;74;jiwa
+11;Aceh;1171;Kota Banda Aceh;2020;kefarmasian ;195;jiwa
+11;Aceh;1172;Kota Sabang;2020;kefarmasian ;18;jiwa
+11;Aceh;1173;Kota Langsa;2020;kefarmasian ;7;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2020;kefarmasian ;73;jiwa
+11;Aceh;1175;Kota Subulussalam;2020;kefarmasian ;55;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2020;perawat;363;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2020;perawat;343;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2020;perawat;696;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2020;perawat;498;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2020;perawat;975;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2020;perawat;619;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2020;perawat;426;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2020;perawat;355;jiwa
+11;Aceh;1109;Kabupaten Pidie;2020;perawat;167;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2020;perawat;139;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2020;perawat;1529;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2020;perawat;346;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2020;perawat;244;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2020;perawat;642;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2020;perawat;423;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2020;perawat;33;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2020;perawat;452;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2020;perawat;68;jiwa
+11;Aceh;1171;Kota Banda Aceh;2020;perawat;1788;jiwa
+11;Aceh;1172;Kota Sabang;2020;perawat;147;jiwa
+11;Aceh;1173;Kota Langsa;2020;perawat;483;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2020;perawat;933;jiwa
+11;Aceh;1175;Kota Subulussalam;2020;perawat;221;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2020;bidan;46;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2020;bidan;268;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2020;bidan;476;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2020;bidan;691;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2020;bidan;1489;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2020;bidan;87;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2020;bidan;54;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2020;bidan;743;jiwa
+11;Aceh;1109;Kabupaten Pidie;2020;bidan;227;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2020;bidan;1874;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2020;bidan;2281;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2020;bidan;42;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2020;bidan;222;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2020;bidan;659;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2020;bidan;619;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2020;bidan;332;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2020;bidan;8;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2020;bidan;735;jiwa
+11;Aceh;1171;Kota Banda Aceh;2020;bidan;511;jiwa
+11;Aceh;1172;Kota Sabang;2020;bidan;64;jiwa
+11;Aceh;1173;Kota Langsa;2020;bidan;256;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2020;bidan;729;jiwa
+11;Aceh;1175;Kota Subulussalam;2020;bidan;286;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2019;dokter umum;33;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2019;dokter umum;51;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2019;dokter umum;113;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2019;dokter umum;4;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2019;dokter umum;127;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2019;dokter umum;15;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2019;dokter umum;93;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2019;dokter umum;113;jiwa
+11;Aceh;1109;Kabupaten Pidie;2019;dokter umum;116;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2019;dokter umum;214;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2019;dokter umum;154;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2019;dokter umum;55;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2019;dokter umum;45;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2019;dokter umum;61;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2019;dokter umum;53;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2019;dokter umum;59;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2019;dokter umum;47;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2019;dokter umum;57;jiwa
+11;Aceh;1171;Kota Banda Aceh;2019;dokter umum;132;jiwa
+11;Aceh;1172;Kota Sabang;2019;dokter umum;35;jiwa
+11;Aceh;1173;Kota Langsa;2019;dokter umum;82;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2019;dokter umum;153;jiwa
+11;Aceh;1175;Kota Subulussalam;2019;dokter umum;36;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2019;tenaga kesehatan masyarakat;23;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2019;tenaga kesehatan masyarakat;19;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2019;tenaga kesehatan masyarakat;21;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2019;tenaga kesehatan masyarakat;18;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2019;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2019;tenaga kesehatan masyarakat;31;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2019;tenaga kesehatan masyarakat;74;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2019;tenaga kesehatan masyarakat;73;jiwa
+11;Aceh;1109;Kabupaten Pidie;2019;tenaga kesehatan masyarakat;4;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2019;tenaga kesehatan masyarakat;48;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2019;tenaga kesehatan masyarakat;28;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2019;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2019;tenaga kesehatan masyarakat;21;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2019;tenaga kesehatan masyarakat;11;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2019;tenaga kesehatan masyarakat;25;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2019;tenaga kesehatan masyarakat;13;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2019;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2019;tenaga kesehatan masyarakat;15;jiwa
+11;Aceh;1171;Kota Banda Aceh;2019;tenaga kesehatan masyarakat;21;jiwa
+11;Aceh;1172;Kota Sabang;2019;tenaga kesehatan masyarakat;5;jiwa
+11;Aceh;1173;Kota Langsa;2019;tenaga kesehatan masyarakat;9;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2019;tenaga kesehatan masyarakat;27;jiwa
+11;Aceh;1175;Kota Subulussalam;2019;tenaga kesehatan masyarakat;1;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2019;kefarmasian ;39;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2019;kefarmasian ;34;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2019;kefarmasian ;19;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2019;kefarmasian ;37;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2019;kefarmasian ;46;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2019;kefarmasian ;48;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2019;kefarmasian ;32;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2019;kefarmasian ;36;jiwa
+11;Aceh;1109;Kabupaten Pidie;2019;kefarmasian ;84;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2019;kefarmasian ;131;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2019;kefarmasian ;31;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2019;kefarmasian ;21;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2019;kefarmasian ;56;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2019;kefarmasian ;17;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2019;kefarmasian ;23;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2019;kefarmasian ;24;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2019;kefarmasian ;55;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2019;kefarmasian ;2;jiwa
+11;Aceh;1171;Kota Banda Aceh;2019;kefarmasian ;38;jiwa
+11;Aceh;1172;Kota Sabang;2019;kefarmasian ;13;jiwa
+11;Aceh;1173;Kota Langsa;2019;kefarmasian ;44;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2019;kefarmasian ;63;jiwa
+11;Aceh;1175;Kota Subulussalam;2019;kefarmasian ;33;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2019;perawat;274;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2019;perawat;342;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2019;perawat;289;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2019;perawat;283;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2019;perawat;575;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2019;perawat;537;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2019;perawat;222;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2019;perawat;233;jiwa
+11;Aceh;1109;Kabupaten Pidie;2019;perawat;685;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2019;perawat;855;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2019;perawat;764;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2019;perawat;258;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2019;perawat;278;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2019;perawat;276;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2019;perawat;192;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2019;perawat;184;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2019;perawat;343;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2019;perawat;218;jiwa
+11;Aceh;1171;Kota Banda Aceh;2019;perawat;219;jiwa
+11;Aceh;1172;Kota Sabang;2019;perawat;11;jiwa
+11;Aceh;1173;Kota Langsa;2019;perawat;328;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2019;perawat;917;jiwa
+11;Aceh;1175;Kota Subulussalam;2019;perawat;185;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2019;bidan;37;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2019;bidan;27;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2019;bidan;194;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2019;bidan;31;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2019;bidan;741;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2019;bidan;574;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2019;bidan;347;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2019;bidan;631;jiwa
+11;Aceh;1109;Kabupaten Pidie;2019;bidan;161;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2019;bidan;986;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2019;bidan;1.189;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2019;bidan;363;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2019;bidan;298;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2019;bidan;345;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2019;bidan;324;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2019;bidan;24;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2019;bidan;672;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2019;bidan;329;jiwa
+11;Aceh;1171;Kota Banda Aceh;2019;bidan;185;jiwa
+11;Aceh;1172;Kota Sabang;2019;bidan;62;jiwa
+11;Aceh;1173;Kota Langsa;2019;bidan;129;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2019;bidan;71;jiwa
+11;Aceh;1175;Kota Subulussalam;2019;bidan;23;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2018;dokter umum;39;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2018;dokter umum;54;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2018;dokter umum;85;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2018;dokter umum;49;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2018;dokter umum;11;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2018;dokter umum;11;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2018;dokter umum;64;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2018;dokter umum;116;jiwa
+11;Aceh;1109;Kabupaten Pidie;2018;dokter umum;188;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2018;dokter umum;149;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2018;dokter umum;114;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2018;dokter umum;57;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2018;dokter umum;6;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2018;dokter umum;74;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2018;dokter umum;64;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2018;dokter umum;69;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2018;dokter umum;81;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2018;dokter umum;72;jiwa
+11;Aceh;1171;Kota Banda Aceh;2018;dokter umum;475;jiwa
+11;Aceh;1172;Kota Sabang;2018;dokter umum;37;jiwa
+11;Aceh;1173;Kota Langsa;2018;dokter umum;78;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2018;dokter umum;54;jiwa
+11;Aceh;1175;Kota Subulussalam;2018;dokter umum;36;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2018;tenaga kesehatan masyarakat;13;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2018;tenaga kesehatan masyarakat;38;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2018;tenaga kesehatan masyarakat;31;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2018;tenaga kesehatan masyarakat;142;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2018;tenaga kesehatan masyarakat;85;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2018;tenaga kesehatan masyarakat;79;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2018;tenaga kesehatan masyarakat;13;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2018;tenaga kesehatan masyarakat;146;jiwa
+11;Aceh;1109;Kabupaten Pidie;2018;tenaga kesehatan masyarakat;141;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2018;tenaga kesehatan masyarakat;52;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2018;tenaga kesehatan masyarakat;235;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2018;tenaga kesehatan masyarakat;32;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2018;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2018;tenaga kesehatan masyarakat;47;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2018;tenaga kesehatan masyarakat;48;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2018;tenaga kesehatan masyarakat;54;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2018;tenaga kesehatan masyarakat;49;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2018;tenaga kesehatan masyarakat;52;jiwa
+11;Aceh;1171;Kota Banda Aceh;2018;tenaga kesehatan masyarakat;16;jiwa
+11;Aceh;1172;Kota Sabang;2018;tenaga kesehatan masyarakat;26;jiwa
+11;Aceh;1173;Kota Langsa;2018;tenaga kesehatan masyarakat;79;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2018;tenaga kesehatan masyarakat;93;jiwa
+11;Aceh;1175;Kota Subulussalam;2018;tenaga kesehatan masyarakat;12;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2018;kefarmasian ;25;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2018;kefarmasian ;3;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2018;kefarmasian ;45;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2018;kefarmasian ;34;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2018;kefarmasian ;32;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2018;kefarmasian ;28;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2018;kefarmasian ;24;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2018;kefarmasian ;26;jiwa
+11;Aceh;1109;Kabupaten Pidie;2018;kefarmasian ;169;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2018;kefarmasian ;65;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2018;kefarmasian ;56;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2018;kefarmasian ;21;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2018;kefarmasian ;39;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2018;kefarmasian ;35;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2018;kefarmasian ;22;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2018;kefarmasian ;3;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2018;kefarmasian ;46;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2018;kefarmasian ;28;jiwa
+11;Aceh;1171;Kota Banda Aceh;2018;kefarmasian ;151;jiwa
+11;Aceh;1172;Kota Sabang;2018;kefarmasian ;1;jiwa
+11;Aceh;1173;Kota Langsa;2018;kefarmasian ;25;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2018;kefarmasian ;18;jiwa
+11;Aceh;1175;Kota Subulussalam;2018;kefarmasian ;4;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2018;perawat;261;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2018;perawat;349;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2018;perawat;23;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2018;perawat;577;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2018;perawat;429;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2018;perawat;413;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2018;perawat;176;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2018;perawat;22;jiwa
+11;Aceh;1109;Kabupaten Pidie;2018;perawat;1349;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2018;perawat;734;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2018;perawat;779;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2018;perawat;227;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2018;perawat;44;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2018;perawat;427;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2018;perawat;182;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2018;perawat;192;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2018;perawat;354;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2018;perawat;232;jiwa
+11;Aceh;1171;Kota Banda Aceh;2018;perawat;1375;jiwa
+11;Aceh;1172;Kota Sabang;2018;perawat;172;jiwa
+11;Aceh;1173;Kota Langsa;2018;perawat;395;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2018;perawat;437;jiwa
+11;Aceh;1175;Kota Subulussalam;2018;perawat;185;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2018;bidan;315;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2018;bidan;221;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2018;bidan;277;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2018;bidan;41;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2018;bidan;45;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2018;bidan;593;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2018;bidan;298;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2018;bidan;691;jiwa
+11;Aceh;1109;Kabupaten Pidie;2018;bidan;127;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2018;bidan;977;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2018;bidan;13;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2018;bidan;316;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2018;bidan;511;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2018;bidan;469;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2018;bidan;395;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2018;bidan;253;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2018;bidan;578;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2018;bidan;354;jiwa
+11;Aceh;1171;Kota Banda Aceh;2018;bidan;357;jiwa
+11;Aceh;1172;Kota Sabang;2018;bidan;72;jiwa
+11;Aceh;1173;Kota Langsa;2018;bidan;117;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2018;bidan;394;jiwa
+11;Aceh;1175;Kota Subulussalam;2018;bidan;256;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;dokter umum;2;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;dokter umum;42;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;dokter umum;53;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;dokter umum;43;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;dokter umum;82;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;dokter umum;54;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;dokter umum;48;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;dokter umum;85;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;dokter umum;9;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;dokter umum;14;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;dokter umum;82;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;dokter umum;44;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;dokter umum;3;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;dokter umum;5;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;dokter umum;53;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;dokter umum;35;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;dokter umum;53;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;dokter umum;41;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;dokter umum;377;jiwa
+11;Aceh;1172;Kota Sabang;2017;dokter umum;22;jiwa
+11;Aceh;1173;Kota Langsa;2017;dokter umum;43;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;dokter umum;56;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;dokter umum;26;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;dokter spesialis;16;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;dokter spesialis;1;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;dokter spesialis;17;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;dokter spesialis;11;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;dokter spesialis;32;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;dokter spesialis;29;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;dokter spesialis;23;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;dokter spesialis;13;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;dokter spesialis;43;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;dokter spesialis;38;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;dokter spesialis;54;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;dokter spesialis;11;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;dokter spesialis;11;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;dokter spesialis;26;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;dokter spesialis;8;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;dokter spesialis;12;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;dokter spesialis;14;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;dokter spesialis;12;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;dokter spesialis;3;jiwa
+11;Aceh;1172;Kota Sabang;2017;dokter spesialis;11;jiwa
+11;Aceh;1173;Kota Langsa;2017;dokter spesialis;23;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;dokter spesialis;1;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;dokter spesialis;5;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;dokter gigi;4;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;dokter gigi;7;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;dokter gigi;8;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;dokter gigi;3;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;dokter gigi;2;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;dokter gigi;1;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;dokter gigi;16;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;dokter gigi;25;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;dokter gigi;15;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;dokter gigi;21;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;dokter gigi;18;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;dokter gigi;4;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;dokter gigi;8;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;dokter gigi;13;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;dokter gigi;5;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;dokter gigi;8;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;dokter gigi;12;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;dokter gigi;1;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;dokter gigi;24;jiwa
+11;Aceh;1172;Kota Sabang;2017;dokter gigi;3;jiwa
+11;Aceh;1173;Kota Langsa;2017;dokter gigi;12;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;dokter gigi;12;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;dokter gigi;7;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;tenaga kesehatan masyarakat;81;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;tenaga kesehatan masyarakat;59;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;tenaga kesehatan masyarakat;35;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;tenaga kesehatan masyarakat;98;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;tenaga kesehatan masyarakat;93;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;tenaga kesehatan masyarakat;76;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;tenaga kesehatan masyarakat;66;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;tenaga kesehatan masyarakat;141;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;tenaga kesehatan masyarakat;16;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;tenaga kesehatan masyarakat;124;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;tenaga kesehatan masyarakat;136;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;tenaga kesehatan masyarakat;44;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;tenaga kesehatan masyarakat;32;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;tenaga kesehatan masyarakat;4;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;tenaga kesehatan masyarakat;46;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;tenaga kesehatan masyarakat;52;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;tenaga kesehatan masyarakat;81;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;tenaga kesehatan masyarakat;87;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;tenaga kesehatan masyarakat;11;jiwa
+11;Aceh;1172;Kota Sabang;2017;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1173;Kota Langsa;2017;tenaga kesehatan masyarakat;87;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;tenaga kesehatan masyarakat;39;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;tenaga kesehatan masyarakat;54;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;apoteker;7;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;apoteker;5;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;apoteker;11;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;apoteker;13;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;apoteker;12;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;apoteker;11;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;apoteker;1;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;apoteker;4;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;apoteker;1;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;apoteker;25;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;apoteker;15;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;apoteker;3;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;apoteker;4;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;apoteker;13;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;apoteker;9;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;apoteker;4;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;apoteker;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;apoteker;4;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;apoteker;26;jiwa
+11;Aceh;1172;Kota Sabang;2017;apoteker;2;jiwa
+11;Aceh;1173;Kota Langsa;2017;apoteker;7;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;apoteker;2;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;apoteker;5;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;kefarmasian ;2;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;kefarmasian ;36;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;kefarmasian ;27;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;kefarmasian ;43;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;kefarmasian ;37;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;kefarmasian ;28;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;kefarmasian ;34;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;kefarmasian ;56;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;kefarmasian ;57;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;kefarmasian ;67;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;kefarmasian ;56;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;kefarmasian ;22;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;kefarmasian ;44;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;kefarmasian ;29;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;kefarmasian ;48;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;kefarmasian ;26;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;kefarmasian ;29;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;kefarmasian ;56;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;kefarmasian ;11;jiwa
+11;Aceh;1172;Kota Sabang;2017;kefarmasian ;9;jiwa
+11;Aceh;1173;Kota Langsa;2017;kefarmasian ;4;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;kefarmasian ;34;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;kefarmasian ;42;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;perawat;435;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;perawat;52;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;perawat;385;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;perawat;237;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;perawat;834;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;perawat;447;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;perawat;459;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;perawat;323;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;perawat;762;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;perawat;652;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;perawat;824;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;perawat;322;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;perawat;49;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;perawat;52;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;perawat;169;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;perawat;262;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;perawat;339;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;perawat;46;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;perawat;1239;jiwa
+11;Aceh;1172;Kota Sabang;2017;perawat;153;jiwa
+11;Aceh;1173;Kota Langsa;2017;perawat;348;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;perawat;511;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;perawat;293;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;bidan;237;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;bidan;27;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;bidan;282;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;bidan;29;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;bidan;191;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;bidan;628;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;bidan;558;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;bidan;899;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;bidan;832;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;bidan;591;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;bidan;1218;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;bidan;387;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;bidan;283;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;bidan;397;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;bidan;285;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;bidan;272;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;bidan;635;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;bidan;389;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;bidan;332;jiwa
+11;Aceh;1172;Kota Sabang;2017;bidan;77;jiwa
+11;Aceh;1173;Kota Langsa;2017;bidan;195;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;bidan;432;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;bidan;368;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;tenaga kesehatan lingkungan;17;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;tenaga kesehatan lingkungan;1;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;tenaga kesehatan lingkungan;15;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;tenaga kesehatan lingkungan;14;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;tenaga kesehatan lingkungan;21;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;tenaga kesehatan lingkungan;51;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;tenaga kesehatan lingkungan;8;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;tenaga kesehatan lingkungan;71;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;tenaga kesehatan lingkungan;144;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;tenaga kesehatan lingkungan;49;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;tenaga kesehatan lingkungan;36;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;tenaga kesehatan lingkungan;21;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;tenaga kesehatan lingkungan;12;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;tenaga kesehatan lingkungan;14;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;tenaga kesehatan lingkungan;1;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;tenaga kesehatan lingkungan;23;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;tenaga kesehatan lingkungan;23;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;tenaga kesehatan lingkungan;97;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;tenaga kesehatan lingkungan;47;jiwa
+11;Aceh;1172;Kota Sabang;2017;tenaga kesehatan lingkungan;7;jiwa
+11;Aceh;1173;Kota Langsa;2017;tenaga kesehatan lingkungan;7;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;tenaga kesehatan lingkungan;16;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;tenaga kesehatan lingkungan;13;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;teknisi gigi;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;teknisi gigi;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;teknisi gigi;1;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;teknisi gigi;3;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;teknisi gigi;1;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;teknisi gigi;8;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;teknisi gigi;21;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;teknisi gigi;32;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;teknisi gigi;6;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;teknisi gigi;7;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;teknisi gigi;1;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;teknisi gigi;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;teknisi gigi;0;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;teknisi gigi;2;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;teknisi gigi;4;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;teknisi gigi;14;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;teknisi gigi;4;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;teknisi gigi;1;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;teknisi gigi;0;jiwa
+11;Aceh;1172;Kota Sabang;2017;teknisi gigi;0;jiwa
+11;Aceh;1173;Kota Langsa;2017;teknisi gigi;1;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;teknisi gigi;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;teknisi gigi;0;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;tenaga kesehatan;19;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;tenaga kesehatan;13;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;tenaga kesehatan;18;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;tenaga kesehatan;13;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;tenaga kesehatan;33;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;tenaga kesehatan;34;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;tenaga kesehatan;3;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;tenaga kesehatan;58;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;tenaga kesehatan;38;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;tenaga kesehatan;46;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;tenaga kesehatan;33;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;tenaga kesehatan;27;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;tenaga kesehatan;1;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;tenaga kesehatan;17;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;tenaga kesehatan;21;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;tenaga kesehatan;19;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;tenaga kesehatan;16;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;tenaga kesehatan;28;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;tenaga kesehatan;58;jiwa
+11;Aceh;1172;Kota Sabang;2017;tenaga kesehatan;1;jiwa
+11;Aceh;1173;Kota Langsa;2017;tenaga kesehatan;15;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;tenaga kesehatan;15;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;tenaga kesehatan;13;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;APIKES;13;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;APIKES;9;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;APIKES;5;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;APIKES;2;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;APIKES;8;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;APIKES;11;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;APIKES;8;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;APIKES;4;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;APIKES;21;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;APIKES;1;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;APIKES;9;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;APIKES;5;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;APIKES;5;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;APIKES;4;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;APIKES;5;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;APIKES;3;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;APIKES;2;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;APIKES;12;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;APIKES;56;jiwa
+11;Aceh;1172;Kota Sabang;2017;APIKES;3;jiwa
+11;Aceh;1173;Kota Langsa;2017;APIKES;5;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;APIKES;4;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;APIKES;4;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;ATEM;3;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;ATEM;2;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;ATEM;5;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;ATEM;6;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;ATEM;12;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;ATEM;12;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;ATEM;7;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;ATEM;2;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;ATEM;8;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;ATEM;9;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;ATEM;6;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;ATEM;2;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;ATEM;2;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;ATEM;4;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;ATEM;5;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;ATEM;3;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;ATEM;4;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;ATEM;15;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;ATEM;37;jiwa
+11;Aceh;1172;Kota Sabang;2017;ATEM;4;jiwa
+11;Aceh;1173;Kota Langsa;2017;ATEM;3;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;ATEM;5;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;ATEM;4;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;analisis kesehatan;22;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;analisis kesehatan;22;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;analisis kesehatan;34;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;analisis kesehatan;26;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;analisis kesehatan;42;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;analisis kesehatan;32;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;analisis kesehatan;53;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;analisis kesehatan;51;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;analisis kesehatan;39;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;analisis kesehatan;6;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;analisis kesehatan;77;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;analisis kesehatan;29;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;analisis kesehatan;26;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;analisis kesehatan;33;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;analisis kesehatan;17;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;analisis kesehatan;24;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;analisis kesehatan;18;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;analisis kesehatan;37;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;analisis kesehatan;1;jiwa
+11;Aceh;1172;Kota Sabang;2017;analisis kesehatan;18;jiwa
+11;Aceh;1173;Kota Langsa;2017;analisis kesehatan;21;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;analisis kesehatan;13;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;analisis kesehatan;29;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2017;tenaga non kesehatan;89;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2017;tenaga non kesehatan;177;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2017;tenaga non kesehatan;112;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2017;tenaga non kesehatan;54;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2017;tenaga non kesehatan;479;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2017;tenaga non kesehatan;257;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2017;tenaga non kesehatan;161;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2017;tenaga non kesehatan;182;jiwa
+11;Aceh;1109;Kabupaten Pidie;2017;tenaga non kesehatan;248;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2017;tenaga non kesehatan;653;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2017;tenaga non kesehatan;147;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2017;tenaga non kesehatan;225;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2017;tenaga non kesehatan;69;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2017;tenaga non kesehatan;349;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2017;tenaga non kesehatan;43;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2017;tenaga non kesehatan;1;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2017;tenaga non kesehatan;55;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2017;tenaga non kesehatan;36;jiwa
+11;Aceh;1171;Kota Banda Aceh;2017;tenaga non kesehatan;194;jiwa
+11;Aceh;1172;Kota Sabang;2017;tenaga non kesehatan;34;jiwa
+11;Aceh;1173;Kota Langsa;2017;tenaga non kesehatan;136;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2017;tenaga non kesehatan;148;jiwa
+11;Aceh;1175;Kota Subulussalam;2017;tenaga non kesehatan;69;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;dokter umum;6;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;dokter umum;33;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;dokter umum;48;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;dokter umum;2;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;dokter umum;55;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;dokter umum;25;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;dokter umum;23;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;dokter umum;73;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;dokter umum;65;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;dokter umum;58;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;dokter umum;51;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;dokter umum;24;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;dokter umum;37;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;dokter umum;38;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;dokter umum;14;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;dokter umum;35;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;dokter umum;39;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;dokter umum;18;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;dokter umum;24;jiwa
+11;Aceh;1172;Kota Sabang;2016;dokter umum;9;jiwa
+11;Aceh;1173;Kota Langsa;2016;dokter umum;19;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;dokter umum;45;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;dokter umum;7;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;dokter spesialis;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;dokter spesialis;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;dokter spesialis;0;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;dokter spesialis;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;dokter spesialis;0;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;dokter spesialis;2;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;dokter spesialis;0;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;dokter spesialis;0;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;dokter spesialis;0;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;dokter spesialis;0;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;dokter spesialis;0;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;dokter spesialis;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;dokter spesialis;4;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;dokter spesialis;0;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;dokter spesialis;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;dokter spesialis;0;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;dokter spesialis;0;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;dokter spesialis;0;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;dokter spesialis;0;jiwa
+11;Aceh;1172;Kota Sabang;2016;dokter spesialis;2;jiwa
+11;Aceh;1173;Kota Langsa;2016;dokter spesialis;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;dokter spesialis;1;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;dokter spesialis;2;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;dokter gigi;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;dokter gigi;3;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;dokter gigi;8;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;dokter gigi;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;dokter gigi;15;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;dokter gigi;6;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;dokter gigi;5;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;dokter gigi;17;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;dokter gigi;8;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;dokter gigi;16;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;dokter gigi;17;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;dokter gigi;1;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;dokter gigi;8;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;dokter gigi;7;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;dokter gigi;1;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;dokter gigi;7;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;dokter gigi;8;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;dokter gigi;13;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;dokter gigi;9;jiwa
+11;Aceh;1172;Kota Sabang;2016;dokter gigi;2;jiwa
+11;Aceh;1173;Kota Langsa;2016;dokter gigi;6;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;dokter gigi;9;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;dokter gigi;0;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;S2 Kesehatan MKes/MPh;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;S2 Kesehatan MKes/MPh;14;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;S2 Kesehatan MKes/MPh;6;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;S2 Kesehatan MKes/MPh;5;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;S2 Kesehatan MKes/MPh;15;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;S2 Kesehatan MKes/MPh;27;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;S2 Kesehatan MKes/MPh;2;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;S2 Kesehatan MKes/MPh;28;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;S2 Kesehatan MKes/MPh;9;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;S2 Kesehatan MKes/MPh;14;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;S2 Kesehatan MKes/MPh;18;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;S2 Kesehatan MKes/MPh;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;S2 Kesehatan MKes/MPh;6;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;S2 Kesehatan MKes/MPh;15;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;S2 Kesehatan MKes/MPh;1;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;S2 Kesehatan MKes/MPh;5;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;S2 Kesehatan MKes/MPh;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;S2 Kesehatan MKes/MPh;4;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;S2 Kesehatan MKes/MPh;23;jiwa
+11;Aceh;1172;Kota Sabang;2016;S2 Kesehatan MKes/MPh;0;jiwa
+11;Aceh;1173;Kota Langsa;2016;S2 Kesehatan MKes/MPh;29;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;S2 Kesehatan MKes/MPh;26;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;S2 Kesehatan MKes/MPh;2;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;tenaga kesehatan masyarakat;66;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;tenaga kesehatan masyarakat;35;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;tenaga kesehatan masyarakat;35;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;tenaga kesehatan masyarakat;71;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;tenaga kesehatan masyarakat;58;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;tenaga kesehatan masyarakat;77;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;tenaga kesehatan masyarakat;19;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;tenaga kesehatan masyarakat;97;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;tenaga kesehatan masyarakat;119;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;tenaga kesehatan masyarakat;92;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;tenaga kesehatan masyarakat;129;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;tenaga kesehatan masyarakat;43;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;tenaga kesehatan masyarakat;26;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;tenaga kesehatan masyarakat;47;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;tenaga kesehatan masyarakat;24;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;tenaga kesehatan masyarakat;5;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;tenaga kesehatan masyarakat;61;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;tenaga kesehatan masyarakat;53;jiwa
+11;Aceh;1172;Kota Sabang;2016;tenaga kesehatan masyarakat;29;jiwa
+11;Aceh;1173;Kota Langsa;2016;tenaga kesehatan masyarakat;73;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;tenaga kesehatan masyarakat;73;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;tenaga kesehatan masyarakat;1;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;apoteker;3;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;apoteker;3;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;apoteker;3;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;apoteker;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;apoteker;2;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;apoteker;7;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;apoteker;5;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;apoteker;4;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;apoteker;2;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;apoteker;6;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;apoteker;1;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;apoteker;1;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;apoteker;2;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;apoteker;6;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;apoteker;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;apoteker;6;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;apoteker;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;apoteker;1;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;apoteker;2;jiwa
+11;Aceh;1172;Kota Sabang;2016;apoteker;1;jiwa
+11;Aceh;1173;Kota Langsa;2016;apoteker;1;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;apoteker;2;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;apoteker;1;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;kefarmasian;9;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;kefarmasian;19;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;kefarmasian;3;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;kefarmasian;5;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;kefarmasian;18;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;kefarmasian;2;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;kefarmasian;13;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;kefarmasian;23;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;kefarmasian;41;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;kefarmasian;45;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;kefarmasian;25;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;kefarmasian;13;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;kefarmasian;27;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;kefarmasian;14;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;kefarmasian;8;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;kefarmasian;25;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;kefarmasian;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;kefarmasian;13;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;kefarmasian;21;jiwa
+11;Aceh;1172;Kota Sabang;2016;kefarmasian;9;jiwa
+11;Aceh;1173;Kota Langsa;2016;kefarmasian;19;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;kefarmasian;2;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;kefarmasian;7;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;perawat;83;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;perawat;261;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;perawat;193;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;perawat;25;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;perawat;33;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;perawat;121;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;perawat;9;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;perawat;267;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;perawat;729;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;perawat;414;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;perawat;479;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;perawat;28;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;perawat;252;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;perawat;157;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;perawat;8;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;perawat;174;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;perawat;276;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;perawat;23;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;perawat;82;jiwa
+11;Aceh;1172;Kota Sabang;2016;perawat;64;jiwa
+11;Aceh;1173;Kota Langsa;2016;perawat;13;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;perawat;254;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;perawat;68;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;bidan;143;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;bidan;26;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;bidan;248;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;bidan;25;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;bidan;373;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;bidan;447;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;bidan;262;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;bidan;373;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;bidan;1258;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;bidan;97;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;bidan;169;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;bidan;318;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;bidan;328;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;bidan;19;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;bidan;142;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;bidan;229;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;bidan;692;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;bidan;367;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;bidan;184;jiwa
+11;Aceh;1172;Kota Sabang;2016;bidan;48;jiwa
+11;Aceh;1173;Kota Langsa;2016;bidan;137;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;bidan;352;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;bidan;26;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;teknisi gigi;11;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;teknisi gigi;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;teknisi gigi;6;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;teknisi gigi;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;teknisi gigi;0;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;teknisi gigi;8;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;teknisi gigi;9;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;teknisi gigi;41;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;teknisi gigi;9;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;teknisi gigi;3;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;teknisi gigi;0;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;teknisi gigi;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;teknisi gigi;9;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;teknisi gigi;0;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;teknisi gigi;3;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;teknisi gigi;1;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;teknisi gigi;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;teknisi gigi;3;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;teknisi gigi;0;jiwa
+11;Aceh;1172;Kota Sabang;2016;teknisi gigi;0;jiwa
+11;Aceh;1173;Kota Langsa;2016;teknisi gigi;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;teknisi gigi;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;teknisi gigi;1;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;tenaga kesehatan;2;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;tenaga kesehatan;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;tenaga kesehatan;3;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;tenaga kesehatan;3;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;tenaga kesehatan;1;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;tenaga kesehatan;9;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;tenaga kesehatan;4;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;tenaga kesehatan;25;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;tenaga kesehatan;19;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;tenaga kesehatan;26;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;tenaga kesehatan;4;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;tenaga kesehatan;12;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;tenaga kesehatan;4;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;tenaga kesehatan;9;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;tenaga kesehatan;17;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;tenaga kesehatan;3;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;tenaga kesehatan;12;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;tenaga kesehatan;18;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;tenaga kesehatan;1;jiwa
+11;Aceh;1172;Kota Sabang;2016;tenaga kesehatan;3;jiwa
+11;Aceh;1173;Kota Langsa;2016;tenaga kesehatan;15;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;tenaga kesehatan;15;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;tenaga kesehatan;4;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;ATRO;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;ATRO;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;ATRO;6;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;ATRO;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;ATRO;0;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;ATRO;0;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;ATRO;0;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;ATRO;0;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;ATRO;0;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;ATRO;0;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;ATRO;6;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;ATRO;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;ATRO;0;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;ATRO;1;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;ATRO;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;ATRO;0;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;ATRO;0;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;ATRO;0;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;ATRO;2;jiwa
+11;Aceh;1172;Kota Sabang;2016;ATRO;0;jiwa
+11;Aceh;1173;Kota Langsa;2016;ATRO;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;ATRO;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;ATRO;0;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;APIKES;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;APIKES;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;APIKES;1;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;APIKES;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;APIKES;0;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;APIKES;0;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;APIKES;0;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;APIKES;0;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;APIKES;0;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;APIKES;0;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;APIKES;1;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;APIKES;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;APIKES;0;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;APIKES;0;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;APIKES;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;APIKES;0;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;APIKES;0;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;APIKES;0;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;APIKES;2;jiwa
+11;Aceh;1172;Kota Sabang;2016;APIKES;0;jiwa
+11;Aceh;1173;Kota Langsa;2016;APIKES;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;APIKES;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;APIKES;0;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;ATEM;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;ATEM;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;ATEM;9;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;ATEM;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;ATEM;0;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;ATEM;0;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;ATEM;4;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;ATEM;0;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;ATEM;0;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;ATEM;0;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;ATEM;0;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;ATEM;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;ATEM;0;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;ATEM;1;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;ATEM;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;ATEM;0;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;ATEM;2;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;ATEM;0;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;ATEM;1;jiwa
+11;Aceh;1172;Kota Sabang;2016;ATEM;0;jiwa
+11;Aceh;1173;Kota Langsa;2016;ATEM;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;ATEM;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;ATEM;0;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;analisis kesehatan;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;analisis kesehatan;9;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;analisis kesehatan;8;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;analisis kesehatan;2;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;analisis kesehatan;17;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;analisis kesehatan;8;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;analisis kesehatan;7;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;analisis kesehatan;13;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;analisis kesehatan;6;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;analisis kesehatan;17;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;analisis kesehatan;32;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;analisis kesehatan;7;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;analisis kesehatan;2;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;analisis kesehatan;7;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;analisis kesehatan;1;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;analisis kesehatan;1;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;analisis kesehatan;8;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;analisis kesehatan;14;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;analisis kesehatan;21;jiwa
+11;Aceh;1172;Kota Sabang;2016;analisis kesehatan;1;jiwa
+11;Aceh;1173;Kota Langsa;2016;analisis kesehatan;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;analisis kesehatan;11;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;analisis kesehatan;5;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2016;analisis kesehatan;112;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2016;tenaga non kesehatan;12;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2016;tenaga non kesehatan;12;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2016;tenaga non kesehatan;28;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2016;tenaga non kesehatan;258;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2016;tenaga non kesehatan;85;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2016;tenaga non kesehatan;72;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2016;tenaga non kesehatan;254;jiwa
+11;Aceh;1109;Kabupaten Pidie;2016;tenaga non kesehatan;215;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2016;tenaga non kesehatan;29;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2016;tenaga non kesehatan;294;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2016;tenaga non kesehatan;84;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2016;tenaga non kesehatan;131;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2016;tenaga non kesehatan;0;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2016;tenaga non kesehatan;39;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2016;tenaga non kesehatan;184;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2016;tenaga non kesehatan;89;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2016;tenaga non kesehatan;89;jiwa
+11;Aceh;1171;Kota Banda Aceh;2016;tenaga non kesehatan;112;jiwa
+11;Aceh;1172;Kota Sabang;2016;tenaga non kesehatan;0;jiwa
+11;Aceh;1173;Kota Langsa;2016;tenaga non kesehatan;2;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2016;tenaga non kesehatan;255;jiwa
+11;Aceh;1175;Kota Subulussalam;2016;tenaga non kesehatan;6;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;dokter umum;18;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;dokter umum;44;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;dokter umum;64;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;dokter umum;46;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;dokter umum;68;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;dokter umum;49;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;dokter umum;51;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;dokter umum;95;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;dokter umum;52;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;dokter umum;98;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;dokter umum;89;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;dokter umum;41;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;dokter umum;35;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;dokter umum;49;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;dokter umum;29;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;dokter umum;36;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;dokter umum;54;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;dokter umum;35;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;dokter umum;45;jiwa
+11;Aceh;1172;Kota Sabang;2015;dokter umum;25;jiwa
+11;Aceh;1173;Kota Langsa;2015;dokter umum;34;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;dokter umum;17;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;dokter umum;15;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;dokter spesialis;6;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;dokter spesialis;8;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;dokter spesialis;1;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;dokter spesialis;13;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;dokter spesialis;2;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;dokter spesialis;29;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;dokter spesialis;18;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;dokter spesialis;1;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;dokter spesialis;29;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;dokter spesialis;32;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;dokter spesialis;31;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;dokter spesialis;1;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;dokter spesialis;3;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;dokter spesialis;14;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;dokter spesialis;7;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;dokter spesialis;6;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;dokter spesialis;8;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;dokter spesialis;9;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;dokter spesialis;5;jiwa
+11;Aceh;1172;Kota Sabang;2015;dokter spesialis;1;jiwa
+11;Aceh;1173;Kota Langsa;2015;dokter spesialis;25;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;dokter spesialis;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;dokter spesialis;5;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;dokter gigi;4;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;dokter gigi;7;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;dokter gigi;1;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;dokter gigi;5;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;dokter gigi;2;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;dokter gigi;8;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;dokter gigi;5;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;dokter gigi;19;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;dokter gigi;8;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;dokter gigi;22;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;dokter gigi;15;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;dokter gigi;4;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;dokter gigi;7;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;dokter gigi;13;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;dokter gigi;2;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;dokter gigi;7;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;dokter gigi;14;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;dokter gigi;8;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;dokter gigi;16;jiwa
+11;Aceh;1172;Kota Sabang;2015;dokter gigi;7;jiwa
+11;Aceh;1173;Kota Langsa;2015;dokter gigi;12;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;dokter gigi;9;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;dokter gigi;5;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;tenaga kesehatan masyarakat;3;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;tenaga kesehatan masyarakat;47;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;tenaga kesehatan masyarakat;6;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;tenaga kesehatan masyarakat;17;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;tenaga kesehatan masyarakat;92;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;tenaga kesehatan masyarakat;98;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;tenaga kesehatan masyarakat;74;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;tenaga kesehatan masyarakat;156;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;tenaga kesehatan masyarakat;354;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;tenaga kesehatan masyarakat;194;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;tenaga kesehatan masyarakat;286;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;tenaga kesehatan masyarakat;38;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;tenaga kesehatan masyarakat;21;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;tenaga kesehatan masyarakat;44;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;tenaga kesehatan masyarakat;75;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;tenaga kesehatan masyarakat;33;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;tenaga kesehatan masyarakat;62;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;tenaga kesehatan masyarakat;169;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;tenaga kesehatan masyarakat;51;jiwa
+11;Aceh;1172;Kota Sabang;2015;tenaga kesehatan masyarakat;52;jiwa
+11;Aceh;1173;Kota Langsa;2015;tenaga kesehatan masyarakat;1;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;tenaga kesehatan masyarakat;7;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;tenaga kesehatan masyarakat;12;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;apoteker;1;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;apoteker;2;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;apoteker;8;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;apoteker;8;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;apoteker;8;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;apoteker;7;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;apoteker;1;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;apoteker;3;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;apoteker;7;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;apoteker;11;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;apoteker;7;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;apoteker;2;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;apoteker;3;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;apoteker;7;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;apoteker;1;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;apoteker;3;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;apoteker;2;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;apoteker;1;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;apoteker;3;jiwa
+11;Aceh;1172;Kota Sabang;2015;apoteker;7;jiwa
+11;Aceh;1173;Kota Langsa;2015;apoteker;9;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;apoteker;3;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;apoteker;3;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;kefarmasian;13;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;kefarmasian;23;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;kefarmasian;21;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;kefarmasian;25;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;kefarmasian;56;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;kefarmasian;34;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;kefarmasian;54;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;kefarmasian;48;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;kefarmasian;49;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;kefarmasian;66;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;kefarmasian;37;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;kefarmasian;2;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;kefarmasian;28;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;kefarmasian;2;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;kefarmasian;24;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;kefarmasian;18;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;kefarmasian;18;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;kefarmasian;34;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;kefarmasian;47;jiwa
+11;Aceh;1172;Kota Sabang;2015;kefarmasian;18;jiwa
+11;Aceh;1173;Kota Langsa;2015;kefarmasian;41;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;kefarmasian;24;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;kefarmasian;15;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;perawat;163;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;perawat;36;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;perawat;362;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;perawat;35;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;perawat;658;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;perawat;421;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;perawat;433;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;perawat;266;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;perawat;595;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;perawat;751;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;perawat;496;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;perawat;385;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;perawat;214;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;perawat;399;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;perawat;328;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;perawat;182;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;perawat;244;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;perawat;211;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;perawat;134;jiwa
+11;Aceh;1172;Kota Sabang;2015;perawat;198;jiwa
+11;Aceh;1173;Kota Langsa;2015;perawat;36;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;perawat;246;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;perawat;134;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;bidan;225;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;bidan;214;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;bidan;28;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;bidan;21;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;bidan;942;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;bidan;587;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;bidan;385;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;bidan;867;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;bidan;941;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;bidan;169;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;bidan;1323;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;bidan;192;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;bidan;221;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;bidan;339;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;bidan;435;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;bidan;197;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;bidan;311;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;bidan;386;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;bidan;182;jiwa
+11;Aceh;1172;Kota Sabang;2015;bidan;118;jiwa
+11;Aceh;1173;Kota Langsa;2015;bidan;235;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;bidan;199;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;bidan;146;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;AKG;1;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;AKG;7;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;AKG;0;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;AKG;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;AKG;6;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;AKG;1;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;AKG;7;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;AKG;0;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;AKG;2;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;AKG;0;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;AKG;0;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;AKG;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;AKG;0;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;AKG;2;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;AKG;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;AKG;0;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;AKG;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;AKG;0;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;AKG;8;jiwa
+11;Aceh;1172;Kota Sabang;2015;AKG;0;jiwa
+11;Aceh;1173;Kota Langsa;2015;AKG;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;AKG;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;AKG;2;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;tenaga kesehatan;9;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;tenaga kesehatan;9;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;tenaga kesehatan;14;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;tenaga kesehatan;16;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;tenaga kesehatan;21;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;tenaga kesehatan;27;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;tenaga kesehatan;16;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;tenaga kesehatan;47;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;tenaga kesehatan;2;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;tenaga kesehatan;32;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;tenaga kesehatan;21;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;tenaga kesehatan;13;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;tenaga kesehatan;7;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;tenaga kesehatan;1;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;tenaga kesehatan;18;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;tenaga kesehatan;1;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;tenaga kesehatan;14;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;tenaga kesehatan;24;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;tenaga kesehatan;19;jiwa
+11;Aceh;1172;Kota Sabang;2015;tenaga kesehatan;13;jiwa
+11;Aceh;1173;Kota Langsa;2015;tenaga kesehatan;16;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;tenaga kesehatan;12;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;tenaga kesehatan;9;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;ATRO;9;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;ATRO;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;ATRO;8;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;ATRO;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;ATRO;8;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;ATRO;14;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;ATRO;11;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;ATRO;2;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;ATRO;4;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;ATRO;14;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;ATRO;0;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;ATRO;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;ATRO;6;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;ATRO;4;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;ATRO;7;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;ATRO;6;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;ATRO;0;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;ATRO;8;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;ATRO;5;jiwa
+11;Aceh;1172;Kota Sabang;2015;ATRO;3;jiwa
+11;Aceh;1173;Kota Langsa;2015;ATRO;1;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;ATRO;2;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;ATRO;4;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;APIKES;4;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;APIKES;8;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;APIKES;1;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;APIKES;1;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;APIKES;9;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;APIKES;9;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;APIKES;1;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;APIKES;3;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;APIKES;16;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;APIKES;1;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;APIKES;4;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;APIKES;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;APIKES;3;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;APIKES;4;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;APIKES;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;APIKES;1;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;APIKES;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;APIKES;7;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;APIKES;15;jiwa
+11;Aceh;1172;Kota Sabang;2015;APIKES;4;jiwa
+11;Aceh;1173;Kota Langsa;2015;APIKES;8;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;APIKES;9;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;APIKES;3;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;ATEM;0;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;ATEM;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;ATEM;5;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;ATEM;2;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;ATEM;9;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;ATEM;1;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;ATEM;6;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;ATEM;2;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;ATEM;7;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;ATEM;9;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;ATEM;1;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;ATEM;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;ATEM;1;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;ATEM;2;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;ATEM;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;ATEM;2;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;ATEM;4;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;ATEM;4;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;ATEM;7;jiwa
+11;Aceh;1172;Kota Sabang;2015;ATEM;5;jiwa
+11;Aceh;1173;Kota Langsa;2015;ATEM;4;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;ATEM;3;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;ATEM;2;jiwa
+11;Aceh;1101;Kabupaten Simeulue;2015;tenaga non kesehatan;5;jiwa
+11;Aceh;1102;Kabupaten Aceh Singkil;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1103;Kabupaten Aceh Selatan;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1104;Kabupaten Aceh Tenggara;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1105;Kabupaten Aceh Timur;2015;tenaga non kesehatan;6;jiwa
+11;Aceh;1106;Kabupaten Aceh Tengah;2015;tenaga non kesehatan;87;jiwa
+11;Aceh;1107;Kabupaten Aceh Barat;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1108;Kabupaten Aceh Besar;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1109;Kabupaten Pidie;2015;tenaga non kesehatan;7;jiwa
+11;Aceh;1110;Kabupaten Bireuen;2015;tenaga non kesehatan;5;jiwa
+11;Aceh;1111;Kabupaten Aceh Utara;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1112;Kabupatan Aceh Barat Daya;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1113;Kabupaten Gayo Lues;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1114;Kabupaten Aceh Tamiang;2015;tenaga non kesehatan;8;jiwa
+11;Aceh;1115;Kabupaten Nagan Raya;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1116;Kabupaten Aceh Jaya;2015;tenaga non kesehatan;176;jiwa
+11;Aceh;1117;Kabupaten Bener Meriah;2015;tenaga non kesehatan;3;jiwa
+11;Aceh;1118;Kabupaten Pidie Jaya;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1171;Kota Banda Aceh;2015;tenaga non kesehatan;2;jiwa
+11;Aceh;1172;Kota Sabang;2015;tenaga non kesehatan;3;jiwa
+11;Aceh;1173;Kota Langsa;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1174;Kota Lhokseumawe;2015;tenaga non kesehatan;0;jiwa
+11;Aceh;1175;Kota Subulussalam;2015;tenaga non kesehatan;17;jiwa
