@@ -8,6 +8,12 @@ use App\Http\Controllers\Api\LocationController;
 // ==========================================
 // ROUTE PUBLIK (Bisa diakses tanpa login)
 // ==========================================
+Route::prefix('v1/auth')->group(function () {
+    Route::post('/register', [AuthController::class, 'register']);
+    Route::post('/login', [AuthController::class, 'login']);
+});
+
+// URL lama dipertahankan agar integrasi yang sudah ada tetap berjalan.
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -38,4 +44,19 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('pendidikan')->group(base_path('routes/api/pendidikan.php'));
     Route::prefix('pertanian')->group(base_path('routes/api/pertanian.php'));
     Route::prefix('kebencanaan')->group(base_path('routes/api/kebencanaan.php'));
+
+    // API v1 untuk area Backend Dev 1. Route Dev 2 di atas tetap pada
+    // registrasi dan prefix yang sudah disepakati tim.
+    Route::prefix('v1')->name('v1.')->group(function () {
+        Route::prefix('auth')->group(function () {
+            Route::post('/logout', [AuthController::class, 'logout']);
+            Route::get('/user', function (Request $request) {
+                return $request->user();
+            });
+        });
+
+        Route::prefix('dashboard')->group(base_path('routes/api/dashboard.php'));
+        Route::prefix('kependudukan')->group(base_path('routes/api/kependudukan.php'));
+        Route::prefix('kesehatan')->group(base_path('routes/api/kesehatan.php'));
+    });
 });
