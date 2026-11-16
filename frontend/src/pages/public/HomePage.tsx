@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import HomeBasemap from '../../components/public/HomeBasemap';
 import ButtonLink from '../../components/ui/ButtonLink';
+import Reveal from '../../components/ui/Reveal';
 import StatusTag from '../../components/ui/StatusTag';
 import { publicDomains } from '../../data/publicDomains';
 
@@ -22,20 +23,27 @@ export default function HomePage() {
       >
         <div className="container-content grid lg:grid-cols-12 lg:items-stretch">
           <div className="py-12 md:py-16 lg:col-span-5 lg:py-24 lg:pr-10">
-            <p className="text-sm font-semibold text-ink-2">
+            <p className="animate-rise-in text-sm font-semibold text-ink-2">
               Geoportal Provinsi Aceh
             </p>
             <h1
               id="home-hero-heading"
-              className="mt-5 max-w-[15ch] text-hero text-ink"
+              className="mt-5 max-w-[15ch] animate-rise-in text-hero text-ink"
+              style={{ animationDelay: '60ms' }}
             >
               Membaca Aceh lewat peta dan data
             </h1>
-            <p className="mt-6 max-w-prose text-lg text-ink-2">
+            <p
+              className="mt-6 max-w-prose animate-rise-in text-lg text-ink-2"
+              style={{ animationDelay: '120ms' }}
+            >
               Portal publik untuk membaca peta dasar, hasil analisis, dan status
               data lima layanan di Aceh.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div
+              className="mt-8 flex animate-rise-in flex-col gap-3 sm:flex-row"
+              style={{ animationDelay: '180ms' }}
+            >
               <ButtonLink to="/webgis">Buka WebGIS</ButtonLink>
               <ButtonLink to="/analitik" variant="secondary">
                 Lihat analitik
@@ -44,18 +52,27 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-col justify-between bg-forest p-6 text-paper md:p-8 lg:col-span-7 lg:min-h-[560px] lg:p-10 xl:-mr-[calc((100vw-1280px)/2+3rem)]">
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-forest-soft/40 pb-5">
+            <div
+              className="flex animate-rise-in flex-wrap items-center justify-between gap-3 border-b border-forest-soft/40 pb-5"
+              style={{ animationDelay: '100ms' }}
+            >
               <p className="text-sm font-semibold text-paper">Provinsi Aceh</p>
               <p className="text-sm text-forest-soft">Data 2024</p>
             </div>
 
-            <div className="py-10 lg:py-16">
+            <div
+              className="animate-rise-in py-10 lg:py-16"
+              style={{ animationDelay: '180ms' }}
+            >
               <p className="font-display text-[clamp(5rem,13vw,11rem)] leading-none tracking-display text-paper">
                 Aceh
               </p>
             </div>
 
-            <div>
+            <div
+              className="animate-rise-in"
+              style={{ animationDelay: '260ms' }}
+            >
               <div className="h-px bg-forest-soft/40" />
               <dl className="mt-5 grid gap-4 sm:grid-cols-3">
                 <div>
@@ -88,7 +105,7 @@ export default function HomePage() {
         className="border-b border-line bg-surface-soft"
       >
         <div className="container-content py-12 md:py-16 lg:py-24">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+          <Reveal className="grid gap-10 lg:grid-cols-12 lg:items-start">
             <figure className="lg:col-span-7">
               <HomeBasemap />
               <figcaption className="mt-3 text-xs text-ink-3">
@@ -124,17 +141,17 @@ export default function HomePage() {
               </p>
               <div className="mt-6">
                 <ButtonLink to="/analitik/kependudukan" variant="text">
-                  Lihat status kependudukan
+                  Lihat analisis kependudukan
                 </ButtonLink>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section aria-labelledby="home-domains-heading" className="border-b border-line">
         <div className="container-content py-12 md:py-16 lg:py-24">
-          <div className="max-w-prose">
+          <Reveal className="max-w-prose">
             <p className="text-sm font-semibold text-ink-2">Lima layanan</p>
             <h2
               id="home-domains-heading"
@@ -147,9 +164,12 @@ export default function HomePage() {
               hasil clustering tersimpan. Empat layanan lain menunggu model atau
               dataset.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="mt-8 bg-forest p-6 text-paper md:p-10 lg:mt-12 lg:p-12">
+          <Reveal
+            className="mt-8 bg-forest p-6 text-paper md:p-10 lg:mt-12 lg:p-12"
+            delay={80}
+          >
             <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
               <div className="lg:col-span-7">
                 <span className="inline-flex max-w-full border border-forest-soft px-2.5 py-1 text-left text-sm font-semibold text-paper">
@@ -166,7 +186,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-6">
                   <ButtonLink to={kependudukan.href} variant="inverse">
-                    Buka status kependudukan
+                    Buka analisis kependudukan
                   </ButtonLink>
                 </div>
               </div>
@@ -184,13 +204,14 @@ export default function HomePage() {
                   ))}
               </dl>
             </div>
-          </div>
+          </Reveal>
 
-          <ul className="mt-8 border-t border-line">
+          <Reveal className="mt-8" delay={140}>
+            <ul className="border-t border-line">
             {otherDomains.map((domain) => (
               <li
                 key={domain.slug}
-                className="grid gap-4 border-b border-line py-6 md:grid-cols-12 md:items-start md:gap-6 md:py-7"
+                className="grid gap-4 border-b border-line py-6 transition-colors duration-150 ease-editorial hover:bg-surface-soft md:grid-cols-12 md:items-start md:gap-6 md:py-7"
               >
                 <div className="md:col-span-3">
                   <h3 className="font-display text-2xl text-ink">{domain.name}</h3>
@@ -205,20 +226,21 @@ export default function HomePage() {
                   <Link
                     to={domain.href}
                     aria-label={`Buka status ${domain.name}`}
-                    className="inline-flex min-h-11 items-center text-sm font-semibold text-forest underline-offset-4 hover:underline"
+                    className="inline-flex min-h-11 items-center text-sm font-semibold text-forest underline-offset-4 transition-colors duration-200 ease-editorial hover:underline"
                   >
                     Buka status {domain.name}
                   </Link>
                 </div>
               </li>
             ))}
-          </ul>
+            </ul>
+          </Reveal>
         </div>
       </section>
 
       <section aria-labelledby="home-status-heading" className="bg-surface-soft">
         <div className="container-content py-12 md:py-16 lg:py-24">
-          <div className="max-w-prose">
+          <Reveal className="max-w-prose">
             <p className="text-sm font-semibold text-ink-2">Status data</p>
             <h2
               id="home-status-heading"
@@ -230,9 +252,9 @@ export default function HomePage() {
               Ringkasan ini mengikuti dataset dan model yang ada di repositori.
               Tidak ada angka yang ditampilkan tanpa sumber.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="mt-8 hidden border-y border-line md:block">
+          <Reveal className="mt-8 hidden border-y border-line md:block" delay={80}>
             <table className="w-full border-collapse text-left text-sm">
               <caption className="sr-only">
                 Status ketersediaan data lima domain layanan
@@ -255,7 +277,10 @@ export default function HomePage() {
               </thead>
               <tbody>
                 {publicDomains.map((domain) => (
-                  <tr key={domain.slug} className="border-b border-line">
+                  <tr
+                    key={domain.slug}
+                    className="border-b border-line transition-colors duration-150 ease-editorial hover:bg-surface"
+                  >
                     <th scope="row" className="py-4 pr-4 font-semibold text-ink">
                       {domain.name}
                     </th>
@@ -265,7 +290,7 @@ export default function HomePage() {
                       <Link
                         to={domain.href}
                         aria-label={`Buka status ${domain.name}`}
-                        className="inline-flex min-h-11 items-center text-sm font-semibold text-forest underline-offset-4 hover:underline"
+                        className="inline-flex min-h-11 items-center text-sm font-semibold text-forest underline-offset-4 transition-colors duration-200 ease-editorial hover:underline"
                       >
                         Buka status
                       </Link>
@@ -274,17 +299,21 @@ export default function HomePage() {
                 ))}
               </tbody>
             </table>
-          </div>
+          </Reveal>
 
-          <ul className="mt-8 divide-y divide-line border-y border-line md:hidden">
+          <Reveal className="mt-8 md:hidden" delay={80}>
+            <ul className="divide-y divide-line border-y border-line">
             {publicDomains.map((domain) => (
-              <li key={domain.slug} className="py-5">
+              <li
+                key={domain.slug}
+                className="py-5 transition-colors duration-150 ease-editorial hover:bg-surface"
+              >
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="font-display text-xl text-ink">{domain.name}</h3>
                   <Link
                     to={domain.href}
                     aria-label={`Buka status ${domain.name}`}
-                    className="inline-flex min-h-11 items-center text-sm font-semibold text-forest underline-offset-4 hover:underline"
+                    className="inline-flex min-h-11 items-center text-sm font-semibold text-forest underline-offset-4 transition-colors duration-200 ease-editorial hover:underline"
                   >
                     Buka status
                   </Link>
@@ -301,7 +330,8 @@ export default function HomePage() {
                 </dl>
               </li>
             ))}
-          </ul>
+            </ul>
+          </Reveal>
 
           <p className="mt-6 max-w-prose text-xs text-ink-3">
             Sumber: dataset dan metadata pada repositori layanan analitik. Rincian

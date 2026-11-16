@@ -4,9 +4,13 @@ import Dashboard from './pages/Dashboard';
 import DashboardLayout from './components/layout/DashboardLayout';
 import PublicLayout from './components/layout/PublicLayout';
 import AnalyticsIndexPage from './pages/public/AnalyticsIndexPage';
+import AnalyticsKependudukanPage from './pages/public/AnalyticsKependudukanPage';
+import DataCatalogPage from './pages/public/DataCatalogPage';
+import DatasetDetailPage from './pages/public/DatasetDetailPage';
 import DomainStatusPage from './pages/public/DomainStatusPage';
 import HomePage from './pages/public/HomePage';
-import PublicPlaceholderPage from './pages/public/PublicPlaceholderPage';
+import ServiceCatalogPage from './pages/public/ServiceCatalogPage';
+import WebGisPage from './pages/public/WebGisPage';
 import { useAuthStore } from './store/authStore';
 
 // Import halaman domain
@@ -32,19 +36,14 @@ export default function App() {
 
         <Route element={<PublicLayout />}>
           <Route index element={<HomePage />} />
-          <Route
-            path="webgis"
-            element={
-              <PublicPlaceholderPage
-                title="WebGIS"
-                description="Halaman WebGIS akan menampilkan peta dasar dan lapisan data yang tersedia."
-              />
-            }
-          />
+          <Route path="webgis" element={<WebGisPage />} />
+          <Route path="layanan" element={<ServiceCatalogPage />} />
+          <Route path="data" element={<DataCatalogPage />} />
+          <Route path="data/:slug" element={<DatasetDetailPage />} />
           <Route path="analitik" element={<AnalyticsIndexPage />} />
           <Route
             path="analitik/kependudukan"
-            element={<DomainStatusPage slug="kependudukan" />}
+            element={<AnalyticsKependudukanPage />}
           />
           <Route
             path="analitik/kesehatan"

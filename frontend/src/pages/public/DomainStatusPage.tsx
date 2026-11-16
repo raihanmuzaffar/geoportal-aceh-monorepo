@@ -1,5 +1,6 @@
 import { Link, Navigate } from 'react-router-dom';
 import ButtonLink from '../../components/ui/ButtonLink';
+import Reveal from '../../components/ui/Reveal';
 import StatusTag from '../../components/ui/StatusTag';
 import { getPublicDomain } from '../../data/publicDomains';
 
@@ -19,13 +20,19 @@ export default function DomainStatusPage({ slug }: DomainStatusPageProps) {
       <nav aria-label="Breadcrumb" className="text-sm text-ink-2">
         <ol className="flex flex-wrap items-center gap-2">
           <li>
-            <Link to="/" className="underline-offset-4 hover:underline">
+            <Link
+              to="/"
+              className="underline-offset-4 transition-colors duration-200 ease-editorial hover:underline"
+            >
               Home
             </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <Link to="/analitik" className="underline-offset-4 hover:underline">
+            <Link
+              to="/analitik"
+              className="underline-offset-4 transition-colors duration-200 ease-editorial hover:underline"
+            >
               Analitik
             </Link>
           </li>
@@ -45,7 +52,7 @@ export default function DomainStatusPage({ slug }: DomainStatusPageProps) {
         <p className="mt-5 text-lg text-ink-2">{domain.summary}</p>
       </header>
 
-      <div className="mt-10 grid gap-8 border-t border-line pt-8 lg:grid-cols-12 lg:gap-12">
+      <Reveal className="mt-10 grid gap-8 border-t border-line pt-8 lg:grid-cols-12 lg:gap-12">
         <section aria-labelledby="tersedia-heading" className="lg:col-span-7">
           <h2 id="tersedia-heading" className="text-xl text-ink">
             Yang tersedia
@@ -54,8 +61,13 @@ export default function DomainStatusPage({ slug }: DomainStatusPageProps) {
           {domain.datasets.length > 0 ? (
             <ul className="mt-4 divide-y divide-line border-y border-line">
               {domain.datasets.map((dataset) => (
-                <li key={dataset} className="py-4 text-base text-ink-2">
-                  {dataset}
+                <li key={dataset.name} className="py-4">
+                  <p className="text-base text-ink-2">{dataset.name}</p>
+                  {dataset.period && (
+                    <p className="mt-1 text-xs text-ink-3">
+                      Periode data: {dataset.period}
+                    </p>
+                  )}
                 </li>
               ))}
             </ul>
@@ -67,7 +79,11 @@ export default function DomainStatusPage({ slug }: DomainStatusPageProps) {
 
           {domain.details && (
             <div className="mt-8">
-              <h2 className="text-xl text-ink">Ringkasan model</h2>
+              <h2 className="text-xl text-ink">
+                {domain.status === 'available'
+                  ? 'Ringkasan model'
+                  : 'Rincian data'}
+              </h2>
               <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-line pt-5 sm:grid-cols-3">
                 {domain.details.map((detail) => (
                   <div key={detail.label}>
@@ -97,7 +113,7 @@ export default function DomainStatusPage({ slug }: DomainStatusPageProps) {
             </ButtonLink>
           </div>
         </aside>
-      </div>
+      </Reveal>
     </article>
   );
 }

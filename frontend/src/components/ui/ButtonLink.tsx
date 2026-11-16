@@ -15,7 +15,7 @@ const variantStyles = {
     'min-h-12 border border-line-strong bg-transparent px-6 py-3 text-forest hover:bg-forest-soft active:translate-y-px',
   inverse:
     'min-h-12 bg-paper px-6 py-3 text-forest hover:bg-surface focus-visible:outline-paper active:translate-y-px',
-  text: 'min-h-11 text-forest underline-offset-4 hover:underline',
+  text: 'min-h-11 text-forest underline-offset-4 hover:underline active:translate-y-px',
 };
 
 export default function ButtonLink({
@@ -27,7 +27,7 @@ export default function ButtonLink({
   return (
     <Link
       to={to}
-      className={`inline-flex items-center justify-center rounded text-sm font-semibold transition-colors duration-200 ease-editorial ${variantStyles[variant]} ${className}`}
+      className={`inline-flex items-center justify-center rounded text-sm font-semibold transition-[background-color,border-color,color,transform] duration-200 ease-editorial ${variantStyles[variant]} ${className}`}
     >
       {children}
     </Link>

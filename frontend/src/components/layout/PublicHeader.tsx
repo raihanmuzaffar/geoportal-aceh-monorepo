@@ -7,12 +7,37 @@ const navItems = [
   { to: '/', label: 'Home', end: true },
   { to: '/webgis', label: 'WebGIS', end: false },
   { to: '/analitik', label: 'Analitik', end: false },
+  { to: '/layanan', label: 'Layanan', end: false },
+  { to: '/data', label: 'Data', end: false },
 ];
 
 export default function PublicHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let frame = 0;
+
+    const update = () => {
+      frame = 0;
+      setScrolled(window.scrollY > 8);
+    };
+
+    const handleScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -55,8 +80,12 @@ export default function PublicHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper">
-      <div className="container-content flex h-16 items-center justify-between gap-4 md:h-[72px]">
+    <header
+      className={`sticky top-0 z-50 h-16 border-b border-line bg-paper transition-shadow duration-200 ease-editorial md:h-[72px] ${
+        scrolled ? 'shadow-[0_1px_2px_rgba(24,33,28,0.06)]' : 'shadow-none'
+      }`}
+    >
+      <div className="container-content flex h-full items-center justify-between gap-4">
         <Wordmark />
 
         <nav aria-label="Navigasi utama" className="hidden items-center gap-8 md:flex">
@@ -81,7 +110,7 @@ export default function PublicHeader() {
         <div className="flex items-center gap-2">
           <Link
             to="/login"
-            className="hidden min-h-11 items-center px-3 text-sm font-semibold text-forest underline-offset-4 hover:underline md:inline-flex"
+            className="hidden min-h-11 items-center px-3 text-sm font-semibold text-forest underline-offset-4 transition-colors duration-200 ease-editorial hover:underline md:inline-flex"
           >
             Masuk
           </Link>
@@ -92,12 +121,22 @@ export default function PublicHeader() {
             aria-expanded={open}
             aria-controls="mobile-navigation"
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded border border-line-strong px-3 text-sm font-semibold text-ink transition-colors duration-200 ease-editorial hover:bg-surface md:hidden"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded border border-line-strong px-3 text-sm font-semibold text-ink transition-[background-color,border-color,color,transform] duration-200 ease-editorial hover:bg-surface active:translate-y-px md:hidden"
           >
             {open ? (
-              <X aria-hidden="true" size={18} strokeWidth={1.5} />
+              <X
+                aria-hidden="true"
+                size={18}
+                strokeWidth={1.5}
+                className="animate-fade-in"
+              />
             ) : (
-              <Menu aria-hidden="true" size={18} strokeWidth={1.5} />
+              <Menu
+                aria-hidden="true"
+                size={18}
+                strokeWidth={1.5}
+                className="animate-fade-in"
+              />
             )}
             <span>{open ? 'Tutup' : 'Menu'}</span>
           </button>
@@ -107,8 +146,13 @@ export default function PublicHeader() {
       <div
         id="mobile-navigation"
         ref={panelRef}
-        hidden={!open}
-        className="absolute inset-x-0 top-full border-b border-line bg-paper shadow-overlay md:hidden"
+        aria-hidden={!open}
+        inert={!open}
+        className={`absolute inset-x-0 top-[calc(100%_+_1px)] border-b border-line bg-paper shadow-overlay transition-[opacity,transform,visibility] duration-200 ease-editorial md:hidden ${
+          open
+            ? 'visible translate-y-0 opacity-100'
+            : 'pointer-events-none invisible -translate-y-1 opacity-0'
+        }`}
       >
         <nav aria-label="Navigasi mobile" className="container-content py-4">
           <ul className="flex flex-col">
@@ -119,7 +163,7 @@ export default function PublicHeader() {
                   end={item.end}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `flex min-h-12 items-center border-b border-line text-base font-semibold ${
+                    `flex min-h-12 items-center border-b border-line text-base font-semibold transition-colors duration-200 ease-editorial hover:text-ink ${
                       isActive ? 'text-ink' : 'text-ink-2'
                     }`
                   }
@@ -132,7 +176,7 @@ export default function PublicHeader() {
               <Link
                 to="/login"
                 onClick={() => setOpen(false)}
-                className="flex min-h-12 items-center text-base font-semibold text-forest"
+                className="flex min-h-12 items-center text-base font-semibold text-forest transition-colors duration-200 ease-editorial hover:text-forest-deep"
               >
                 Masuk
               </Link>

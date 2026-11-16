@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
 import { publicDomains } from '../../data/publicDomains';
+import Reveal from '../ui/Reveal';
 import Wordmark from '../ui/Wordmark';
 
 const exploreLinks = [
   { to: '/', label: 'Home' },
   { to: '/webgis', label: 'WebGIS' },
   { to: '/analitik', label: 'Analitik' },
+  { to: '/layanan', label: 'Layanan' },
+  { to: '/data', label: 'Katalog Data' },
 ];
 
 export default function PublicFooter() {
   return (
     <footer className="border-t border-line bg-surface-soft">
       <div className="container-content py-12 md:py-16">
-        <div className="grid gap-10 md:grid-cols-12">
+        <Reveal className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <Wordmark />
             <p className="mt-4 max-w-prose text-sm text-ink-2">
@@ -27,7 +30,7 @@ export default function PublicFooter() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="inline-flex min-h-11 items-center text-sm text-ink-2 underline-offset-4 hover:text-ink hover:underline"
+                    className="inline-flex min-h-11 items-center text-sm text-ink-2 underline-offset-4 transition-colors duration-200 ease-editorial hover:text-ink hover:underline"
                   >
                     {item.label}
                   </Link>
@@ -46,7 +49,7 @@ export default function PublicFooter() {
                 <li key={domain.slug}>
                   <Link
                     to={domain.href}
-                    className="inline-flex min-h-11 items-center underline-offset-4 hover:text-ink hover:underline"
+                    className="inline-flex min-h-11 items-center underline-offset-4 transition-colors duration-200 ease-editorial hover:text-ink hover:underline"
                   >
                     {domain.name}
                   </Link>
@@ -54,7 +57,7 @@ export default function PublicFooter() {
               ))}
             </ul>
           </div>
-        </div>
+        </Reveal>
 
         <div className="mt-12 border-t border-line pt-6">
           <p className="text-xs text-ink-3">
