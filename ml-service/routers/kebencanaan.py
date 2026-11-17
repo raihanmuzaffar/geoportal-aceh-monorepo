@@ -1,33 +1,38 @@
+from typing import Any, Literal
+
 from fastapi import APIRouter
-from pydantic import BaseModel
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, ConfigDict, Field
 
 router = APIRouter()
 
+
 class KebencanaanRequest(BaseModel):
-    curah_hujan_mm: float
-    kemiringan_lereng_derajat: float
-    tutupan_lahan: str # Contoh: "Hutan", "Pemukiman", "Sawah"
+    model_config = ConfigDict(extra="forbid")
+
+    disaster_type: Literal["Banjir", "Gempa", "Longsor"]
+    latitude: float = Field(ge=-90, le=90)
+    longitude: float = Field(ge=-180, le=180)
+    rainfall_mm: float | None = Field(default=None, ge=0)
+    elevation_m: float | None = None
+    slope_deg: float | None = Field(default=None, ge=0, le=90)
+    features: dict[str, Any] | None = None
+
 
 @router.post("/predict-disaster")
 def predict_disaster(data: KebencanaanRequest):
-    # --- LOGIKA DUMMY ---
-    # Nanti diganti dengan model XGBoost / Random Forest
-    if data.curah_hujan_mm > 150 and data.kemiringan_lereng_derajat > 30:
-        risiko = "Tinggi"
-        jenis = "Tanah Longsor"
-    elif data.curah_hujan_mm > 150 and data.tutupan_lahan == "Pemukiman":
-        risiko = "Tinggi"
-        jenis = "Banjir"
-    else:
-        risiko = "Rendah"
-        jenis = "Tidak Ada Ancaman Signifikan"
+    """
+    Endpoint kontrak prediksi kebencanaan.
 
-    return {
-        "status": "success",
-        "data": {
-            "disaster_type": jenis,
-            "risk_level": risiko,
-            "confidence_score": 0.85,
-            "model_version": "v1.0-dummy"
-        }
-    }
+    Model prediksi belum tersedia. Endpoint sengaja mengembalikan
+    HTTP 501 agar sistem tidak menyajikan hasil risiko dummy.
+    """
+    return JSONResponse(
+        status_code=501,
+        content={
+            "status": "error",
+            "code": "MODEL_NOT_AVAILABLE",
+            "message": "Model prediksi kebencanaan belum tersedia.",
+            "data": None,
+        },
+    )

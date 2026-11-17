@@ -13,6 +13,12 @@ import {
 import MapView from '../components/MapView';
 import { useDashboardStore } from '../store/dashboardStore';
 
+function formatMetric(value: number | null | undefined): string {
+  return value === null || value === undefined
+    ? '—'
+    : value.toLocaleString('id-ID');
+}
+
 export default function Dashboard() {
   const { stats, isLoading, error, fetchStats } = useDashboardStore();
 
@@ -81,7 +87,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {stats?.totalPenduduk ? stats.totalPenduduk.toLocaleString('id-ID') : '0'}
+              {formatMetric(stats?.totalPenduduk)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Total Jiwa Terdata</p>
           </div>
@@ -95,7 +101,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {stats?.totalKesehatan ? stats.totalKesehatan.toLocaleString('id-ID') : '0'}
+              {formatMetric(stats?.totalKesehatan)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Fasilitas Kesehatan</p>
           </div>
@@ -109,7 +115,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {stats?.totalPendidikan ? stats.totalPendidikan.toLocaleString('id-ID') : '0'}
+              {formatMetric(stats?.totalPendidikan)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Sekolah Terdaftar</p>
           </div>
@@ -123,7 +129,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {stats?.totalPertanianHa ? stats.totalPertanianHa.toLocaleString('id-ID') : '0'}
+              {formatMetric(stats?.totalPertanianHa)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Hektar Luas Lahan</p>
           </div>
@@ -137,7 +143,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {stats?.totalKebencanaan ? stats.totalKebencanaan.toLocaleString('id-ID') : '0'}
+              {formatMetric(stats?.totalKebencanaan)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Titik Riwayat Bencana</p>
           </div>
@@ -151,10 +157,10 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {stats?.totalLayerSpasial ?? 0}
+              {formatMetric(stats?.totalLayerSpasial)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">
-              {stats?.totalPenggunaAktif ?? 0} Pengguna Aktif
+              {formatMetric(stats?.totalPengguna)} Pengguna Terdaftar
             </p>
           </div>
         </div>

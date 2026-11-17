@@ -32,7 +32,14 @@ interface DataTableProps<T> {
   onDelete?: (item: T) => void;
 }
 
-export default function DataTable<T extends Record<string, any>>({
+function getFieldValue<T extends object>(
+  item: T,
+  key: string
+): unknown {
+  return (item as Record<string, unknown>)[key];
+}
+
+export default function DataTable<T extends object>({
   data,
   columns,
   isLoading = false,
@@ -53,7 +60,7 @@ export default function DataTable<T extends Record<string, any>>({
     const query = searchQuery.toLowerCase();
     return data.filter((item) =>
       columns.some((col) => {
-        const value = item[col.key];
+        const value = getFieldValue(item, col.key);
         if (value === null || value === undefined) return false;
         return String(value).toLowerCase().includes(query);
       })
@@ -65,8 +72,8 @@ export default function DataTable<T extends Record<string, any>>({
     if (!sortConfig) return filteredData;
 
     return [...filteredData].sort((a, b) => {
-      const aVal = a[sortConfig.key];
-      const bVal = b[sortConfig.key];
+      const aVal = getFieldValue(a, sortConfig.key);
+      const bVal = getFieldValue(b, sortConfig.key);
 
       if (aVal === bVal) return 0;
       if (aVal === null || aVal === undefined) return 1;
@@ -198,7 +205,7 @@ export default function DataTable<T extends Record<string, any>>({
             ) : (
               paginatedData.map((item, index) => {
                 const rowNumber = (currentPage - 1) * pageSize + index + 1;
-                const rowKey = String(item.id ?? index);
+                const rowKey = String(getFieldValue(item, 'id') ?? index);
                 return (
                   <tr
                     key={rowKey}
@@ -209,7 +216,7 @@ export default function DataTable<T extends Record<string, any>>({
                     </td>
                     {columns.map((col) => (
                       <td key={col.key} className="py-3.5 px-4">
-                        {col.render ? col.render(item) : String(item[col.key] ?? '-')}
+                        {col.render ? col.render(item) : String(getFieldValue(item, col.key) ?? '-')}
                       </td>
                     ))}
                     {hasActions && (

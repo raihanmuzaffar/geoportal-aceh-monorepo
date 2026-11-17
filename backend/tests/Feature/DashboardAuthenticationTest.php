@@ -51,6 +51,46 @@ class DashboardAuthenticationTest extends TestCase
         });
     }
 
+    public function test_registration_creates_a_regular_user_by_default(): void
+    {
+        $response = $this->postJson('/api/v1/auth/register', [
+            'name' => 'Pengguna Geoportal',
+            'email' => 'user-register@example.test',
+            'password' => 'secure-password',
+            'password_confirmation' => 'secure-password',
+        ]);
+
+        $response
+            ->assertCreated()
+            ->assertJsonPath('status', 'success')
+            ->assertJsonPath('data.role', 'user')
+            ->assertJsonStructure(['access_token']);
+
+        $this->assertDatabaseHas('users', [
+            'email' => 'user-register@example.test',
+            'role' => 'user',
+        ]);
+    }
+
+    public function test_registration_rejects_role_assignment(): void
+    {
+        $response = $this->postJson('/api/v1/auth/register', [
+            'name' => 'Admin Palsu',
+            'email' => 'fake-admin@example.test',
+            'password' => 'secure-password',
+            'password_confirmation' => 'secure-password',
+            'role' => 'admin',
+        ]);
+
+        $response
+            ->assertUnprocessable()
+            ->assertJsonValidationErrors(['role']);
+
+        $this->assertDatabaseMissing('users', [
+            'email' => 'fake-admin@example.test',
+        ]);
+    }
+
     public function test_login_issues_a_sanctum_token(): void
     {
         $user = User::factory()->create([
@@ -111,10 +151,24 @@ class DashboardAuthenticationTest extends TestCase
             ->assertOk()
             ->assertJsonPath('status', 'success')
             ->assertJsonPath('message', 'Dashboard statistics retrieved successfully')
-            ->assertJsonPath('data.total_users', 1)
-            ->assertJsonPath('data.total_penduduk', 2)
+            ->assertJsonPath('data.total_pengguna', 1)
+            ->assertJsonPath('data.total_penduduk', 2000)
             ->assertJsonPath('data.total_faskes', 3)
-            ->assertJsonPath('meta.has_mock_data', false)
-            ->assertJsonPath('meta.mock_data_fields', []);
+            ->assertJsonPath('data.total_sekolah', null)
+            ->assertJsonPath('data.total_pertanian_ha', null)
+            ->assertJsonPath('data.total_bencana', null)
+            ->assertJsonPath('data.total_layer_spasial', null)
+            ->assertJsonPath('data.distribusi_wilayah', [])
+            ->assertJsonPath('meta.available_fields', [
+                'total_pengguna',
+                'total_penduduk',
+                'total_faskes',
+            ])
+            ->assertJsonPath('meta.unavailable_fields', [
+                'total_sekolah',
+                'total_pertanian_ha',
+                'total_bencana',
+                'total_layer_spasial',
+            ]);
     }
 }

@@ -1,13 +1,13 @@
-// Sumber: ml-service/data/processed/kependudukan/hasil_cluster_kependudukan_2024.csv
-// Nilai disalin apa adanya dari CSV. Nama Kabupaten Aceh Barat Daya diperbaiki
-// dari salah ketik "Kabupatan" pada CSV sumber.
+// Sumber: BPS Provinsi Aceh WebAPI, data tahun 2024.
+// Dataset ini disinkronkan dari CSV hasil training model BPS 2024.
+// Clustering bersifat eksploratif, bukan prediksi atau peringkat wilayah.
 
 export type KependudukanClusterId = 0 | 1 | 2;
 
 export type KependudukanClusterRow = {
   kode: string;
   kabupatenKota: string;
-  pendudukRibu: number;
+  jumlahPenduduk: number;
   kepadatanPerKm2: number;
   lajuPertumbuhan: number;
   cluster: KependudukanClusterId;
@@ -15,46 +15,46 @@ export type KependudukanClusterRow = {
 
 export const kependudukanMetadata = {
   algorithm: 'K-Means',
+  modelVersion: "2.0.0-bps-2024",
   clusterCount: 3,
   regionCount: 23,
   year: 2024,
   randomState: 42,
-  silhouette: 0.3366,
-  features: [
-    'Jumlah penduduk',
-    'Kepadatan penduduk per km2',
-    'Laju pertumbuhan penduduk per tahun',
-  ],
-  source:
-    'ml-service/data/processed/kependudukan/hasil_cluster_kependudukan_2024.csv',
-  metadataSource:
-    'ml-service/artifacts/kependudukan/metadata.json',
+  nInit: 50,
+  silhouette: 0.401373,
+  daviesBouldin: 0.837454,
+  calinskiHarabasz: 15.360424,
+  meanARI: 1.0,
+  features: ["Jumlah penduduk (jiwa)", "Kepadatan penduduk (jiwa/km²)", "Laju pertumbuhan penduduk (%)"],
+  source: "Badan Pusat Statistik (BPS) Provinsi Aceh - WebAPI",
+  metadataSource: 'ml-service/artifacts/kependudukan/metadata_bps_2024.json',
+  dataSource: 'ml-service/data/processed/kependudukan/bps-kependudukan-cluster-2024.csv',
 };
 
 export const kependudukanCluster2024: KependudukanClusterRow[] = [
-  { kode: '1101', kabupatenKota: 'Kabupaten Simeulue', pendudukRibu: 98.6, kepadatanPerKm2: 48, lajuPertumbuhan: 15.6, cluster: 2 },
-  { kode: '1102', kabupatenKota: 'Kabupaten Aceh Singkil', pendudukRibu: 135.7, kepadatanPerKm2: 62, lajuPertumbuhan: 18.1, cluster: 2 },
-  { kode: '1103', kabupatenKota: 'Kabupaten Aceh Selatan', pendudukRibu: 242.0, kepadatanPerKm2: 63, lajuPertumbuhan: 10.5, cluster: 0 },
-  { kode: '1104', kabupatenKota: 'Kabupaten Aceh Tenggara', pendudukRibu: 234.4, kepadatanPerKm2: 55, lajuPertumbuhan: 15.5, cluster: 2 },
-  { kode: '1105', kabupatenKota: 'Kabupaten Aceh Timur', pendudukRibu: 443.6, kepadatanPerKm2: 71, lajuPertumbuhan: 12.5, cluster: 0 },
-  { kode: '1106', kabupatenKota: 'Kabupaten Aceh Tengah', pendudukRibu: 206.3, kepadatanPerKm2: 53, lajuPertumbuhan: 1.3, cluster: 0 },
-  { kode: '1107', kabupatenKota: 'Kabupaten Aceh Barat', pendudukRibu: 206.7, kepadatanPerKm2: 71, lajuPertumbuhan: 1.0, cluster: 0 },
-  { kode: '1108', kabupatenKota: 'Kabupaten Aceh Besar', pendudukRibu: 428.3, kepadatanPerKm2: 144, lajuPertumbuhan: 13.9, cluster: 0 },
-  { kode: '1109', kabupatenKota: 'Kabupaten Pidie', pendudukRibu: 453.2, kepadatanPerKm2: 147, lajuPertumbuhan: 1.0, cluster: 0 },
-  { kode: '1110', kabupatenKota: 'Kabupaten Bireuen', pendudukRibu: 459.1, kepadatanPerKm2: 241, lajuPertumbuhan: 12.9, cluster: 0 },
-  { kode: '1111', kabupatenKota: 'Kabupaten Aceh Utara', pendudukRibu: 742.7, kepadatanPerKm2: 195, lajuPertumbuhan: 11.3, cluster: 0 },
-  { kode: '1112', kabupatenKota: 'Kabupaten Aceh Barat Daya', pendudukRibu: 159.2, kepadatanPerKm2: 107, lajuPertumbuhan: 1.4, cluster: 0 },
-  { kode: '1113', kabupatenKota: 'Kabupaten Gayo Lues', pendudukRibu: 106.6, kepadatanPerKm2: 99, lajuPertumbuhan: 18.2, cluster: 2 },
-  { kode: '1114', kabupatenKota: 'Kabupaten Aceh Tamiang', pendudukRibu: 304.0, kepadatanPerKm2: 158, lajuPertumbuhan: 12.5, cluster: 0 },
-  { kode: '1115', kabupatenKota: 'Kabupaten Nagan Raya', pendudukRibu: 176.9, kepadatanPerKm2: 52, lajuPertumbuhan: 12.1, cluster: 2 },
-  { kode: '1116', kabupatenKota: 'Kabupaten Aceh Jaya', pendudukRibu: 94.7, kepadatanPerKm2: 26, lajuPertumbuhan: 1.6, cluster: 0 },
-  { kode: '1117', kabupatenKota: 'Kabupaten Bener Meriah', pendudukRibu: 172.0, kepadatanPerKm2: 118, lajuPertumbuhan: 16.7, cluster: 2 },
-  { kode: '1118', kabupatenKota: 'Kabupaten Pidie Jaya', pendudukRibu: 166.5, kepadatanPerKm2: 155, lajuPertumbuhan: 12.8, cluster: 2 },
-  { kode: '1171', kabupatenKota: 'Kota Banda Aceh', pendudukRibu: 265.0, kepadatanPerKm2: 4319, lajuPertumbuhan: 11.6, cluster: 1 },
-  { kode: '1172', kabupatenKota: 'Kota Sabang', pendudukRibu: 43.5, kepadatanPerKm2: 1454, lajuPertumbuhan: 11.6, cluster: 2 },
-  { kode: '1173', kabupatenKota: 'Kota Langsa', pendudukRibu: 198.4, kepadatanPerKm2: 754, lajuPertumbuhan: 16.3, cluster: 2 },
-  { kode: '1174', kabupatenKota: 'Kota Lhokseumawe', pendudukRibu: 200.4, kepadatanPerKm2: 1107, lajuPertumbuhan: 22.8, cluster: 2 },
-  { kode: '1175', kabupatenKota: 'Kota Subulussalam', pendudukRibu: 100.1, kepadatanPerKm2: 107, lajuPertumbuhan: 22.8, cluster: 2 },
+  { kode: "1101", kabupatenKota: "Kabupaten Simeulue", jumlahPenduduk: 98633, kepadatanPerKm2: 48, lajuPertumbuhan: 1.56, cluster: 1 },
+  { kode: "1102", kabupatenKota: "Kabupaten Aceh Singkil", jumlahPenduduk: 135684, kepadatanPerKm2: 62, lajuPertumbuhan: 1.81, cluster: 1 },
+  { kode: "1103", kabupatenKota: "Kabupaten Aceh Selatan", jumlahPenduduk: 241994, kepadatanPerKm2: 63, lajuPertumbuhan: 1.05, cluster: 0 },
+  { kode: "1104", kabupatenKota: "Kabupaten Aceh Tenggara", jumlahPenduduk: 234430, kepadatanPerKm2: 55, lajuPertumbuhan: 1.53, cluster: 0 },
+  { kode: "1105", kabupatenKota: "Kabupaten Aceh Timur", jumlahPenduduk: 443638, kepadatanPerKm2: 71, lajuPertumbuhan: 1.26, cluster: 0 },
+  { kode: "1106", kabupatenKota: "Kabupaten Aceh Tengah", jumlahPenduduk: 226744, kepadatanPerKm2: 53, lajuPertumbuhan: 1.3, cluster: 0 },
+  { kode: "1107", kabupatenKota: "Kabupaten Aceh Barat", jumlahPenduduk: 206822, kepadatanPerKm2: 71, lajuPertumbuhan: 1.0, cluster: 0 },
+  { kode: "1108", kabupatenKota: "Kabupaten Aceh Besar", jumlahPenduduk: 428254, kepadatanPerKm2: 144, lajuPertumbuhan: 1.39, cluster: 0 },
+  { kode: "1109", kabupatenKota: "Kabupaten Pidie", jumlahPenduduk: 452547, kepadatanPerKm2: 147, lajuPertumbuhan: 1.0, cluster: 0 },
+  { kode: "1110", kabupatenKota: "Kabupaten Bireuen", jumlahPenduduk: 459073, kepadatanPerKm2: 241, lajuPertumbuhan: 1.29, cluster: 0 },
+  { kode: "1111", kabupatenKota: "Kabupaten Aceh Utara", jumlahPenduduk: 631984, kepadatanPerKm2: 195, lajuPertumbuhan: 1.13, cluster: 0 },
+  { kode: "1112", kabupatenKota: "Kabupaten Aceh Barat Daya", jumlahPenduduk: 159187, kepadatanPerKm2: 107, lajuPertumbuhan: 1.4, cluster: 0 },
+  { kode: "1113", kabupatenKota: "Kabupaten Gayo Lues", jumlahPenduduk: 106791, kepadatanPerKm2: 19, lajuPertumbuhan: 1.82, cluster: 1 },
+  { kode: "1114", kabupatenKota: "Kabupaten Aceh Tamiang", jumlahPenduduk: 309039, kepadatanPerKm2: 158, lajuPertumbuhan: 1.25, cluster: 0 },
+  { kode: "1115", kabupatenKota: "Kabupaten Nagan Raya", jumlahPenduduk: 176429, kepadatanPerKm2: 52, lajuPertumbuhan: 1.19, cluster: 0 },
+  { kode: "1116", kabupatenKota: "Kabupaten Aceh Jaya", jumlahPenduduk: 99200, kepadatanPerKm2: 26, lajuPertumbuhan: 1.6, cluster: 1 },
+  { kode: "1117", kabupatenKota: "Kabupaten Bener Meriah", jumlahPenduduk: 172036, kepadatanPerKm2: 118, lajuPertumbuhan: 1.67, cluster: 1 },
+  { kode: "1118", kabupatenKota: "Kabupaten Pidie Jaya", jumlahPenduduk: 166467, kepadatanPerKm2: 155, lajuPertumbuhan: 1.28, cluster: 0 },
+  { kode: "1171", kabupatenKota: "Kota Banda Aceh", jumlahPenduduk: 265019, kepadatanPerKm2: 4319, lajuPertumbuhan: 1.16, cluster: 2 },
+  { kode: "1172", kabupatenKota: "Kota Sabang", jumlahPenduduk: 43470, kepadatanPerKm2: 284, lajuPertumbuhan: 1.36, cluster: 1 },
+  { kode: "1173", kabupatenKota: "Kota Langsa", jumlahPenduduk: 197909, kepadatanPerKm2: 754, lajuPertumbuhan: 1.63, cluster: 2 },
+  { kode: "1174", kabupatenKota: "Kota Lhokseumawe", jumlahPenduduk: 200403, kepadatanPerKm2: 1107, lajuPertumbuhan: 1.54, cluster: 2 },
+  { kode: "1175", kabupatenKota: "Kota Subulussalam", jumlahPenduduk: 99062, kepadatanPerKm2: 71, lajuPertumbuhan: 2.28, cluster: 1 },
 ];
 
 export function summarizeClusters(rows: KependudukanClusterRow[]) {

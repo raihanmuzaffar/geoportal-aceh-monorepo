@@ -16,13 +16,13 @@ type ClusterScatterProps = {
 
 const numberFormat = new Intl.NumberFormat('id-ID');
 
-const xMin = 20;
-const xMax = 6000;
+const xMin = 10;
+const xMax = 5000;
 const yMin = 0;
-const yMax = 25;
+const yMax = 2.5;
 
-const xTicks = [25, 100, 500, 2500, 6000];
-const yTicks = [0, 5, 10, 15, 20, 25];
+const xTicks = [10, 50, 100, 500, 1000, 5000];
+const yTicks = [0, 0.5, 1, 1.5, 2, 2.5];
 
 function xPosition(value: number) {
   return (
@@ -47,7 +47,7 @@ export default function ClusterScatter({
     summary.map((item) => [item.cluster, item.count] as const),
   );
 
-  const populations = rows.map((row) => row.pendudukRibu);
+  const populations = rows.map((row) => row.jumlahPenduduk);
   const populationMin = populations.length
     ? Math.min(...populations)
     : 0;
@@ -144,7 +144,7 @@ export default function ClusterScatter({
       <figure className="mt-5">
         <div
           role="img"
-          aria-label={`Grafik sebaran ${rows.length} wilayah berdasarkan kepadatan penduduk berskala log dan laju pertumbuhan. Ukuran titik menunjukkan jumlah penduduk. Bentuk penanda: lingkaran untuk Cluster 0, belah ketupat untuk Cluster 1, dan kotak untuk Cluster 2. Data lengkap tersedia pada tabel hasil di bawah.`}
+          aria-label={`Grafik sebaran ${rows.length} wilayah berdasarkan kepadatan penduduk berskala log dan laju pertumbuhan dalam persen. Ukuran titik menunjukkan jumlah penduduk. Bentuk penanda: lingkaran untuk Cluster 0, belah ketupat untuk Cluster 1, dan kotak untuk Cluster 2. Data lengkap tersedia pada tabel hasil di bawah.`}
           aria-describedby={captionId}
           className="grid grid-cols-[2.5rem_minmax(0,1fr)]"
         >
@@ -179,7 +179,7 @@ export default function ClusterScatter({
 
             {rows.map((row) => {
               const marker = clusterMarkers[row.cluster];
-              const size = pointSize(row.pendudukRibu);
+              const size = pointSize(row.jumlahPenduduk);
 
               return (
                 <span
@@ -245,10 +245,11 @@ export default function ClusterScatter({
           id={captionId}
           className="mt-3 text-xs text-ink-3"
         >
-          Sumbu tegak: laju pertumbuhan penduduk (nilai dataset, satuan belum
-          dipastikan). Ukuran titik: jumlah penduduk. Bentuk penanda: lingkaran
-          Cluster 0, belah ketupat Cluster 1, kotak Cluster 2. Sumber: CSV hasil
-          clustering kependudukan 2024.
+          Sumbu mendatar: kepadatan penduduk (jiwa/km²), skala logaritmik.
+          Sumbu tegak: laju pertumbuhan penduduk (%). Ukuran titik:
+          jumlah penduduk (jiwa). Bentuk penanda: lingkaran Cluster 0,
+          belah ketupat Cluster 1, kotak Cluster 2. Sumber: BPS Provinsi
+          Aceh WebAPI, data 2024.
         </figcaption>
       </figure>
     </div>

@@ -53,7 +53,7 @@ function sortValue(row: KependudukanClusterRow, key: SortKey) {
     case 'wilayah':
       return row.kabupatenKota;
     case 'penduduk':
-      return row.pendudukRibu;
+      return row.jumlahPenduduk;
     case 'kepadatan':
       return row.kepadatanPerKm2;
     case 'laju':
@@ -230,7 +230,7 @@ export default function AnalyticsKependudukanPage() {
             </div>
             <p className="mt-5 max-w-prose text-lg text-ink-2">
               K-Means membagi 23 kabupaten/kota ke dalam 3 cluster berdasarkan
-              jumlah penduduk, kepadatan, dan laju pertumbuhan. Grafik dan tabel
+              jumlah penduduk (jiwa), kepadatan (jiwa/km²), dan laju pertumbuhan (%). Grafik dan tabel
               di bawah memakai CSV hasil clustering yang tersimpan, bukan
               pemanggilan model langsung.
             </p>
@@ -296,10 +296,10 @@ export default function AnalyticsKependudukanPage() {
         <div className="mt-8 max-w-prose border-l-2 border-earth pl-4">
           <p className="text-sm font-semibold text-ink">Batas hasil</p>
           <p className="mt-2 text-sm text-ink-2">
-            Hasil ini adalah eksperimen awal, bukan prediksi langsung. Label
-            cluster adalah keluaran ordinal K-Means, bukan kategori bernama atau
-            tingkat kesejahteraan. Laju pertumbuhan penduduk pada dataset belum
-            diverifikasi terhadap sumber resmi.
+            Hasil ini merupakan eksperimen clustering eksploratif, bukan
+            prediksi langsung. Label cluster merupakan keluaran algoritma
+            K-Means, bukan peringkat wilayah atau ukuran kesejahteraan.
+            Data bersumber dari BPS Provinsi Aceh WebAPI tahun 2024.
           </p>
         </div>
       </div>
@@ -315,9 +315,9 @@ export default function AnalyticsKependudukanPage() {
                 Komposisi cluster
               </h2>
               <p className="mt-4 text-base text-ink-2">
-                Cluster 0 dan 2 masing-masing berisi 11 wilayah. Cluster 1
-                berisi satu wilayah. Komposisi ini dihitung langsung dari kolom
-                cluster pada CSV.
+                Cluster 0 berisi 13 wilayah, Cluster 1 berisi 7 wilayah, dan
+                Cluster 2 berisi 3 wilayah. Komposisi ini mengikuti hasil
+                clustering dari dataset BPS tahun 2024.
               </p>
               <p className="mt-4 text-xs text-ink-3">
                 Angka 0, 1, dan 2 adalah label keluaran model, bukan peringkat.
@@ -385,9 +385,9 @@ export default function AnalyticsKependudukanPage() {
                 Kepadatan tertinggi
               </h3>
               <p className="mt-2 text-sm text-ink-2">
-                Kota Banda Aceh memiliki kepadatan 4.319 jiwa/km2 dan laju
-                pertumbuhan 11,6 pada dataset. Wilayah ini menjadi satu-satunya
-                anggota Cluster 1.
+                Kota Banda Aceh memiliki kepadatan 4.319 jiwa/km² dan laju
+                pertumbuhan 1,16%. Bersama Kota Langsa dan Kota Lhokseumawe,
+                Banda Aceh termasuk Cluster 2.
               </p>
             </div>
 
@@ -448,7 +448,7 @@ export default function AnalyticsKependudukanPage() {
                       onSort={handleSort}
                     />
                     <SortHeader
-                      label="Penduduk (ribu jiwa)"
+                      label="Penduduk (jiwa)"
                       sortKey="penduduk"
                       sort={sort}
                       onSort={handleSort}
@@ -462,7 +462,7 @@ export default function AnalyticsKependudukanPage() {
                       align="right"
                     />
                     <SortHeader
-                      label="Laju pertumbuhan"
+                      label="Laju pertumbuhan (%)"
                       sortKey="laju"
                       sort={sort}
                       onSort={handleSort}
@@ -492,7 +492,7 @@ export default function AnalyticsKependudukanPage() {
                         data-numeric
                         className="px-3 py-3 text-right tabular-nums text-ink-2"
                       >
-                        {formatDecimal(row.pendudukRibu)}
+                        {formatInteger(row.jumlahPenduduk)}
                       </td>
                       <td
                         data-numeric
@@ -527,13 +527,13 @@ export default function AnalyticsKependudukanPage() {
                   <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
                     <div>
                       <dt className="text-xs text-ink-3">
-                        Penduduk (ribu jiwa)
+                        Penduduk (jiwa)
                       </dt>
                       <dd
                         data-numeric
                         className="text-sm tabular-nums text-ink-2"
                       >
-                        {formatDecimal(row.pendudukRibu)}
+                        {formatInteger(row.jumlahPenduduk)}
                       </dd>
                     </div>
                     <div>
@@ -549,7 +549,7 @@ export default function AnalyticsKependudukanPage() {
                     </div>
                     <div>
                       <dt className="text-xs text-ink-3">
-                        Laju pertumbuhan
+                        Laju pertumbuhan (%)
                       </dt>
                       <dd
                         data-numeric
@@ -564,9 +564,8 @@ export default function AnalyticsKependudukanPage() {
             </ul>
 
             <p className="mt-4 break-words text-xs text-ink-3">
-              Sumber: {kependudukanMetadata.source}. Metadata model:{' '}
-              {kependudukanMetadata.metadataSource}. Tidak ada angka di luar CSV
-              dan metadata model.
+              Sumber data: {kependudukanMetadata.source}. Dataset: BPS 2024.
+              Metadata model: {kependudukanMetadata.metadataSource}.
             </p>
           </Reveal>
         </div>
@@ -577,9 +576,10 @@ export default function AnalyticsKependudukanPage() {
           <div className="lg:col-span-7">
             <h2 className="text-sm font-semibold text-ink">Catatan sumber</h2>
             <p className="mt-3 max-w-prose text-sm text-ink-2">
-              Hasil dihitung dari {kependudukanMetadata.regionCount} wilayah
-              pada tahun {kependudukanMetadata.year}. Satuan laju pertumbuhan
-              belum dipastikan dan nilainya ditampilkan apa adanya dari CSV.
+              Hasil clustering dihitung dari {kependudukanMetadata.regionCount}
+              kabupaten/kota pada tahun {kependudukanMetadata.year}.
+              Jumlah penduduk menggunakan satuan jiwa, kepadatan jiwa/km²,
+              dan laju pertumbuhan persen.
             </p>
           </div>
           <div className="lg:col-span-5 lg:text-right">

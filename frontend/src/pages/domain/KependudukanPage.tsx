@@ -96,14 +96,12 @@ export default function KependudukanPage() {
       header: 'Kepadatan (/km²)',
       sortable: true,
       render: (item) => {
-        let badgeStyle = 'bg-slate-100 text-slate-700';
-        if (item.kepadatan > 4000) {
-          badgeStyle = 'bg-rose-100 text-rose-700 font-medium';
-        } else if (item.kepadatan > 1000) {
-          badgeStyle = 'bg-amber-100 text-amber-700 font-medium';
-        } else {
-          badgeStyle = 'bg-emerald-100 text-emerald-700 font-medium';
-        }
+        const badgeStyle =
+          item.kepadatan > 4000
+            ? 'bg-rose-100 text-rose-700 font-medium'
+            : item.kepadatan > 1000
+              ? 'bg-amber-100 text-amber-700 font-medium'
+              : 'bg-emerald-100 text-emerald-700 font-medium';
         return (
           <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs ${badgeStyle}`}>
             {item.kepadatan.toLocaleString('id-ID')}

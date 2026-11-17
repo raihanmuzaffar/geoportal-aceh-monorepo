@@ -1,0 +1,24 @@
+bps_kode_kabupaten,tahun,bps_nama_kabupaten,jumlah_penduduk,kepadatan_penduduk_per_km^2,laju_pertumbuhan_penduduk_pertahun,cluster
+1101,2024,Kabupaten Simeulue,98.6,48,15.6,2
+1102,2024,Kabupaten Aceh Singkil,135.7,62,18.1,2
+1103,2024,Kabupaten Aceh Selatan,242.0,63,10.5,0
+1104,2024,Kabupaten Aceh Tenggara,234.4,55,15.5,2
+1105,2024,Kabupaten Aceh Timur,443.6,71,12.5,0
+1106,2024,Kabupaten Aceh Tengah,206.3,53,1.3,0
+1107,2024,Kabupaten Aceh Barat,206.7,71,1.0,0
+1108,2024,Kabupaten Aceh Besar,428.3,144,13.9,0
+1109,2024,Kabupaten Pidie,453.2,147,1.0,0
+1110,2024,Kabupaten Bireuen,459.1,241,12.9,0
+1111,2024,Kabupaten Aceh Utara,742.7,195,11.3,0
+1112,2024,Kabupatan Aceh Barat Daya,159.2,107,1.4,0
+1113,2024,Kabupaten Gayo Lues,106.6,99,18.2,2
+1114,2024,Kabupaten Aceh Tamiang,304.0,158,12.5,0
+1115,2024,Kabupaten Nagan Raya,176.9,52,12.1,2
+1116,2024,Kabupaten Aceh Jaya,94.7,26,1.6,0
+1117,2024,Kabupaten Bener Meriah,172.0,118,16.7,2
+1118,2024,Kabupaten Pidie Jaya,166.5,155,12.8,2
+1171,2024,Kota Banda Aceh,265.0,4319,11.6,1
+1172,2024,Kota Sabang,43.5,1454,11.6,2
+1173,2024,Kota Langsa,198.4,754,16.3,2
+1174,2024,Kota Lhokseumawe,200.4,1107,22.8,2
+1175,2024,Kota Subulussalam,100.1,107,22.8,2

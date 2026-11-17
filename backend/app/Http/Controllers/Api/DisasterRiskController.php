@@ -3,47 +3,45 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class DisasterRiskController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    private function deprecatedResponse(): JsonResponse
     {
-        //
+        return response()->json([
+            'status' => 'error',
+            'code' => 'ENDPOINT_DEPRECATED',
+            'message' => 'Endpoint risks sudah tidak digunakan. Gunakan endpoint incidents atau zones.',
+            'data' => [
+                'incidents' => '/api/kebencanaan/incidents',
+                'zones' => '/api/kebencanaan/zones',
+            ],
+        ], 410);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function index(): JsonResponse
     {
-        //
+        return $this->deprecatedResponse();
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function store(): JsonResponse
     {
-        //
+        return $this->deprecatedResponse();
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function show(string $id): JsonResponse
     {
-        //
+        return $this->deprecatedResponse();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function update(string $id): JsonResponse
     {
-        //
+        return $this->deprecatedResponse();
+    }
+
+    public function destroy(string $id): JsonResponse
+    {
+        return $this->deprecatedResponse();
     }
 }

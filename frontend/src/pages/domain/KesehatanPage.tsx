@@ -75,11 +75,14 @@ export default function KesehatanPage() {
       header: 'Tipe / Jenis',
       sortable: true,
       render: (item) => {
-        let badgeColor = 'bg-slate-100 text-slate-700';
-        if (item.jenis === 'Rumah Sakit') badgeColor = 'bg-rose-100 text-rose-700 font-semibold';
-        else if (item.jenis === 'Puskesmas') badgeColor = 'bg-emerald-100 text-emerald-700 font-semibold';
-        else if (item.jenis === 'RSIA') badgeColor = 'bg-purple-100 text-purple-700 font-semibold';
-        else badgeColor = 'bg-blue-100 text-blue-700 font-semibold';
+        const badgeColor =
+          item.jenis === 'Rumah Sakit'
+            ? 'bg-rose-100 text-rose-700 font-semibold'
+            : item.jenis === 'Puskesmas'
+              ? 'bg-emerald-100 text-emerald-700 font-semibold'
+              : item.jenis === 'RSIA'
+                ? 'bg-purple-100 text-purple-700 font-semibold'
+                : 'bg-blue-100 text-blue-700 font-semibold';
 
         return (
           <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs ${badgeColor}`}>

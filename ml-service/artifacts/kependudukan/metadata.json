@@ -1,0 +1,14 @@
+{
+    "model": "KMeans",
+    "tahun_data": 2024,
+    "jumlah_wilayah": 23,
+    "jumlah_cluster": 3,
+    "features": [
+        "jumlah_penduduk",
+        "kepadatan_penduduk_per_km^2",
+        "laju_pertumbuhan_penduduk_pertahun"
+    ],
+    "silhouette_score": 0.336606038217106,
+    "random_state": 42,
+    "catatan": "Eksperimen awal. Nilai pertumbuhan penduduk belum diverifikasi terhadap sumber resmi."
+}
