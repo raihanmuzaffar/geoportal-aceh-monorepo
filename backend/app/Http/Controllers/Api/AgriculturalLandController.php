@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Controllers\Api;
@@ -12,9 +13,28 @@ use Illuminate\Http\Request;
 
 class AgriculturalLandController extends Controller
 {
-    public function index(): JsonResponse
+    /**
+     * Display a listing of agricultural lands.
+     * Supports commodity search and dynamic pagination.
+     */
+    public function index(Request $request): JsonResponse
     {
-        $lands = AgriculturalLand::latest()->paginate(10);
+        $query = AgriculturalLand::query();
+
+        // Filter berdasarkan komoditas
+        if ($request->filled('commodity')) {
+            $query->where(
+                'commodity',
+                'ilike',
+                '%' . $request->input('commodity') . '%'
+            );
+        }
+
+        // Pagination dinamis (minimal 1, maksimal 100)
+        $perPage = (int) $request->input('per_page', 10);
+        $perPage = max(1, min($perPage, 100));
+
+        $lands = $query->latest()->paginate($perPage);
 
         return response()->json([
             'status' => 'success',
@@ -29,17 +49,26 @@ class AgriculturalLandController extends Controller
         ]);
     }
 
+    /**
+     * Store a newly created agricultural land.
+     */
     public function store(Request $request): JsonResponse
     {
         $validated = $request->validate([
             'owner_name' => ['required', 'string', 'max:255'],
             'commodity' => ['required', 'string', 'max:255'],
-            'area_size' => ['required', 'numeric', 'gt:0'], // Satuan: Hektare (ha)
-            'location' => ['required', 'array', new GeometryGeojsonRule([MultiPolygon::class])],
+            'area_size' => ['required', 'numeric', 'gt:0'],
+            'location' => [
+                'required',
+                'array',
+                new GeometryGeojsonRule([MultiPolygon::class]),
+            ],
         ]);
 
         /** @var MultiPolygon $multiPolygon */
-        $multiPolygon = app(GeojsonParser::class)->parse($validated['location']);
+        $multiPolygon = app(GeojsonParser::class)->parse(
+            $validated['location']
+        );
 
         $land = AgriculturalLand::create([
             'owner_name' => $validated['owner_name'],
@@ -55,6 +84,9 @@ class AgriculturalLandController extends Controller
         ], 201);
     }
 
+    /**
+     * Display the specified agricultural land.
+     */
     public function show(AgriculturalLand $land): JsonResponse
     {
         return response()->json([
@@ -64,17 +96,29 @@ class AgriculturalLandController extends Controller
         ]);
     }
 
-    public function update(Request $request, AgriculturalLand $land): JsonResponse
-    {
+    /**
+     * Update the specified agricultural land.
+     */
+    public function update(
+        Request $request,
+        AgriculturalLand $land
+    ): JsonResponse {
         $validated = $request->validate([
             'owner_name' => ['sometimes', 'required', 'string', 'max:255'],
             'commodity' => ['sometimes', 'required', 'string', 'max:255'],
             'area_size' => ['sometimes', 'required', 'numeric', 'gt:0'],
-            'location' => ['sometimes', 'required', 'array', new GeometryGeojsonRule([MultiPolygon::class])],
+            'location' => [
+                'sometimes',
+                'required',
+                'array',
+                new GeometryGeojsonRule([MultiPolygon::class]),
+            ],
         ]);
 
         if (isset($validated['location'])) {
-            $validated['location'] = app(GeojsonParser::class)->parse($validated['location']);
+            $validated['location'] = app(GeojsonParser::class)->parse(
+                $validated['location']
+            );
         }
 
         $land->update($validated);
@@ -86,6 +130,9 @@ class AgriculturalLandController extends Controller
         ]);
     }
 
+    /**
+     * Remove the specified agricultural land.
+     */
     public function destroy(AgriculturalLand $land): JsonResponse
     {
         $land->delete();

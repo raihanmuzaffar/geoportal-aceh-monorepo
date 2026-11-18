@@ -1,9 +1,12 @@
+
 <?php
 
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\DisasterRisk;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class DisasterRiskController extends Controller
 {
@@ -20,9 +23,37 @@ class DisasterRiskController extends Controller
         ], 410);
     }
 
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        return $this->deprecatedResponse();
+        $query = DisasterRisk::query();
+
+        // Filter berdasarkan jenis bencana
+        if ($request->filled('type')) {
+            $query->where('type', $request->input('type'));
+        }
+
+        // Filter berdasarkan tingkat risiko
+        if ($request->filled('risk_level')) {
+            $query->where('risk_level', $request->input('risk_level'));
+        }
+
+        // Pagination dinamis
+        $perPage = (int) $request->input('per_page', 10);
+        $perPage = max(1, min($perPage, 100));
+
+        $risks = $query->paginate($perPage);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Disaster risks retrieved successfully',
+            'data' => $risks->items(),
+            'meta' => [
+                'current_page' => $risks->currentPage(),
+                'last_page' => $risks->lastPage(),
+                'per_page' => $risks->perPage(),
+                'total' => $risks->total(),
+            ],
+        ]);
     }
 
     public function store(): JsonResponse

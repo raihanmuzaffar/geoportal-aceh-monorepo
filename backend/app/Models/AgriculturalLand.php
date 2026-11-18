@@ -17,6 +17,10 @@ class AgriculturalLand extends Model
         'location',
     ];
 
+    protected $hidden = [
+        'owner_name',
+    ];
+
     protected function casts(): array
     {
         return [
