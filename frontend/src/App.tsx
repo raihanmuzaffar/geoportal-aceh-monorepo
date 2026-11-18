@@ -21,6 +21,8 @@ import ServiceCatalogPage from './pages/public/ServiceCatalogPage';
 import WebGisPage from './pages/public/WebGisPage';
 
 import { useAuthStore } from './store/authStore';
+import { normalizeRole, type UserRole } from './utils/rbac';
+import Forbidden403Page from './pages/Forbidden403Page';
 
 import KependudukanPage from './pages/domain/KependudukanPage';
 import KesehatanPage from './pages/domain/KesehatanPage';
@@ -38,10 +40,13 @@ function AuthLoading() {
 
 function ProtectedRoute({
   children,
+  allowedRoles,
 }: {
   children: ReactNode;
+  allowedRoles?: UserRole[];
 }) {
   const token = useAuthStore((state) => state.token);
+  const user = useAuthStore((state) => state.user);
   const isInitializing = useAuthStore(
     (state) => state.isInitializing,
   );
@@ -50,6 +55,19 @@ function ProtectedRoute({
 
   if (!token) {
     return <Navigate to="/login" replace />;
+  }
+
+  // Cek apakah pengguna memiliki role yang diizinkan (Route Guard RBAC)
+  if (allowedRoles && allowedRoles.length > 0) {
+    const userRole = normalizeRole(user?.role);
+    if (!allowedRoles.includes(userRole)) {
+      return (
+        <Forbidden403Page
+          requiredRole={allowedRoles.join(' / ')}
+          message={`Halaman ini memerlukan hak akses [${allowedRoles.join(', ')}]. Peran akun Anda saat ini adalah [${userRole}].`}
+        />
+      );
+    }
   }
 
   return <>{children}</>;
@@ -133,6 +151,7 @@ export default function App() {
           <Route path="pendidikan" element={<PendidikanPage />} />
           <Route path="pertanian" element={<PertanianPage />} />
           <Route path="kebencanaan" element={<KebencanaanPage />} />
+          <Route path="403" element={<Forbidden403Page />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -8,16 +8,12 @@ import {
   AlertTriangle, 
   Layers, 
   RefreshCw, 
-  AlertCircle 
 } from 'lucide-react';
 import MapView from '../components/MapView';
 import { useDashboardStore } from '../store/dashboardStore';
-
-function formatMetric(value: number | null | undefined): string {
-  return value === null || value === undefined
-    ? '—'
-    : value.toLocaleString('id-ID');
-}
+import { CardSkeleton } from '../components/ui/LoadingSkeleton';
+import ErrorState from '../components/ui/ErrorState';
+import { formatNullableNumber } from '../utils/formatters';
 
 export default function Dashboard() {
   const { stats, isLoading, error, fetchStats } = useDashboardStore();
@@ -48,33 +44,19 @@ export default function Dashboard() {
         </button>
       </div>
 
-      {/* Error Banner jika ada */}
+      {/* Error State Standar dengan Retry */}
       {error && (
-        <div className="p-4 bg-rose-50 border border-rose-200 rounded-xl flex items-center justify-between gap-3 text-rose-700 text-sm">
-          <div className="flex items-center gap-2">
-            <AlertCircle className="w-5 h-5 shrink-0" />
-            <span>{error}</span>
-          </div>
-          <button
-            type="button"
-            onClick={() => fetchStats()}
-            className="underline font-semibold hover:text-rose-900"
-          >
-            Coba lagi
-          </button>
-        </div>
+        <ErrorState
+          error={error}
+          onRetry={fetchStats}
+          isRetrying={isLoading}
+        />
       )}
 
       {/* Loading Skeleton / Kartu Metrik 5 Domain Utama */}
       {isLoading && !stats ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm animate-pulse space-y-3">
-              <div className="w-8 h-8 bg-slate-200 rounded-lg" />
-              <div className="h-4 bg-slate-200 rounded w-1/2" />
-              <div className="h-6 bg-slate-200 rounded w-3/4" />
-            </div>
-          ))}
+          <CardSkeleton count={6} />
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
@@ -87,7 +69,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {formatMetric(stats?.totalPenduduk)}
+              {formatNullableNumber(stats?.totalPenduduk)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Total Jiwa Terdata</p>
           </div>
@@ -101,7 +83,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {formatMetric(stats?.totalKesehatan)}
+              {formatNullableNumber(stats?.totalKesehatan)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Fasilitas Kesehatan</p>
           </div>
@@ -115,7 +97,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {formatMetric(stats?.totalPendidikan)}
+              {formatNullableNumber(stats?.totalPendidikan)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Sekolah Terdaftar</p>
           </div>
@@ -129,7 +111,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {formatMetric(stats?.totalPertanianHa)}
+              {formatNullableNumber(stats?.totalPertanianHa)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Hektar Luas Lahan</p>
           </div>
@@ -143,7 +125,7 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {formatMetric(stats?.totalKebencanaan)}
+              {formatNullableNumber(stats?.totalKebencanaan)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">Titik Riwayat Bencana</p>
           </div>
@@ -157,10 +139,10 @@ export default function Dashboard() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-800 mt-3">
-              {formatMetric(stats?.totalLayerSpasial)}
+              {formatNullableNumber(stats?.totalLayerSpasial)}
             </h3>
             <p className="text-xs text-slate-400 mt-1">
-              {formatMetric(stats?.totalPengguna)} Pengguna Terdaftar
+              {formatNullableNumber(stats?.totalPengguna)} Pengguna Terdaftar
             </p>
           </div>
         </div>

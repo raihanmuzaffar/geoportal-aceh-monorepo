@@ -1,34 +1,23 @@
-import { useState, useMemo } from 'react';
-import { Plus, AlertTriangle, Flame, ShieldAlert, Waves, Home } from 'lucide-react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { Plus, AlertTriangle, Flame, ShieldAlert, Waves, Home, RefreshCw, AlertCircle } from 'lucide-react';
 import DataTable, { type Column } from '../../components/ui/DataTable';
 import Modal from '../../components/ui/Modal';
+import { kebencanaanService } from '../../services/kebencanaanService';
+import type { BencanaItem } from '../../services/types';
+import { useRBAC } from '../../utils/rbac';
+import { CardSkeleton } from '../../components/ui/LoadingSkeleton';
+import ErrorState from '../../components/ui/ErrorState';
+import FormFieldError from '../../components/ui/FormFieldError';
+import { extractLaravelValidationErrors, formatNullableNumber, sanitizeErrorMessage } from '../../utils/formatters';
 
-export interface BencanaItem {
-  id: number;
-  jenis_bencana: 'Banjir Luapan' | 'Tanah Longsor' | 'Gempa Bumi' | 'Angin Puting Beliung' | 'Kebakaran Hutan';
-  wilayah: string;
-  lokasi_detail: string;
-  tanggal_kejadian: string;
-  tingkat_dampak: 'Tinggi' | 'Sedang' | 'Rendah';
-  warga_terdampak: number;
-  status_penanganan: 'Tanggap Darurat' | 'Pemulihan' | 'Selesai';
-}
-
-const initialBencanaData: BencanaItem[] = [
-  { id: 1, jenis_bencana: 'Banjir Luapan', wilayah: 'Kab. Aceh Tenggara', lokasi_detail: 'Kec. Semadam & Bambel', tanggal_kejadian: '2024-10-18', tingkat_dampak: 'Tinggi', warga_terdampak: 1850, status_penanganan: 'Pemulihan' },
-  { id: 2, jenis_bencana: 'Tanah Longsor', wilayah: 'Kab. Aceh Tengah', lokasi_detail: 'Jl. Takengon - Isaq Km. 12', tanggal_kejadian: '2024-11-02', tingkat_dampak: 'Tinggi', warga_terdampak: 320, status_penanganan: 'Tanggap Darurat' },
-  { id: 3, jenis_bencana: 'Banjir Luapan', wilayah: 'Kab. Aceh Utara', lokasi_detail: 'Kec. Matangkuli & Pirak Timur', tanggal_kejadian: '2024-10-25', tingkat_dampak: 'Tinggi', warga_terdampak: 2450, status_penanganan: 'Pemulihan' },
-  { id: 4, jenis_bencana: 'Angin Puting Beliung', wilayah: 'Kota Banda Aceh', lokasi_detail: 'Kec. Ulee Kareng', tanggal_kejadian: '2024-09-14', tingkat_dampak: 'Sedang', warga_terdampak: 65, status_penanganan: 'Selesai' },
-  { id: 5, jenis_bencana: 'Gempa Bumi', wilayah: 'Kab. Pidie Jaya', lokasi_detail: 'Kec. Meureudu (M 4.8)', tanggal_kejadian: '2024-08-30', tingkat_dampak: 'Sedang', warga_terdampak: 140, status_penanganan: 'Selesai' },
-  { id: 6, jenis_bencana: 'Kebakaran Hutan', wilayah: 'Kab. Aceh Barat', lokasi_detail: 'Kec. Johan Pahlawan (Lahan Gambut)', tanggal_kejadian: '2024-07-22', tingkat_dampak: 'Sedang', warga_terdampak: 80, status_penanganan: 'Selesai' },
-  { id: 7, jenis_bencana: 'Tanah Longsor', wilayah: 'Kab. Bener Meriah', lokasi_detail: 'Kec. Pintu Rime Gayo', tanggal_kejadian: '2024-11-08', tingkat_dampak: 'Sedang', warga_terdampak: 95, status_penanganan: 'Tanggap Darurat' },
-  { id: 8, jenis_bencana: 'Banjir Luapan', wilayah: 'Kab. Nagan Raya', lokasi_detail: 'Kec. Tripa Makmur', tanggal_kejadian: '2024-10-12', tingkat_dampak: 'Tinggi', warga_terdampak: 1200, status_penanganan: 'Pemulihan' },
-  { id: 9, jenis_bencana: 'Angin Puting Beliung', wilayah: 'Kab. Aceh Besar', lokasi_detail: 'Kec. Peukan Bada', tanggal_kejadian: '2024-09-05', tingkat_dampak: 'Rendah', warga_terdampak: 25, status_penanganan: 'Selesai' },
-  { id: 10, jenis_bencana: 'Tanah Longsor', wilayah: 'Kab. Aceh Selatan', lokasi_detail: 'Kec. Tapaktuan', tanggal_kejadian: '2024-11-10', tingkat_dampak: 'Sedang', warga_terdampak: 110, status_penanganan: 'Tanggap Darurat' },
-];
+export type { BencanaItem };
 
 export default function KebencanaanPage() {
-  const [dataList, setDataList] = useState<BencanaItem[]>(initialBencanaData);
+  const { can } = useRBAC();
+  const [dataList, setDataList] = useState<BencanaItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   // Modal State
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -36,6 +25,8 @@ export default function KebencanaanPage() {
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<BencanaItem | null>(null);
   const [modalMode, setModalMode] = useState<'create' | 'edit'>('create');
+  const [formValidationErrors, setFormValidationErrors] = useState<Record<string, string[]>>({});
+  const [submitGeneralError, setSubmitGeneralError] = useState<string | null>(null);
 
   // Form State
   const [formData, setFormData] = useState({
@@ -47,6 +38,24 @@ export default function KebencanaanPage() {
     warga_terdampak: 0,
     status_penanganan: 'Tanggap Darurat' as BencanaItem['status_penanganan'],
   });
+
+  const loadData = useCallback(async () => {
+    setIsLoading(true);
+    setFetchError(null);
+    try {
+      const items = await kebencanaanService.getAll();
+      setDataList(items);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal memuat data bencana';
+      setFetchError(msg);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   // Metrik Agregasi
   const totalKejadian = dataList.length;
@@ -95,8 +104,8 @@ export default function KebencanaanPage() {
           item.tingkat_dampak === 'Tinggi'
             ? 'bg-rose-100 text-rose-700 font-bold border-rose-200'
             : item.tingkat_dampak === 'Sedang'
-            ? 'bg-amber-100 text-amber-700 font-semibold border-amber-200'
-            : 'bg-emerald-100 text-emerald-700 border-emerald-200';
+              ? 'bg-amber-100 text-amber-700 font-semibold border-amber-200'
+              : 'bg-emerald-100 text-emerald-700 border-emerald-200';
 
         return (
           <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs border ${style}`}>
@@ -139,6 +148,8 @@ export default function KebencanaanPage() {
   // Handler Buka Form Tambah
   const handleOpenCreate = () => {
     setModalMode('create');
+    setFormValidationErrors({});
+    setSubmitGeneralError(null);
     setFormData({
       jenis_bencana: 'Banjir Luapan',
       wilayah: 'Kab. Aceh Tenggara',
@@ -154,6 +165,8 @@ export default function KebencanaanPage() {
   // Handler Buka Form Edit
   const handleOpenEdit = (item: BencanaItem) => {
     setModalMode('edit');
+    setFormValidationErrors({});
+    setSubmitGeneralError(null);
     setSelectedItem(item);
     setFormData({
       jenis_bencana: item.jenis_bencana,
@@ -167,52 +180,71 @@ export default function KebencanaanPage() {
     setIsFormModalOpen(true);
   };
 
-  // Handler Simpan Data (Create / Update)
-  const handleSubmitForm = () => {
+  // Handler Simpan Data (Create / Update via Service)
+  const handleSubmitForm = async () => {
     if (!formData.lokasi_detail.trim()) {
-      alert('Lokasi spesifik kejadian wajib diisi!');
+      setFormValidationErrors({
+        lokasi_detail: ['Lokasi spesifik kejadian bencana wajib diisi.'],
+      });
       return;
     }
 
-    if (modalMode === 'create') {
-      const newItem: BencanaItem = {
-        id: Date.now(),
-        jenis_bencana: formData.jenis_bencana,
-        wilayah: formData.wilayah,
-        lokasi_detail: formData.lokasi_detail,
-        tanggal_kejadian: formData.tanggal_kejadian,
-        tingkat_dampak: formData.tingkat_dampak,
-        warga_terdampak: Number(formData.warga_terdampak),
-        status_penanganan: formData.status_penanganan,
-      };
-      setDataList([newItem, ...dataList]);
-    } else if (selectedItem) {
-      setDataList(
-        dataList.map((item) =>
-          item.id === selectedItem.id
-            ? {
-                ...item,
-                jenis_bencana: formData.jenis_bencana,
-                wilayah: formData.wilayah,
-                lokasi_detail: formData.lokasi_detail,
-                tanggal_kejadian: formData.tanggal_kejadian,
-                tingkat_dampak: formData.tingkat_dampak,
-                warga_terdampak: Number(formData.warga_terdampak),
-                status_penanganan: formData.status_penanganan,
-              }
-            : item
-        )
-      );
+    setIsSubmitting(true);
+    setFormValidationErrors({});
+    setSubmitGeneralError(null);
+
+    try {
+      if (modalMode === 'create') {
+        const newItem = await kebencanaanService.create({
+          jenis_bencana: formData.jenis_bencana,
+          wilayah: formData.wilayah,
+          lokasi_detail: formData.lokasi_detail,
+          tanggal_kejadian: formData.tanggal_kejadian,
+          tingkat_dampak: formData.tingkat_dampak,
+          warga_terdampak: Number(formData.warga_terdampak),
+          status_penanganan: formData.status_penanganan,
+        });
+        setDataList((prev) => [newItem, ...prev.filter((i) => i.id !== newItem.id)]);
+      } else if (selectedItem) {
+        const updated = await kebencanaanService.update(selectedItem.id, {
+          jenis_bencana: formData.jenis_bencana,
+          wilayah: formData.wilayah,
+          lokasi_detail: formData.lokasi_detail,
+          tanggal_kejadian: formData.tanggal_kejadian,
+          tingkat_dampak: formData.tingkat_dampak,
+          warga_terdampak: Number(formData.warga_terdampak),
+          status_penanganan: formData.status_penanganan,
+        });
+        setDataList((prev) => prev.map((item) => (item.id === selectedItem.id ? updated : item)));
+      }
+      setIsFormModalOpen(false);
+    } catch (err: unknown) {
+      const valErrors = extractLaravelValidationErrors(err);
+      if (Object.keys(valErrors).length > 0) {
+        setFormValidationErrors(valErrors);
+      } else {
+        setSubmitGeneralError(sanitizeErrorMessage(err, 'Gagal menyimpan laporan bencana'));
+      }
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsFormModalOpen(false);
   };
 
-  // Handler Hapus Data
-  const handleDeleteConfirm = () => {
+  // Handler Hapus Data via Service
+  const handleDeleteConfirm = async () => {
     if (selectedItem) {
-      setDataList(dataList.filter((item) => item.id !== selectedItem.id));
-      setIsDeleteModalOpen(false);
-      setSelectedItem(null);
+      setIsSubmitting(true);
+      try {
+        await kebencanaanService.delete(selectedItem.id);
+        setDataList((prev) => prev.filter((item) => item.id !== selectedItem.id));
+        setIsDeleteModalOpen(false);
+        setSelectedItem(null);
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : 'Gagal menghapus laporan bencana';
+        alert(msg);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -227,78 +259,116 @@ export default function KebencanaanPage() {
           </p>
         </div>
 
-        <button
-          type="button"
-          onClick={handleOpenCreate}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-lg shadow-sm transition-colors self-start sm:self-auto"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Lapor Kejadian Bencana</span>
-        </button>
-      </div>
+        <div className="flex items-center gap-2 self-start sm:self-auto">
+          <button
+            type="button"
+            onClick={loadData}
+            disabled={isLoading}
+            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-60 transition-colors shadow-sm"
+          >
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-orange-600' : 'text-slate-500'}`} />
+            <span>Perbarui</span>
+          </button>
 
-      {/* Kartu Ringkasan Metrik */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Total Kejadian</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalKejadian} Titik</h3>
-            <p className="text-xs text-slate-400 mt-1">Laporan Tercatat</p>
-          </div>
-          <div className="p-3 bg-orange-100 text-orange-600 rounded-xl">
-            <AlertTriangle className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Tanggap Darurat</p>
-            <h3 className="text-2xl font-bold text-rose-600 mt-1">{totalDarurat} Lokasi</h3>
-            <p className="text-xs text-slate-400 mt-1">Butuh Penanganan Segera</p>
-          </div>
-          <div className="p-3 bg-rose-100 text-rose-600 rounded-xl">
-            <Flame className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Dampak Kritis / Tinggi</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalDampakTinggi} Titik</h3>
-            <p className="text-xs text-slate-400 mt-1">Tingkat Kerusakan Berat</p>
-          </div>
-          <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
-            <ShieldAlert className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Warga Terdampak</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalWarga.toLocaleString('id-ID')} Jiwa</h3>
-            <p className="text-xs text-slate-400 mt-1">Mengungsi & Terdampak</p>
-          </div>
-          <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
-            <Home className="w-6 h-6" />
-          </div>
+          {can('create') && (
+            <button
+              type="button"
+              onClick={handleOpenCreate}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-lg shadow-sm transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Lapor Kejadian Bencana</span>
+            </button>
+          )}
         </div>
       </div>
+
+      {/* Error Banner Standar dengan Tombol Coba Lagi */}
+      {fetchError && (
+        <ErrorState
+          error={fetchError}
+          onRetry={loadData}
+          isRetrying={isLoading}
+        />
+      )}
+
+      {/* Kartu Ringkasan Metrik (Skeleton saat memuat awal) */}
+      {isLoading && dataList.length === 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <CardSkeleton count={4} />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Total Kejadian</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalKejadian)} Titik
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Laporan Tercatat</p>
+            </div>
+            <div className="p-3 bg-orange-100 text-orange-600 rounded-xl">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Tanggap Darurat</p>
+              <h3 className="text-2xl font-bold text-rose-600 mt-1">
+                {formatNullableNumber(totalDarurat)} Lokasi
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Butuh Penanganan Segera</p>
+            </div>
+            <div className="p-3 bg-rose-100 text-rose-600 rounded-xl">
+              <Flame className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Dampak Kritis / Tinggi</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalDampakTinggi)} Titik
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Tingkat Kerusakan Berat</p>
+            </div>
+            <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
+              <ShieldAlert className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Warga Terdampak</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalWarga)} Jiwa
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Mengungsi & Terdampak</p>
+            </div>
+            <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
+              <Home className="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Tabel Data Reusable */}
       <DataTable
         data={dataList}
         columns={columns}
+        isLoading={isLoading}
         searchPlaceholder="Cari jenis bencana, wilayah, atau lokasi detail..."
         pageSize={5}
         onView={(item) => {
           setSelectedItem(item);
           setIsDetailModalOpen(true);
         }}
-        onEdit={(item) => handleOpenEdit(item)}
-        onDelete={(item) => {
+        onEdit={can('update') ? (item) => handleOpenEdit(item) : undefined}
+        onDelete={can('delete') ? (item) => {
           setSelectedItem(item);
           setIsDeleteModalOpen(true);
-        }}
+        } : undefined}
       />
 
       {/* Modal 1: Form Tambah / Edit */}
@@ -308,8 +378,16 @@ export default function KebencanaanPage() {
         title={modalMode === 'create' ? 'Lapor Kejadian Bencana Baru' : 'Edit Laporan Bencana'}
         onConfirm={handleSubmitForm}
         confirmText={modalMode === 'create' ? 'Simpan Laporan' : 'Perbarui Laporan'}
+        isLoading={isSubmitting}
         maxWidth="lg"
       >
+        {submitGeneralError && (
+          <div className="mb-4 p-3 bg-rose-50 border border-rose-200 text-rose-700 text-xs rounded-xl flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 text-rose-500 shrink-0" />
+            <span>{submitGeneralError}</span>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-semibold text-slate-600 mb-1">Jenis Bencana</label>
@@ -324,6 +402,7 @@ export default function KebencanaanPage() {
               <option value="Angin Puting Beliung">Angin Puting Beliung</option>
               <option value="Kebakaran Hutan">Kebakaran Hutan & Lahan</option>
             </select>
+            <FormFieldError errors={formValidationErrors['jenis_bencana']} />
           </div>
 
           <div>
@@ -345,6 +424,7 @@ export default function KebencanaanPage() {
               <option value="Kota Banda Aceh">Kota Banda Aceh</option>
               <option value="Kab. Aceh Selatan">Kab. Aceh Selatan</option>
             </select>
+            <FormFieldError errors={formValidationErrors['wilayah']} />
           </div>
 
           <div className="sm:col-span-2">
@@ -354,9 +434,10 @@ export default function KebencanaanPage() {
               value={formData.lokasi_detail}
               onChange={(e) => setFormData({ ...formData, lokasi_detail: e.target.value })}
               placeholder="Contoh: Desa Semadam Awal, Km 15"
-              className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-orange-500 outline-none"
+              className={`w-full text-sm border rounded-lg p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-orange-500 outline-none ${formValidationErrors['lokasi_detail'] ? 'border-rose-400 bg-rose-50/30' : 'border-slate-200'}`}
               required
             />
+            <FormFieldError errors={formValidationErrors['lokasi_detail']} />
           </div>
 
           <div>
@@ -415,6 +496,7 @@ export default function KebencanaanPage() {
         title="Konfirmasi Hapus Laporan Bencana"
         confirmVariant="danger"
         confirmText="Hapus Sekarang"
+        isLoading={isSubmitting}
         onConfirm={handleDeleteConfirm}
       >
         <p className="text-slate-600">
@@ -467,6 +549,29 @@ export default function KebencanaanPage() {
                 </span>
               </div>
             </div>
+
+            {/* Aksi Verifikasi Laporan (Khusus Administrator BPBD) */}
+            {can('verify') && (
+              <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs">
+                <span className="text-slate-500 font-medium">Otorisasi BPBD:</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setDataList((prev) =>
+                      prev.map((item) =>
+                        item.id === selectedItem.id
+                          ? { ...item, status_penanganan: 'Selesai' }
+                          : item
+                      )
+                    );
+                    setIsDetailModalOpen(false);
+                  }}
+                  className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-colors shadow-sm"
+                >
+                  Verifikasi Penanganan Selesai
+                </button>
+              </div>
+            )}
           </div>
         )}
       </Modal>
