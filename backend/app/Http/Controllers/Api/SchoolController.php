@@ -3,9 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\School;
+use Clickbar\Magellan\Data\Geometries\Point;
+use Clickbar\Magellan\IO\Parser\Geojson\GeojsonParser;
+use Clickbar\Magellan\Rules\GeometryGeojsonRule;
 use Illuminate\Http\Request;
 
-public function index(Request $request)
+class SchoolController extends Controller
+{
+    public function index(Request $request)
     {
         $query = School::query();
 
@@ -32,45 +38,66 @@ public function index(Request $request)
         ]);
     }
 
-class SchoolController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function store(Request $request, GeojsonParser $parser)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'level' => 'required|in:SD,SMP,SMA,SMK',
+            'status' => 'required|in:Negeri,Swasta',
+            'location' => ['required', new GeometryGeojsonRule([Point::class])],
+        ]);
+
+        $point = $parser->parse($validated['location']);
+
+        $school = School::create([
+            'name' => $validated['name'],
+            'level' => $validated['level'],
+            'status' => $validated['status'],
+            'location' => $point,
+        ]);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'School created successfully',
+            'data' => $school,
+        ], 201);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function show(School $school)
     {
-        //
+        return response()->json([
+            'status' => 'success',
+            'message' => 'School retrieved successfully',
+            'data' => $school,
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(Request $request, School $school, GeojsonParser $parser)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'sometimes|required|string|max:255',
+            'level' => 'sometimes|required|in:SD,SMP,SMA,SMK',
+            'status' => 'sometimes|required|in:Negeri,Swasta',
+            'location' => ['sometimes', 'required', new GeometryGeojsonRule([Point::class])],
+        ]);
+
+        if (isset($validated['location'])) {
+            $validated['location'] = $parser->parse($validated['location']);
+        }
+
+        $school->update($validated);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'School updated successfully',
+            'data' => $school,
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy(School $school)
     {
-        //
-    }
+        $school->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return response()->noContent();
     }
 }
