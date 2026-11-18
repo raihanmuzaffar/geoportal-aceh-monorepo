@@ -1,34 +1,22 @@
-import { useState, useMemo } from 'react';
-import { Plus, Sprout, Tractor, Scale, Map, Leaf } from 'lucide-react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { Plus, Sprout, Tractor, Scale, Map, Leaf, RefreshCw } from 'lucide-react';
 import DataTable, { type Column } from '../../components/ui/DataTable';
 import Modal from '../../components/ui/Modal';
+import { pertanianService } from '../../services/pertanianService';
+import type { PertanianItem } from '../../services/types';
+import { useRBAC } from '../../utils/rbac';
+import { CardSkeleton } from '../../components/ui/LoadingSkeleton';
+import ErrorState from '../../components/ui/ErrorState';
+import { formatNullableNumber } from '../../utils/formatters';
 
-export interface PertanianItem {
-  id: number;
-  komoditas: string;
-  jenis_lahan: 'Sawah Irigasi' | 'Perkebunan Rakyat' | 'Tegal / Ladang' | 'Hortikultura';
-  wilayah: string;
-  luas_ha: number;
-  produksi_ton: number;
-  produktivitas: number; // Ton/Ha
-  musim_tanam: string;
-}
-
-const initialPertanianData: PertanianItem[] = [
-  { id: 1, komoditas: 'Kopi Arabika Gayo', jenis_lahan: 'Perkebunan Rakyat', wilayah: 'Kab. Aceh Tengah', luas_ha: 48500, produksi_ton: 36200, produktivitas: 0.75, musim_tanam: 'Sep - Jan' },
-  { id: 2, komoditas: 'Kopi Arabika Gayo', jenis_lahan: 'Perkebunan Rakyat', wilayah: 'Kab. Bener Meriah', luas_ha: 42100, produksi_ton: 32800, produktivitas: 0.78, musim_tanam: 'Sep - Jan' },
-  { id: 3, komoditas: 'Padi Sawah', jenis_lahan: 'Sawah Irigasi', wilayah: 'Kab. Aceh Besar', luas_ha: 29400, produksi_ton: 165000, produktivitas: 5.61, musim_tanam: 'Rendengan & Gadu' },
-  { id: 4, komoditas: 'Padi Sawah', jenis_lahan: 'Sawah Irigasi', wilayah: 'Kab. Pidie', luas_ha: 26800, produksi_ton: 158000, produktivitas: 5.90, musim_tanam: 'Rendengan & Gadu' },
-  { id: 5, komoditas: 'Padi Sawah', jenis_lahan: 'Sawah Irigasi', wilayah: 'Kab. Aceh Utara', luas_ha: 38200, produksi_ton: 210000, produktivitas: 5.50, musim_tanam: 'Oktober - Maret' },
-  { id: 6, komoditas: 'Kelapa Sawit', jenis_lahan: 'Perkebunan Rakyat', wilayah: 'Kab. Aceh Tamiang', luas_ha: 34500, produksi_ton: 517500, produktivitas: 15.00, musim_tanam: 'Tahunan' },
-  { id: 7, komoditas: 'Kelapa Sawit', jenis_lahan: 'Perkebunan Rakyat', wilayah: 'Kab. Nagan Raya', luas_ha: 41200, produksi_ton: 659200, produktivitas: 16.00, musim_tanam: 'Tahunan' },
-  { id: 8, komoditas: 'Jagung Hibrida', jenis_lahan: 'Tegal / Ladang', wilayah: 'Kab. Aceh Tenggara', luas_ha: 18900, produksi_ton: 113400, produktivitas: 6.00, musim_tanam: 'April - Juli' },
-  { id: 9, komoditas: 'Nilam Aceh', jenis_lahan: 'Hortikultura', wilayah: 'Kab. Aceh Jaya', luas_ha: 2400, produksi_ton: 360, produktivitas: 0.15, musim_tanam: 'Januari - Juni' },
-  { id: 10, komoditas: 'Kakao Rakyat', jenis_lahan: 'Perkebunan Rakyat', wilayah: 'Kab. Pidie Jaya', luas_ha: 14600, produksi_ton: 10220, produktivitas: 0.70, musim_tanam: 'Tahunan' },
-];
+export type { PertanianItem };
 
 export default function PertanianPage() {
-  const [dataList, setDataList] = useState<PertanianItem[]>(initialPertanianData);
+  const { can } = useRBAC();
+  const [dataList, setDataList] = useState<PertanianItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   // Modal State
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -46,6 +34,24 @@ export default function PertanianPage() {
     produksi_ton: 0,
     musim_tanam: 'Musim Rendengan',
   });
+
+  const loadData = useCallback(async () => {
+    setIsLoading(true);
+    setFetchError(null);
+    try {
+      const items = await pertanianService.getAll();
+      setDataList(items);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal memuat data pertanian';
+      setFetchError(msg);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   // Metrik Agregasi
   const totalLuasHa = useMemo(() => {
@@ -139,8 +145,8 @@ export default function PertanianPage() {
     setIsFormModalOpen(true);
   };
 
-  // Handler Simpan Data (Create / Update)
-  const handleSubmitForm = () => {
+  // Handler Simpan Data (Create / Update via Service)
+  const handleSubmitForm = async () => {
     if (!formData.komoditas.trim()) {
       alert('Nama komoditas wajib diisi!');
       return;
@@ -150,45 +156,55 @@ export default function PertanianPage() {
     const produksi = Number(formData.produksi_ton) || 0;
     const prod = Number((produksi / luas).toFixed(2));
 
-    if (modalMode === 'create') {
-      const newItem: PertanianItem = {
-        id: Date.now(),
-        komoditas: formData.komoditas,
-        jenis_lahan: formData.jenis_lahan,
-        wilayah: formData.wilayah,
-        luas_ha: luas,
-        produksi_ton: produksi,
-        produktivitas: prod,
-        musim_tanam: formData.musim_tanam,
-      };
-      setDataList([newItem, ...dataList]);
-    } else if (selectedItem) {
-      setDataList(
-        dataList.map((item) =>
-          item.id === selectedItem.id
-            ? {
-                ...item,
-                komoditas: formData.komoditas,
-                jenis_lahan: formData.jenis_lahan,
-                wilayah: formData.wilayah,
-                luas_ha: luas,
-                produksi_ton: produksi,
-                produktivitas: prod,
-                musim_tanam: formData.musim_tanam,
-              }
-            : item
-        )
-      );
+    setIsSubmitting(true);
+    try {
+      if (modalMode === 'create') {
+        const newItem = await pertanianService.create({
+          komoditas: formData.komoditas,
+          jenis_lahan: formData.jenis_lahan,
+          wilayah: formData.wilayah,
+          luas_ha: luas,
+          produksi_ton: produksi,
+          produktivitas: prod,
+          musim_tanam: formData.musim_tanam,
+        });
+        setDataList((prev) => [newItem, ...prev.filter((i) => i.id !== newItem.id)]);
+      } else if (selectedItem) {
+        const updated = await pertanianService.update(selectedItem.id, {
+          komoditas: formData.komoditas,
+          jenis_lahan: formData.jenis_lahan,
+          wilayah: formData.wilayah,
+          luas_ha: luas,
+          produksi_ton: produksi,
+          produktivitas: prod,
+          musim_tanam: formData.musim_tanam,
+        });
+        setDataList((prev) => prev.map((item) => (item.id === selectedItem.id ? updated : item)));
+      }
+      setIsFormModalOpen(false);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal menyimpan data pertanian';
+      alert(msg);
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsFormModalOpen(false);
   };
 
-  // Handler Hapus Data
-  const handleDeleteConfirm = () => {
+  // Handler Hapus Data via Service
+  const handleDeleteConfirm = async () => {
     if (selectedItem) {
-      setDataList(dataList.filter((item) => item.id !== selectedItem.id));
-      setIsDeleteModalOpen(false);
-      setSelectedItem(null);
+      setIsSubmitting(true);
+      try {
+        await pertanianService.delete(selectedItem.id);
+        setDataList((prev) => prev.filter((item) => item.id !== selectedItem.id));
+        setIsDeleteModalOpen(false);
+        setSelectedItem(null);
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : 'Gagal menghapus data pertanian';
+        alert(msg);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -203,78 +219,114 @@ export default function PertanianPage() {
           </p>
         </div>
 
-        <button
-          type="button"
-          onClick={handleOpenCreate}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors self-start sm:self-auto"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Tambah Lahan Pertanian</span>
-        </button>
-      </div>
+        <div className="flex items-center gap-2 self-start sm:self-auto">
+          <button
+            type="button"
+            onClick={loadData}
+            disabled={isLoading}
+            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-60 transition-colors shadow-sm"
+          >
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-emerald-600' : 'text-slate-500'}`} />
+            <span>Perbarui</span>
+          </button>
 
-      {/* Kartu Ringkasan Metrik */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Total Luas Lahan</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalLuasHa.toLocaleString('id-ID')} Ha</h3>
-            <p className="text-xs text-slate-400 mt-1">Area Lahan Terpantau</p>
-          </div>
-          <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
-            <Map className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Total Produksi Panen</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalProduksiTon.toLocaleString('id-ID')} Ton</h3>
-            <p className="text-xs text-slate-400 mt-1">Estimasi Produksi Tahunan</p>
-          </div>
-          <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
-            <Scale className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Komoditas Terdata</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{dataList.length} Komoditas</h3>
-            <p className="text-xs text-slate-400 mt-1">Sentra Produksi Wilayah</p>
-          </div>
-          <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
-            <Sprout className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Komoditas Ekspor Utama</p>
-            <h3 className="text-xl font-bold text-slate-800 mt-1">Kopi Gayo & Sawit</h3>
-            <p className="text-xs text-slate-400 mt-1">Nilai Ekonomi Tinggi</p>
-          </div>
-          <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
-            <Leaf className="w-6 h-6" />
-          </div>
+          {can('create') && (
+            <button
+              type="button"
+              onClick={handleOpenCreate}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Tambah Lahan Pertanian</span>
+            </button>
+          )}
         </div>
       </div>
+
+      {/* Error Banner Standar dengan Retry */}
+      {fetchError && (
+        <ErrorState
+          error={fetchError}
+          onRetry={loadData}
+          isRetrying={isLoading}
+        />
+      )}
+
+      {/* Kartu Ringkasan Metrik (Skeleton saat memuat awal) */}
+      {isLoading && dataList.length === 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <CardSkeleton count={4} />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Total Luas Lahan</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalLuasHa)} Ha
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Area Lahan Terpantau</p>
+            </div>
+            <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
+              <Map className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Total Produksi Panen</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalProduksiTon)} Ton
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Estimasi Produksi Tahunan</p>
+            </div>
+            <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
+              <Scale className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Komoditas Terdata</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(dataList.length)} Komoditas
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Sentra Produksi Wilayah</p>
+            </div>
+            <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
+              <Sprout className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Komoditas Ekspor Utama</p>
+              <h3 className="text-xl font-bold text-slate-800 mt-1">Kopi Gayo & Sawit</h3>
+              <p className="text-xs text-slate-400 mt-1">Nilai Ekonomi Tinggi</p>
+            </div>
+            <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
+              <Leaf className="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Tabel Data Reusable */}
       <DataTable
         data={dataList}
         columns={columns}
+        isLoading={isLoading}
         searchPlaceholder="Cari komoditas, jenis lahan, atau kabupaten..."
         pageSize={5}
         onView={(item) => {
           setSelectedItem(item);
           setIsDetailModalOpen(true);
         }}
-        onEdit={(item) => handleOpenEdit(item)}
-        onDelete={(item) => {
+        onEdit={can('update') ? (item) => handleOpenEdit(item) : undefined}
+        onDelete={can('delete') ? (item) => {
           setSelectedItem(item);
           setIsDeleteModalOpen(true);
-        }}
+        } : undefined}
       />
 
       {/* Modal 1: Form Tambah / Edit */}
@@ -284,6 +336,7 @@ export default function PertanianPage() {
         title={modalMode === 'create' ? 'Tambah Data Pertanian' : 'Edit Data Pertanian'}
         onConfirm={handleSubmitForm}
         confirmText={modalMode === 'create' ? 'Simpan Lahan' : 'Perbarui Lahan'}
+        isLoading={isSubmitting}
         maxWidth="lg"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -376,6 +429,7 @@ export default function PertanianPage() {
         title="Konfirmasi Hapus Lahan"
         confirmVariant="danger"
         confirmText="Hapus Sekarang"
+        isLoading={isSubmitting}
         onConfirm={handleDeleteConfirm}
       >
         <p className="text-slate-600">

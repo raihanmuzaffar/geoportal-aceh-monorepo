@@ -10,9 +10,10 @@ import {
   Eye,
   Pencil,
   Trash2,
-  Loader2,
-  Database
+  X,
 } from 'lucide-react';
+import { TableSkeleton } from './LoadingSkeleton';
+import EmptyState from './EmptyState';
 
 export interface Column<T> {
   key: string;
@@ -128,8 +129,21 @@ export default function DataTable<T extends object>({
               setCurrentPage(1);
             }}
             placeholder={searchPlaceholder}
-            className="w-full pl-9 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-800 placeholder-slate-400"
+            className="w-full pl-9 pr-8 py-2 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-800 placeholder-slate-400"
           />
+          {searchQuery && (
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery('');
+                setCurrentPage(1);
+              }}
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-0.5 rounded"
+              title="Hapus pencarian"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          )}
         </div>
         <div className="text-xs text-slate-500 w-full sm:w-auto text-right">
           Total: <span className="font-semibold text-slate-700">{filteredData.length}</span> data
@@ -174,32 +188,22 @@ export default function DataTable<T extends object>({
 
           <tbody className="divide-y divide-slate-200 text-sm text-slate-700">
             {isLoading ? (
-              <tr>
-                <td
-                  colSpan={columns.length + (hasActions ? 2 : 1)}
-                  className="py-12 text-center"
-                >
-                  <div className="flex flex-col items-center justify-center gap-2 text-slate-500">
-                    <Loader2 className="w-8 h-8 animate-spin text-emerald-500" />
-                    <p className="text-sm font-medium">Memuat data...</p>
-                  </div>
-                </td>
-              </tr>
+              <TableSkeleton
+                rows={pageSize}
+                columns={columns.length}
+                hasActions={hasActions}
+              />
             ) : paginatedData.length === 0 ? (
               <tr>
                 <td
                   colSpan={columns.length + (hasActions ? 2 : 1)}
-                  className="py-12 text-center"
+                  className="py-6 text-center"
                 >
-                  <div className="flex flex-col items-center justify-center gap-2 text-slate-400">
-                    <Database className="w-10 h-10 stroke-[1.5]" />
-                    <p className="text-base font-semibold text-slate-600">Tidak ada data ditemukan</p>
-                    <p className="text-xs text-slate-400">
-                      {searchQuery
-                        ? 'Coba kata kunci pencarian yang lain'
-                        : 'Belum ada data yang tercatat'}
-                    </p>
-                  </div>
+                  <EmptyState
+                    isSearchEmpty={Boolean(searchQuery.trim())}
+                    searchQuery={searchQuery}
+                    onResetSearch={() => setSearchQuery('')}
+                  />
                 </td>
               </tr>
             ) : (
@@ -214,11 +218,15 @@ export default function DataTable<T extends object>({
                     <td className="py-3.5 px-4 text-center text-xs text-slate-500 font-medium">
                       {rowNumber}
                     </td>
-                    {columns.map((col) => (
-                      <td key={col.key} className="py-3.5 px-4">
-                        {col.render ? col.render(item) : String(getFieldValue(item, col.key) ?? '-')}
-                      </td>
-                    ))}
+                    {columns.map((col) => {
+                      const val = getFieldValue(item, col.key);
+                      const displayVal = val === null || val === undefined ? '—' : String(val);
+                      return (
+                        <td key={col.key} className="py-3.5 px-4">
+                          {col.render ? col.render(item) : displayVal}
+                        </td>
+                      );
+                    })}
                     {hasActions && (
                       <td className="py-3.5 px-4 text-center">
                         <div className="flex items-center justify-center gap-1.5">

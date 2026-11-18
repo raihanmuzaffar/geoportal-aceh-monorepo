@@ -6,6 +6,7 @@ import {
 
 import { useAuthStore } from '../../store/authStore';
 import { APP_MODE } from '../../config/appMode';
+import { useRBAC } from '../../utils/rbac';
 
 import {
   LogOut,
@@ -19,8 +20,8 @@ import {
 } from 'lucide-react';
 
 export default function DashboardLayout() {
-  const user = useAuthStore((state) => state.user);
   const logout = useAuthStore((state) => state.logout);
+  const { user, badge } = useRBAC();
   const navigate = useNavigate();
 
   const handleLogout = async () => {
@@ -32,13 +33,6 @@ export default function DashboardLayout() {
       navigate('/login', { replace: true });
     }
   };
-
-  const roleLabel =
-    user?.role === 'admin'
-      ? 'Administrator'
-      : user?.role === 'operator'
-        ? 'Operator'
-        : 'Pengguna';
 
   return (
     <div className="min-h-screen bg-slate-100 flex">
@@ -119,10 +113,14 @@ export default function DashboardLayout() {
                 {user?.name || 'Pengguna'}
               </p>
 
-              <p className="text-xs text-slate-500">
-                {roleLabel}
-                {APP_MODE === 'demo' ? ' · Mode Demo' : ''}
-              </p>
+              <div className="flex items-center gap-1.5 justify-end mt-0.5">
+                <span className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-bold border ${badge.badgeClass}`}>
+                  {badge.label}
+                </span>
+                {APP_MODE === 'demo' && (
+                  <span className="text-[10px] text-slate-400">&bull; Demo</span>
+                )}
+              </div>
             </div>
 
             <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold shadow-md">

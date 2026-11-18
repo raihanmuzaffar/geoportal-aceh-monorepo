@@ -129,12 +129,20 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       }
 
       // Login lokal hanya untuk demonstrasi UI.
-      // Tidak memberikan role administrator.
+      const normalizedEmail = email.toLowerCase().trim();
+      const demoRole = normalizedEmail.includes('admin')
+        ? 'admin'
+        : normalizedEmail.includes('operator')
+          ? 'operator'
+          : normalizedEmail.includes('analis')
+            ? 'analis'
+            : 'user';
+
       const demoUser: User = {
         id: 1,
         name: email.split('@')[0] || 'Pengguna Demo',
         email,
-        role: 'user',
+        role: demoRole,
       };
 
       const demoToken = `demo-session-${Date.now()}`;

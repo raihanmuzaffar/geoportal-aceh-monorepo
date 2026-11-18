@@ -19,12 +19,14 @@ interface LayerControlProps {
   visibility: LayerVisibilityState;
   onToggleLayer: (key: keyof LayerVisibilityState) => void;
   isLoading?: boolean;
+  metadata?: Record<string, { isLive: boolean; source: string; count: number }>;
 }
 
 export const LayerControl: React.FC<LayerControlProps> = ({
   visibility,
   onToggleLayer,
   isLoading = false,
+  metadata = {},
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showLegend, setShowLegend] = useState(false);
@@ -89,8 +91,16 @@ export const LayerControl: React.FC<LayerControlProps> = ({
             <div className="space-y-1.5 pl-1">
               <label className="flex items-center justify-between p-1.5 hover:bg-slate-100/70 rounded-lg cursor-pointer transition-colors text-xs text-slate-700">
                 <span className="flex items-center gap-2">
-                  <GraduationCap className="w-4 h-4 text-blue-600" />
-                  <span>Pendidikan (Sekolah/PT)</span>
+                  <GraduationCap className="w-4 h-4 text-blue-600 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>Pendidikan (Sekolah/PT)</span>
+                    {metadata['schools'] && (
+                      <span className="text-[10px] text-slate-400 font-normal flex items-center gap-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${metadata['schools'].isLive ? 'bg-emerald-500' : 'bg-slate-400'}`} />
+                        {metadata['schools'].count} titik &bull; {metadata['schools'].isLive ? 'API' : 'Katalog'}
+                      </span>
+                    )}
+                  </span>
                 </span>
                 <input
                   type="checkbox"
@@ -102,8 +112,16 @@ export const LayerControl: React.FC<LayerControlProps> = ({
 
               <label className="flex items-center justify-between p-1.5 hover:bg-slate-100/70 rounded-lg cursor-pointer transition-colors text-xs text-slate-700">
                 <span className="flex items-center gap-2">
-                  <HeartPulse className="w-4 h-4 text-rose-600" />
-                  <span>Kesehatan (RS/Puskesmas)</span>
+                  <HeartPulse className="w-4 h-4 text-rose-600 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>Kesehatan (RS/Puskesmas)</span>
+                    {metadata['health'] && (
+                      <span className="text-[10px] text-slate-400 font-normal flex items-center gap-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${metadata['health'].isLive ? 'bg-emerald-500' : 'bg-slate-400'}`} />
+                        {metadata['health'].count} faskes &bull; {metadata['health'].isLive ? 'API' : 'Katalog'}
+                      </span>
+                    )}
+                  </span>
                 </span>
                 <input
                   type="checkbox"
@@ -115,8 +133,16 @@ export const LayerControl: React.FC<LayerControlProps> = ({
 
               <label className="flex items-center justify-between p-1.5 hover:bg-slate-100/70 rounded-lg cursor-pointer transition-colors text-xs text-slate-700">
                 <span className="flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 text-amber-600" />
-                  <span>Kejadian Bencana (Titik)</span>
+                  <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>Kejadian Bencana (Titik)</span>
+                    {metadata['disasterPoints'] && (
+                      <span className="text-[10px] text-slate-400 font-normal flex items-center gap-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${metadata['disasterPoints'].isLive ? 'bg-emerald-500' : 'bg-slate-400'}`} />
+                        {metadata['disasterPoints'].count} kejadian &bull; {metadata['disasterPoints'].isLive ? 'API' : 'Katalog'}
+                      </span>
+                    )}
+                  </span>
                 </span>
                 <input
                   type="checkbox"
@@ -136,8 +162,16 @@ export const LayerControl: React.FC<LayerControlProps> = ({
             <div className="space-y-1.5 pl-1">
               <label className="flex items-center justify-between p-1.5 hover:bg-slate-100/70 rounded-lg cursor-pointer transition-colors text-xs text-slate-700">
                 <span className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-indigo-600" />
-                  <span>Kependudukan (Choropleth)</span>
+                  <Users className="w-4 h-4 text-indigo-600 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>Kependudukan (Choropleth)</span>
+                    {metadata['population'] && (
+                      <span className="text-[10px] text-slate-400 font-normal flex items-center gap-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${metadata['population'].isLive ? 'bg-emerald-500' : 'bg-slate-400'}`} />
+                        {metadata['population'].count} wilayah &bull; {metadata['population'].isLive ? 'API' : 'Katalog'}
+                      </span>
+                    )}
+                  </span>
                 </span>
                 <input
                   type="checkbox"
@@ -149,8 +183,16 @@ export const LayerControl: React.FC<LayerControlProps> = ({
 
               <label className="flex items-center justify-between p-1.5 hover:bg-slate-100/70 rounded-lg cursor-pointer transition-colors text-xs text-slate-700">
                 <span className="flex items-center gap-2">
-                  <Sprout className="w-4 h-4 text-emerald-600" />
-                  <span>Lahan Pertanian</span>
+                  <Sprout className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>Lahan Pertanian</span>
+                    {metadata['agriculture'] && (
+                      <span className="text-[10px] text-slate-400 font-normal flex items-center gap-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${metadata['agriculture'].isLive ? 'bg-emerald-500' : 'bg-slate-400'}`} />
+                        {metadata['agriculture'].count} area &bull; {metadata['agriculture'].isLive ? 'API' : 'Katalog'}
+                      </span>
+                    )}
+                  </span>
                 </span>
                 <input
                   type="checkbox"
@@ -162,8 +204,16 @@ export const LayerControl: React.FC<LayerControlProps> = ({
 
               <label className="flex items-center justify-between p-1.5 hover:bg-slate-100/70 rounded-lg cursor-pointer transition-colors text-xs text-slate-700">
                 <span className="flex items-center gap-2">
-                  <ShieldAlert className="w-4 h-4 text-red-600" />
-                  <span>Zona Rawan Bencana</span>
+                  <ShieldAlert className="w-4 h-4 text-red-600 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>Zona Rawan Bencana</span>
+                    {metadata['disasterZones'] && (
+                      <span className="text-[10px] text-slate-400 font-normal flex items-center gap-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${metadata['disasterZones'].isLive ? 'bg-emerald-500' : 'bg-slate-400'}`} />
+                        {metadata['disasterZones'].count} zona &bull; {metadata['disasterZones'].isLive ? 'API' : 'Katalog'}
+                      </span>
+                    )}
+                  </span>
                 </span>
                 <input
                   type="checkbox"
