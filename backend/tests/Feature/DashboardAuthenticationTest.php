@@ -77,6 +77,7 @@ class DashboardAuthenticationTest extends TestCase
         $response = $this->postJson('/api/v1/auth/register', [
             'name' => 'Admin Palsu',
             'email' => 'fake-admin@example.test',
+
             'password' => 'secure-password',
             'password_confirmation' => 'secure-password',
             'role' => 'admin',
