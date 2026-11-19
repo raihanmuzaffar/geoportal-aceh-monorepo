@@ -1,35 +1,22 @@
-import { useState, useMemo } from 'react';
-import { Plus, Users, UserCheck, MapPin, Building, TrendingUp } from 'lucide-react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { Plus, Users, UserCheck, MapPin, Building, TrendingUp, RefreshCw } from 'lucide-react';
 import DataTable, { type Column } from '../../components/ui/DataTable';
 import Modal from '../../components/ui/Modal';
+import { kependudukanService } from '../../services/kependudukanService';
+import type { PendudukItem } from '../../services/types';
+import { useRBAC } from '../../utils/rbac';
+import { CardSkeleton } from '../../components/ui/LoadingSkeleton';
+import ErrorState from '../../components/ui/ErrorState';
+import { formatNullableNumber } from '../../utils/formatters';
 
-export interface PendudukItem {
-  id: number;
-  wilayah: string;
-  kecamatan: string;
-  total_penduduk: number;
-  laki_laki: number;
-  perempuan: number;
-  luas_km2: number;
-  kepadatan: number; // jiwa/km2
-  tahun: number;
-}
-
-const initialData: PendudukItem[] = [
-  { id: 1, wilayah: 'Kota Banda Aceh', kecamatan: 'Kuta Alam', total_penduduk: 43250, laki_laki: 21800, perempuan: 21450, luas_km2: 10.05, kepadatan: 4303, tahun: 2024 },
-  { id: 2, wilayah: 'Kota Banda Aceh', kecamatan: 'Baiturrahman', total_penduduk: 32100, laki_laki: 16200, perempuan: 15900, luas_km2: 4.54, kepadatan: 7070, tahun: 2024 },
-  { id: 3, wilayah: 'Kota Banda Aceh', kecamatan: 'Syiah Kuala', total_penduduk: 37400, laki_laki: 18900, perempuan: 18500, luas_km2: 14.24, kepadatan: 2626, tahun: 2024 },
-  { id: 4, wilayah: 'Kab. Aceh Besar', kecamatan: 'Darul Imarah', total_penduduk: 55200, laki_laki: 27800, perempuan: 27400, luas_km2: 24.35, kepadatan: 2266, tahun: 2024 },
-  { id: 5, wilayah: 'Kab. Aceh Besar', kecamatan: 'Ingin Jaya', total_penduduk: 38900, laki_laki: 19500, perempuan: 19400, luas_km2: 48.00, kepadatan: 810, tahun: 2024 },
-  { id: 6, wilayah: 'Kab. Pidie', kecamatan: 'Kota Sigli', total_penduduk: 21500, laki_laki: 10700, perempuan: 10800, luas_km2: 5.15, kepadatan: 4174, tahun: 2024 },
-  { id: 7, wilayah: 'Kab. Pidie', kecamatan: 'Mutiara', total_penduduk: 31200, laki_laki: 15400, perempuan: 15800, luas_km2: 27.50, kepadatan: 1134, tahun: 2024 },
-  { id: 8, wilayah: 'Kab. Aceh Utara', kecamatan: 'Lhoksukon', total_penduduk: 49800, laki_laki: 24900, perempuan: 24900, luas_km2: 243.00, kepadatan: 205, tahun: 2024 },
-  { id: 9, wilayah: 'Kab. Aceh Tengah', kecamatan: 'Lut Tawar', total_penduduk: 19800, laki_laki: 9950, perempuan: 9850, luas_km2: 83.20, kepadatan: 238, tahun: 2024 },
-  { id: 10, wilayah: 'Kota Lhokseumawe', kecamatan: 'Banda Sakti', total_penduduk: 78500, laki_laki: 39100, perempuan: 39400, luas_km2: 11.24, kepadatan: 6984, tahun: 2024 },
-];
+export type { PendudukItem };
 
 export default function KependudukanPage() {
-  const [dataList, setDataList] = useState<PendudukItem[]>(initialData);
+  const { can } = useRBAC();
+  const [dataList, setDataList] = useState<PendudukItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   // State Modal
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -47,6 +34,24 @@ export default function KependudukanPage() {
     luas_km2: 0,
     tahun: 2024,
   });
+
+  const loadData = useCallback(async () => {
+    setIsLoading(true);
+    setFetchError(null);
+    try {
+      const items = await kependudukanService.getAll();
+      setDataList(items);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal memuat data kependudukan';
+      setFetchError(msg);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   // Metrik Agregasi
   const totalPendudukAll = useMemo(() => {
@@ -96,14 +101,12 @@ export default function KependudukanPage() {
       header: 'Kepadatan (/km²)',
       sortable: true,
       render: (item) => {
-        let badgeStyle = 'bg-slate-100 text-slate-700';
-        if (item.kepadatan > 4000) {
-          badgeStyle = 'bg-rose-100 text-rose-700 font-medium';
-        } else if (item.kepadatan > 1000) {
-          badgeStyle = 'bg-amber-100 text-amber-700 font-medium';
-        } else {
-          badgeStyle = 'bg-emerald-100 text-emerald-700 font-medium';
-        }
+        const badgeStyle =
+          item.kepadatan > 4000
+            ? 'bg-rose-100 text-rose-700 font-medium'
+            : item.kepadatan > 1000
+              ? 'bg-amber-100 text-amber-700 font-medium'
+              : 'bg-emerald-100 text-emerald-700 font-medium';
         return (
           <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs ${badgeStyle}`}>
             {item.kepadatan.toLocaleString('id-ID')}
@@ -143,58 +146,61 @@ export default function KependudukanPage() {
     setIsFormModalOpen(true);
   };
 
-  // Handler Simpan Data (Create / Update)
-  const handleSubmitForm = () => {
+  // Handler Simpan Data (Create / Update via Service)
+  const handleSubmitForm = async () => {
     if (!formData.kecamatan.trim()) {
       alert('Nama kecamatan wajib diisi!');
       return;
     }
 
-    const total = Number(formData.laki_laki) + Number(formData.perempuan);
     const luas = Number(formData.luas_km2) || 1;
-    const kepadatan = Math.round(total / luas);
-
-    if (modalMode === 'create') {
-      const newItem: PendudukItem = {
-        id: Date.now(),
-        wilayah: formData.wilayah,
-        kecamatan: formData.kecamatan,
-        total_penduduk: total,
-        laki_laki: Number(formData.laki_laki),
-        perempuan: Number(formData.perempuan),
-        luas_km2: luas,
-        kepadatan: kepadatan,
-        tahun: Number(formData.tahun),
-      };
-      setDataList([newItem, ...dataList]);
-    } else if (selectedItem) {
-      setDataList(
-        dataList.map((item) =>
-          item.id === selectedItem.id
-            ? {
-                ...item,
-                wilayah: formData.wilayah,
-                kecamatan: formData.kecamatan,
-                total_penduduk: total,
-                laki_laki: Number(formData.laki_laki),
-                perempuan: Number(formData.perempuan),
-                luas_km2: luas,
-                kepadatan: kepadatan,
-                tahun: Number(formData.tahun),
-              }
-            : item
-        )
-      );
+    setIsSubmitting(true);
+    try {
+      if (modalMode === 'create') {
+        const newItem = await kependudukanService.create({
+          wilayah: formData.wilayah,
+          kecamatan: formData.kecamatan,
+          laki_laki: Number(formData.laki_laki),
+          perempuan: Number(formData.perempuan),
+          luas_km2: luas,
+          tahun: Number(formData.tahun),
+        });
+        setDataList((prev) => [newItem, ...prev.filter((i) => i.id !== newItem.id)]);
+      } else if (selectedItem) {
+        const updated = await kependudukanService.update(selectedItem.id, {
+          wilayah: formData.wilayah,
+          kecamatan: formData.kecamatan,
+          laki_laki: Number(formData.laki_laki),
+          perempuan: Number(formData.perempuan),
+          luas_km2: luas,
+          tahun: Number(formData.tahun),
+        });
+        setDataList((prev) => prev.map((item) => (item.id === selectedItem.id ? updated : item)));
+      }
+      setIsFormModalOpen(false);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal menyimpan data';
+      alert(msg);
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsFormModalOpen(false);
   };
 
-  // Handler Hapus Data
-  const handleDeleteConfirm = () => {
+  // Handler Hapus Data via Service
+  const handleDeleteConfirm = async () => {
     if (selectedItem) {
-      setDataList(dataList.filter((item) => item.id !== selectedItem.id));
-      setIsDeleteModalOpen(false);
-      setSelectedItem(null);
+      setIsSubmitting(true);
+      try {
+        await kependudukanService.delete(selectedItem.id);
+        setDataList((prev) => prev.filter((item) => item.id !== selectedItem.id));
+        setIsDeleteModalOpen(false);
+        setSelectedItem(null);
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : 'Gagal menghapus data';
+        alert(msg);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -209,82 +215,114 @@ export default function KependudukanPage() {
           </p>
         </div>
 
-        <button
-          type="button"
-          onClick={handleOpenCreate}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors self-start sm:self-auto"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Tambah Data Penduduk</span>
-        </button>
-      </div>
+        <div className="flex items-center gap-2 self-start sm:self-auto">
+          <button
+            type="button"
+            onClick={loadData}
+            disabled={isLoading}
+            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-60 transition-colors shadow-sm"
+          >
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-emerald-600' : 'text-slate-500'}`} />
+            <span>Perbarui</span>
+          </button>
 
-      {/* Kartu Ringkasan Metrik */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Total Sampel Penduduk</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">
-              {totalPendudukAll.toLocaleString('id-ID')}
-            </h3>
-            <p className="text-xs text-slate-400 mt-1">Jiwa terdata di tabel</p>
-          </div>
-          <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
-            <Users className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Rata-rata Kepadatan</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">
-              {rataKepadatan.toLocaleString('id-ID')}
-            </h3>
-            <p className="text-xs text-slate-400 mt-1">Jiwa / km²</p>
-          </div>
-          <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
-            <TrendingUp className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Total Wilayah Kecamatan</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{dataList.length}</h3>
-            <p className="text-xs text-slate-400 mt-1">Kecamatan tercatat</p>
-          </div>
-          <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
-            <MapPin className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Kategori Kepadatan</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">Tinggi / Sedang</h3>
-            <p className="text-xs text-slate-400 mt-1">Kualifikasi Spasial</p>
-          </div>
-          <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
-            <UserCheck className="w-6 h-6" />
-          </div>
+          {can('create') && (
+            <button
+              type="button"
+              onClick={handleOpenCreate}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Tambah Data Penduduk</span>
+            </button>
+          )}
         </div>
       </div>
+
+      {/* Error Banner Standar dengan Retry */}
+      {fetchError && (
+        <ErrorState
+          error={fetchError}
+          onRetry={loadData}
+          isRetrying={isLoading}
+        />
+      )}
+
+      {/* Kartu Ringkasan Metrik (Skeleton saat memuat awal) */}
+      {isLoading && dataList.length === 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <CardSkeleton count={4} />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Total Sampel Penduduk</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalPendudukAll)}
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Jiwa terdata di tabel</p>
+            </div>
+            <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
+              <Users className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Rata-rata Kepadatan</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(rataKepadatan)}
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Jiwa / km²</p>
+            </div>
+            <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
+              <TrendingUp className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Total Wilayah Kecamatan</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(dataList.length)}
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Kecamatan tercatat</p>
+            </div>
+            <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
+              <MapPin className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Kategori Kepadatan</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">Tinggi / Sedang</h3>
+              <p className="text-xs text-slate-400 mt-1">Kualifikasi Spasial</p>
+            </div>
+            <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
+              <UserCheck className="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Tabel Data Reusable */}
       <DataTable
         data={dataList}
         columns={columns}
+        isLoading={isLoading}
         searchPlaceholder="Cari wilayah atau kecamatan di Aceh..."
         pageSize={5}
         onView={(item) => {
           setSelectedItem(item);
           setIsDetailModalOpen(true);
         }}
-        onEdit={(item) => handleOpenEdit(item)}
-        onDelete={(item) => {
+        onEdit={can('update') ? (item) => handleOpenEdit(item) : undefined}
+        onDelete={can('delete') ? (item) => {
           setSelectedItem(item);
           setIsDeleteModalOpen(true);
-        }}
+        } : undefined}
       />
 
       {/* Modal 1: Form Tambah / Edit */}
@@ -294,6 +332,7 @@ export default function KependudukanPage() {
         title={modalMode === 'create' ? 'Tambah Data Kependudukan' : 'Edit Data Kependudukan'}
         onConfirm={handleSubmitForm}
         confirmText={modalMode === 'create' ? 'Simpan Data' : 'Perbarui Data'}
+        isLoading={isSubmitting}
         maxWidth="lg"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -380,6 +419,7 @@ export default function KependudukanPage() {
         title="Konfirmasi Hapus Data"
         confirmVariant="danger"
         confirmText="Hapus Sekarang"
+        isLoading={isSubmitting}
         onConfirm={handleDeleteConfirm}
       >
         <p className="text-slate-600">

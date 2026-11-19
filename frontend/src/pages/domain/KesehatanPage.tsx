@@ -1,35 +1,22 @@
-import { useState, useMemo } from 'react';
-import { Plus, HeartPulse, Hospital, Stethoscope, Bed, Phone, ShieldCheck } from 'lucide-react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { Plus, HeartPulse, Hospital, Stethoscope, Bed, Phone, ShieldCheck, RefreshCw } from 'lucide-react';
 import DataTable, { type Column } from '../../components/ui/DataTable';
 import Modal from '../../components/ui/Modal';
+import { kesehatanService } from '../../services/kesehatanService';
+import type { FaskesItem } from '../../services/types';
+import { useRBAC } from '../../utils/rbac';
+import { CardSkeleton } from '../../components/ui/LoadingSkeleton';
+import ErrorState from '../../components/ui/ErrorState';
+import { formatNullableNumber } from '../../utils/formatters';
 
-export interface FaskesItem {
-  id: number;
-  nama_faskes: string;
-  jenis: 'Rumah Sakit' | 'Puskesmas' | 'Klinik Pratama' | 'RSIA';
-  wilayah: string;
-  alamat: string;
-  kapasitas_bed: number;
-  jumlah_dokter: number;
-  status: 'Aktif' | 'Renovasi' | 'Siaga';
-  kontak: string;
-}
-
-const initialFaskesData: FaskesItem[] = [
-  { id: 1, nama_faskes: 'RSUD dr. Zainoel Abidin', jenis: 'Rumah Sakit', wilayah: 'Kota Banda Aceh', alamat: 'Jl. Tgk Daud Beureueh No. 108', kapasitas_bed: 720, jumlah_dokter: 145, status: 'Aktif', kontak: '0651-34565' },
-  { id: 2, nama_faskes: 'RSUD Meuraxa', jenis: 'Rumah Sakit', wilayah: 'Kota Banda Aceh', alamat: 'Jl. Soekarno-Hatta, Mibo', kapasitas_bed: 240, jumlah_dokter: 58, status: 'Aktif', kontak: '0651-44123' },
-  { id: 3, nama_faskes: 'RSUD Tgk Chik Ditiro', jenis: 'Rumah Sakit', wilayah: 'Kab. Pidie', alamat: 'Jl. Prof. A. Majid Ibrahim, Sigli', kapasitas_bed: 310, jumlah_dokter: 62, status: 'Aktif', kontak: '0653-21345' },
-  { id: 4, nama_faskes: 'RSUD Cut Meutia', jenis: 'Rumah Sakit', wilayah: 'Kab. Aceh Utara', alamat: 'Jl. Banda Aceh-Medan Km. 280', kapasitas_bed: 350, jumlah_dokter: 70, status: 'Aktif', kontak: '0645-46331' },
-  { id: 5, nama_faskes: 'RSUD Datu Beru', jenis: 'Rumah Sakit', wilayah: 'Kab. Aceh Tengah', alamat: 'Jl. Qurata Aini No. 153, Takengon', kapasitas_bed: 280, jumlah_dokter: 45, status: 'Aktif', kontak: '0643-21214' },
-  { id: 6, nama_faskes: 'Puskesmas Kuta Alam', jenis: 'Puskesmas', wilayah: 'Kota Banda Aceh', alamat: 'Jl. T. Panglima Polem', kapasitas_bed: 15, jumlah_dokter: 8, status: 'Aktif', kontak: '0651-22991' },
-  { id: 7, nama_faskes: 'Puskesmas Baiturrahman', jenis: 'Puskesmas', wilayah: 'Kota Banda Aceh', alamat: 'Jl. Teuku Umar No. 45', kapasitas_bed: 10, jumlah_dokter: 6, status: 'Aktif', kontak: '0651-31002' },
-  { id: 8, nama_faskes: 'Puskesmas Ingin Jaya', jenis: 'Puskesmas', wilayah: 'Kab. Aceh Besar', alamat: 'Jl. Lambaro-Blang Bintang', kapasitas_bed: 20, jumlah_dokter: 7, status: 'Aktif', kontak: '0651-75512' },
-  { id: 9, nama_faskes: 'RSIA Banda Aceh', jenis: 'RSIA', wilayah: 'Kota Banda Aceh', alamat: 'Jl. Prof. A. Majid Ibrahim I', kapasitas_bed: 160, jumlah_dokter: 32, status: 'Aktif', kontak: '0651-21287' },
-  { id: 10, nama_faskes: 'Klinik Pratama Sehat Bersama', jenis: 'Klinik Pratama', wilayah: 'Kota Lhokseumawe', alamat: 'Jl. Merdeka No. 88', kapasitas_bed: 8, jumlah_dokter: 4, status: 'Aktif', kontak: '0645-41221' },
-];
+export type { FaskesItem };
 
 export default function KesehatanPage() {
-  const [dataList, setDataList] = useState<FaskesItem[]>(initialFaskesData);
+  const { can } = useRBAC();
+  const [dataList, setDataList] = useState<FaskesItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   // Modal State
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -49,6 +36,24 @@ export default function KesehatanPage() {
     status: 'Aktif' as FaskesItem['status'],
     kontak: '',
   });
+
+  const loadData = useCallback(async () => {
+    setIsLoading(true);
+    setFetchError(null);
+    try {
+      const items = await kesehatanService.getAll();
+      setDataList(items);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal memuat data faskes';
+      setFetchError(msg);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   // Metrik Agregasi
   const totalBeds = useMemo(() => {
@@ -75,11 +80,14 @@ export default function KesehatanPage() {
       header: 'Tipe / Jenis',
       sortable: true,
       render: (item) => {
-        let badgeColor = 'bg-slate-100 text-slate-700';
-        if (item.jenis === 'Rumah Sakit') badgeColor = 'bg-rose-100 text-rose-700 font-semibold';
-        else if (item.jenis === 'Puskesmas') badgeColor = 'bg-emerald-100 text-emerald-700 font-semibold';
-        else if (item.jenis === 'RSIA') badgeColor = 'bg-purple-100 text-purple-700 font-semibold';
-        else badgeColor = 'bg-blue-100 text-blue-700 font-semibold';
+        const badgeColor =
+          item.jenis === 'Rumah Sakit'
+            ? 'bg-rose-100 text-rose-700 font-semibold'
+            : item.jenis === 'Puskesmas'
+              ? 'bg-emerald-100 text-emerald-700 font-semibold'
+              : item.jenis === 'RSIA'
+                ? 'bg-purple-100 text-purple-700 font-semibold'
+                : 'bg-blue-100 text-blue-700 font-semibold';
 
         return (
           <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs ${badgeColor}`}>
@@ -153,54 +161,64 @@ export default function KesehatanPage() {
     setIsFormModalOpen(true);
   };
 
-  // Handler Simpan Data (Create / Update)
-  const handleSubmitForm = () => {
+  // Handler Simpan Data (Create / Update via Service)
+  const handleSubmitForm = async () => {
     if (!formData.nama_faskes.trim()) {
       alert('Nama fasilitas kesehatan wajib diisi!');
       return;
     }
 
-    if (modalMode === 'create') {
-      const newItem: FaskesItem = {
-        id: Date.now(),
-        nama_faskes: formData.nama_faskes,
-        jenis: formData.jenis,
-        wilayah: formData.wilayah,
-        alamat: formData.alamat,
-        kapasitas_bed: Number(formData.kapasitas_bed),
-        jumlah_dokter: Number(formData.jumlah_dokter),
-        status: formData.status,
-        kontak: formData.kontak,
-      };
-      setDataList([newItem, ...dataList]);
-    } else if (selectedItem) {
-      setDataList(
-        dataList.map((item) =>
-          item.id === selectedItem.id
-            ? {
-                ...item,
-                nama_faskes: formData.nama_faskes,
-                jenis: formData.jenis,
-                wilayah: formData.wilayah,
-                alamat: formData.alamat,
-                kapasitas_bed: Number(formData.kapasitas_bed),
-                jumlah_dokter: Number(formData.jumlah_dokter),
-                status: formData.status,
-                kontak: formData.kontak,
-              }
-            : item
-        )
-      );
+    setIsSubmitting(true);
+    try {
+      if (modalMode === 'create') {
+        const newItem = await kesehatanService.create({
+          nama_faskes: formData.nama_faskes,
+          jenis: formData.jenis,
+          wilayah: formData.wilayah,
+          alamat: formData.alamat,
+          kapasitas_bed: Number(formData.kapasitas_bed),
+          jumlah_dokter: Number(formData.jumlah_dokter),
+          status: formData.status,
+          kontak: formData.kontak,
+        });
+        setDataList((prev) => [newItem, ...prev.filter((i) => i.id !== newItem.id)]);
+      } else if (selectedItem) {
+        const updated = await kesehatanService.update(selectedItem.id, {
+          nama_faskes: formData.nama_faskes,
+          jenis: formData.jenis,
+          wilayah: formData.wilayah,
+          alamat: formData.alamat,
+          kapasitas_bed: Number(formData.kapasitas_bed),
+          jumlah_dokter: Number(formData.jumlah_dokter),
+          status: formData.status,
+          kontak: formData.kontak,
+        });
+        setDataList((prev) => prev.map((item) => (item.id === selectedItem.id ? updated : item)));
+      }
+      setIsFormModalOpen(false);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Gagal menyimpan data faskes';
+      alert(msg);
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsFormModalOpen(false);
   };
 
-  // Handler Hapus Data
-  const handleDeleteConfirm = () => {
+  // Handler Hapus Data via Service
+  const handleDeleteConfirm = async () => {
     if (selectedItem) {
-      setDataList(dataList.filter((item) => item.id !== selectedItem.id));
-      setIsDeleteModalOpen(false);
-      setSelectedItem(null);
+      setIsSubmitting(true);
+      try {
+        await kesehatanService.delete(selectedItem.id);
+        setDataList((prev) => prev.filter((item) => item.id !== selectedItem.id));
+        setIsDeleteModalOpen(false);
+        setSelectedItem(null);
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : 'Gagal menghapus faskes';
+        alert(msg);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -215,78 +233,116 @@ export default function KesehatanPage() {
           </p>
         </div>
 
-        <button
-          type="button"
-          onClick={handleOpenCreate}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-rose-600 hover:bg-rose-700 rounded-lg shadow-sm transition-colors self-start sm:self-auto"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Tambah Faskes Baru</span>
-        </button>
-      </div>
+        <div className="flex items-center gap-2 self-start sm:self-auto">
+          <button
+            type="button"
+            onClick={loadData}
+            disabled={isLoading}
+            className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-60 transition-colors shadow-sm"
+          >
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-rose-600' : 'text-slate-500'}`} />
+            <span>Perbarui</span>
+          </button>
 
-      {/* Kartu Ringkasan Metrik Faskes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Rumah Sakit Terdata</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalRS} RS / RSIA</h3>
-            <p className="text-xs text-slate-400 mt-1">Rujukan Tingkat Lanjut</p>
-          </div>
-          <div className="p-3 bg-rose-100 text-rose-600 rounded-xl">
-            <Hospital className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Puskesmas Wilayah</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalPuskesmas} Unit</h3>
-            <p className="text-xs text-slate-400 mt-1">Faskes Tingkat Pertama</p>
-          </div>
-          <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
-            <HeartPulse className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Total Tempat Tidur</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalBeds.toLocaleString('id-ID')} Bed</h3>
-            <p className="text-xs text-slate-400 mt-1">Kapasitas Rawat Inap</p>
-          </div>
-          <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
-            <Bed className="w-6 h-6" />
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase">Tenaga Medis (Dokter)</p>
-            <h3 className="text-2xl font-bold text-slate-800 mt-1">{totalDokter} Dokter</h3>
-            <p className="text-xs text-slate-400 mt-1">Spesialis & Umum</p>
-          </div>
-          <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
-            <Stethoscope className="w-6 h-6" />
-          </div>
+          {can('create') && (
+            <button
+              type="button"
+              onClick={handleOpenCreate}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-rose-600 hover:bg-rose-700 rounded-lg shadow-sm transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Tambah Faskes Baru</span>
+            </button>
+          )}
         </div>
       </div>
+
+      {/* Error Banner Standar dengan Retry */}
+      {fetchError && (
+        <ErrorState
+          error={fetchError}
+          onRetry={loadData}
+          isRetrying={isLoading}
+        />
+      )}
+
+      {/* Kartu Ringkasan Metrik Faskes (Skeleton saat memuat awal) */}
+      {isLoading && dataList.length === 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <CardSkeleton count={4} />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Rumah Sakit Terdata</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalRS)} RS / RSIA
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Rujukan Tingkat Lanjut</p>
+            </div>
+            <div className="p-3 bg-rose-100 text-rose-600 rounded-xl">
+              <Hospital className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Puskesmas Wilayah</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalPuskesmas)} Unit
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Faskes Tingkat Pertama</p>
+            </div>
+            <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
+              <HeartPulse className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Total Tempat Tidur</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalBeds)} Bed
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Kapasitas Rawat Inap</p>
+            </div>
+            <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
+              <Bed className="w-6 h-6" />
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <p className="text-xs font-semibold text-slate-500 uppercase">Tenaga Medis (Dokter)</p>
+              <h3 className="text-2xl font-bold text-slate-800 mt-1">
+                {formatNullableNumber(totalDokter)} Dokter
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Spesialis & Umum</p>
+            </div>
+            <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
+              <Stethoscope className="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Tabel Data Reusable */}
       <DataTable
         data={dataList}
         columns={columns}
+        isLoading={isLoading}
         searchPlaceholder="Cari nama rumah sakit, puskesmas, atau daerah..."
         pageSize={5}
         onView={(item) => {
           setSelectedItem(item);
           setIsDetailModalOpen(true);
         }}
-        onEdit={(item) => handleOpenEdit(item)}
-        onDelete={(item) => {
+        onEdit={can('update') ? (item) => handleOpenEdit(item) : undefined}
+        onDelete={can('delete') ? (item) => {
           setSelectedItem(item);
           setIsDeleteModalOpen(true);
-        }}
+        } : undefined}
       />
 
       {/* Modal 1: Form Tambah / Edit */}
@@ -296,6 +352,7 @@ export default function KesehatanPage() {
         title={modalMode === 'create' ? 'Tambah Fasilitas Kesehatan' : 'Edit Fasilitas Kesehatan'}
         onConfirm={handleSubmitForm}
         confirmText={modalMode === 'create' ? 'Simpan Faskes' : 'Perbarui Faskes'}
+        isLoading={isSubmitting}
         maxWidth="lg"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -409,6 +466,7 @@ export default function KesehatanPage() {
         title="Konfirmasi Hapus Fasilitas"
         confirmVariant="danger"
         confirmText="Hapus Sekarang"
+        isLoading={isSubmitting}
         onConfirm={handleDeleteConfirm}
       >
         <p className="text-slate-600">

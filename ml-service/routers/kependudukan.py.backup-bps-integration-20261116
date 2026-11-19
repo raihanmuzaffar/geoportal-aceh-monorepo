@@ -1,0 +1,188 @@
+
+from pathlib import Path
+import json
+
+import joblib
+import numpy as np
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, Field
+
+
+router = APIRouter(
+    prefix="/kependudukan",
+    tags=["Kependudukan"],
+)
+
+# ============================================================
+# PATH KONFIGURASI
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+
+ARTIFACT_DIR = BASE_DIR / "artifacts" / "kependudukan"
+
+MODEL_PATH = ARTIFACT_DIR / "kmeans_kependudukan.joblib"
+METADATA_PATH = ARTIFACT_DIR / "metadata.json"
+
+EXPECTED_FEATURES = [
+    "jumlah_penduduk",
+    "kepadatan_penduduk_per_km^2",
+]
+
+
+# ============================================================
+# REQUEST SCHEMA
+# ============================================================
+
+class KependudukanRequest(BaseModel):
+    jumlah_penduduk: float = Field(
+        gt=0,
+        description="Jumlah penduduk dalam ribu jiwa",
+        examples=[265.0],
+    )
+
+    kepadatan_penduduk: float = Field(
+        gt=0,
+        description="Kepadatan penduduk dalam jiwa per km persegi",
+        examples=[4319],
+    )
+
+
+# ============================================================
+# LOAD MODEL
+# ============================================================
+
+def load_model():
+    if not MODEL_PATH.exists():
+        raise HTTPException(
+            status_code=503,
+            detail="Model clustering kependudukan belum tersedia.",
+        )
+
+    if not METADATA_PATH.exists():
+        raise HTTPException(
+            status_code=503,
+            detail="Metadata model kependudukan belum tersedia.",
+        )
+
+    try:
+        artifact = joblib.load(MODEL_PATH)
+
+        with METADATA_PATH.open("r", encoding="utf-8") as file:
+            metadata = json.load(file)
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=503,
+            detail=f"Gagal memuat artefak model: {exc}",
+        )
+
+    # Format artefak yang diwajibkan:
+    # {
+    #     "scaler": StandardScaler,
+    #     "model": KMeans
+    # }
+
+    if not isinstance(artifact, dict):
+        raise HTTPException(
+            status_code=503,
+            detail="Format artefak tidak sesuai. Silakan training ulang.",
+        )
+
+    scaler = artifact.get("scaler")
+    model = artifact.get("model")
+
+    if scaler is None or model is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Scaler atau model K-Means tidak ditemukan.",
+        )
+
+    if metadata.get("features") != EXPECTED_FEATURES:
+        raise HTTPException(
+            status_code=503,
+            detail="Fitur model tidak sesuai dengan baseline demografi.",
+        )
+
+    if metadata.get("density_transform") != "log1p":
+        raise HTTPException(
+            status_code=503,
+            detail="Transformasi kepadatan model tidak sesuai.",
+        )
+
+    if getattr(model, "n_clusters", None) != 3:
+        raise HTTPException(
+            status_code=503,
+            detail="Model harus menggunakan 3 cluster.",
+        )
+
+    return scaler, model, metadata
+
+
+# ============================================================
+# CLUSTERING ENDPOINT
+# ============================================================
+
+@router.post("/cluster")
+def cluster_population(data: KependudukanRequest):
+
+    scaler, model, metadata = load_model()
+
+    try:
+        # Transformasi kepadatan menggunakan log1p.
+        features = np.array(
+            [[
+                data.jumlah_penduduk,
+                np.log1p(data.kepadatan_penduduk),
+            ]],
+            dtype=float,
+        )
+
+        # Standardisasi menggunakan scaler hasil training.
+        X = scaler.transform(features)
+
+        # Prediksi cluster.
+        cluster_id = int(model.predict(X)[0])
+
+        # Hitung jarak Euclidean ke centroid cluster.
+        centroid = model.cluster_centers_[cluster_id]
+
+        distance = float(
+            np.linalg.norm(X[0] - centroid)
+        )
+
+        return {
+            "status": "success",
+            "data": {
+                "cluster_id": cluster_id,
+                "cluster_name": f"Kelompok {cluster_id + 1}",
+                "centroid_distance": round(distance, 6),
+                "input": {
+                    "jumlah_penduduk": data.jumlah_penduduk,
+                    "kepadatan_penduduk": data.kepadatan_penduduk,
+                },
+                "model": {
+                    "name": "K-Means Kependudukan Aceh",
+                    "version": metadata.get(
+                        "model_version",
+                        "1.0.0",
+                    ),
+                    "n_clusters": 3,
+                    "silhouette_score": metadata.get(
+                        "silhouette_score",
+                    ),
+                    "features": EXPECTED_FEATURES,
+                    "density_transform": "log1p",
+                },
+            },
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Gagal melakukan clustering: {exc}",
+        )

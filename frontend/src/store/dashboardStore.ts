@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import api from '../api/axios';
+import { IS_DEMO_MODE } from '../config/appMode';
 
 export interface WilayahStat {
   wilayah: string;
@@ -10,14 +11,29 @@ export interface WilayahStat {
 }
 
 export interface DashboardStats {
-  totalPenduduk: number;
-  totalKesehatan: number;
-  totalPendidikan: number;
-  totalPertanianHa: number;
-  totalKebencanaan: number;
-  totalLayerSpasial: number;
-  totalPenggunaAktif: number;
+  totalPenduduk: number | null;
+  totalKesehatan: number | null;
+  totalPendidikan: number | null;
+  totalPertanianHa: number | null;
+  totalKebencanaan: number | null;
+  totalLayerSpasial: number | null;
+  totalPengguna: number;
   distribusiWilayah: WilayahStat[];
+}
+
+interface DashboardApiResponse {
+  status: string;
+  message?: string;
+  data?: {
+    total_pengguna?: number;
+    total_penduduk?: number | null;
+    total_faskes?: number | null;
+    total_sekolah?: number | null;
+    total_pertanian_ha?: number | null;
+    total_bencana?: number | null;
+    total_layer_spasial?: number | null;
+    distribusi_wilayah?: WilayahStat[];
+  };
 }
 
 interface DashboardState {
@@ -27,7 +43,6 @@ interface DashboardState {
   fetchStats: () => Promise<void>;
 }
 
-// Data awal mock terstandarisasi untuk Provinsi Aceh (Aturan 10.2)
 const fallbackStats: DashboardStats = {
   totalPenduduk: 5452800,
   totalKesehatan: 1420,
@@ -35,7 +50,7 @@ const fallbackStats: DashboardStats = {
   totalPertanianHa: 342150,
   totalKebencanaan: 87,
   totalLayerSpasial: 18,
-  totalPenggunaAktif: 24,
+  totalPengguna: 24,
   distribusiWilayah: [
     { wilayah: 'Kota Banda Aceh', penduduk: 260300, faskes: 112, sekolah: 240, bencana: 6 },
     { wilayah: 'Kab. Aceh Besar', penduduk: 425100, faskes: 154, sekolah: 380, bencana: 14 },
@@ -46,6 +61,13 @@ const fallbackStats: DashboardStats = {
   ],
 };
 
+function nullableNumber(value: unknown): number | null {
+  if (value === null || value === undefined) return null;
+
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 export const useDashboardStore = create<DashboardState>((set) => ({
   stats: null,
   isLoading: false,
@@ -54,33 +76,64 @@ export const useDashboardStore = create<DashboardState>((set) => ({
   fetchStats: async () => {
     set({ isLoading: true, error: null });
 
+    if (IS_DEMO_MODE) {
+      set({
+        stats: fallbackStats,
+        isLoading: false,
+        error: null,
+      });
+      return;
+    }
+
     try {
-      // Ambil token dari authStore (localStorage) jika ada
-      const authData = localStorage.getItem('auth-storage');
-      let token = '';
-      if (authData) {
-        try {
-          const parsed = JSON.parse(authData);
-          token = parsed?.state?.token || '';
-        } catch {
-          // ignore
-        }
+      const response = await api.get<DashboardApiResponse>(
+        '/v1/dashboard',
+        { timeout: 10000 }
+      );
+
+      const payload = response.data;
+      const data = payload?.data;
+
+      if (
+        payload?.status !== 'success'
+        || !data
+        || typeof data.total_pengguna !== 'number'
+      ) {
+        throw new Error(
+          payload?.message || 'Format respons dashboard dari server tidak valid.'
+        );
       }
 
-      const headers = token ? { Authorization: `Bearer ${token}` } : {};
-      const response = await api.get('/dashboard/stats', { headers, timeout: 3500 });
+      const stats: DashboardStats = {
+        totalPengguna: data.total_pengguna,
+        totalPenduduk: nullableNumber(data.total_penduduk),
+        totalKesehatan: nullableNumber(data.total_faskes),
+        totalPendidikan: nullableNumber(data.total_sekolah),
+        totalPertanianHa: nullableNumber(data.total_pertanian_ha),
+        totalKebencanaan: nullableNumber(data.total_bencana),
+        totalLayerSpasial: nullableNumber(data.total_layer_spasial),
+        distribusiWilayah: Array.isArray(data.distribusi_wilayah)
+          ? data.distribusi_wilayah
+          : [],
+      };
 
-      if (response.data && response.data.success && response.data.data) {
-        set({ stats: response.data.data, isLoading: false, error: null });
-        return;
+      set({
+        stats,
+        isLoading: false,
+        error: null,
+      });
+    } catch (error: unknown) {
+      let message = 'Gagal mengambil statistik dashboard dari server.';
+
+      if (error instanceof Error && error.message) {
+        message = error.message;
       }
 
-      // Jika response backend belum lengkap, gunakan fallback terverifikasi
-      set({ stats: fallbackStats, isLoading: false, error: null });
-    } catch {
-      // Fallback transparan jika Backend API belum selesai dibangun (Aturan 10.2)
-      set({ stats: fallbackStats, isLoading: false, error: null });
+      set({
+        stats: null,
+        isLoading: false,
+        error: message,
+      });
     }
   },
 }));
-

@@ -26,8 +26,9 @@ import MapDisasterPoints from './MapDisasterPoints';
 import MapPopulation from './MapPopulation';
 import MapAgriculture from './MapAgriculture';
 import MapDisasterZones from './MapDisasterZones';
+import { useGeoJSONLayers } from '../../hooks/useGeoJSONLayers';
 
-// Import dataset mock data GeoJSON
+// Import dataset fallback data GeoJSON
 import mockSchools from './mock/schoolsData.json';
 import mockHealth from './mock/healthData.json';
 import mockDisaster from './mock/disasterData.json';
@@ -92,8 +93,6 @@ export const MapView: React.FC<MapViewProps> = ({
 }) => {
   const [activeBasemap, setActiveBasemap] = useState<BasemapType>('osm');
   const [resetCounter, setResetCounter] = useState(0);
-  const [isLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Status visibilitas layer-layer spasial
   const [layerVisibility, setLayerVisibility] = useState<LayerVisibilityState>({
@@ -106,6 +105,16 @@ export const MapView: React.FC<MapViewProps> = ({
     showMlPredictionsOnly: false,
   });
 
+  // Ambil data spasial dari API / Service terpusat dengan caching & cancellation
+  const { layers, metadata, isAnyLoading, errors } = useGeoJSONLayers(layerVisibility);
+
+  const [dismissedError, setDismissedError] = useState(false);
+
+  // Cari pesan error pertama jika ada
+  const activeError = !dismissedError
+    ? Object.values(errors).find((err) => Boolean(err)) || null
+    : null;
+
   const toggleLayer = (key: keyof LayerVisibilityState) => {
     setLayerVisibility((prev) => ({
       ...prev,
@@ -113,13 +122,22 @@ export const MapView: React.FC<MapViewProps> = ({
     }));
   };
 
-  // Menggunakan data dari props jika diberikan (misal dari API Laravel),
-  // atau menggunakan fallback mock data valid jika belum ada response API
-  const activeSchools = (schoolsData || mockSchools) as unknown as GeoJSONFeatureCollection<SchoolPointFeature>;
-  const activeHealth = (healthData || mockHealth) as unknown as GeoJSONFeatureCollection<HealthPointFeature>;
-  const activeDisaster = (disasterData || mockDisaster) as unknown as GeoJSONFeatureCollection<DisasterPointFeature | DisasterZoneFeature>;
-  const activePopulation = (populationData || mockDistricts) as unknown as GeoJSONFeatureCollection<PopulationDistrictFeature>;
-  const activeAgriculture = (agricultureData || mockAgriculture) as unknown as GeoJSONFeatureCollection<AgricultureFeature>;
+  // Menggunakan data dari props jika diberikan (misal dari page khusus),
+  // atau dari service terpusat (API dengan fallback dataset terverifikasi)
+  const activeSchools = (schoolsData || layers.schools || mockSchools) as unknown as GeoJSONFeatureCollection<SchoolPointFeature>;
+  const activeHealth = (healthData || layers.health || mockHealth) as unknown as GeoJSONFeatureCollection<HealthPointFeature>;
+  
+  // Gabungkan titik kejadian dan zona kebencanaan jika diperlukan
+  const activeDisaster = (disasterData ||
+    (layers.disasterPoints && layers.disasterZones
+      ? {
+          type: 'FeatureCollection',
+          features: [...layers.disasterPoints.features, ...layers.disasterZones.features],
+        }
+      : layers.disasterPoints || layers.disasterZones || mockDisaster)) as unknown as GeoJSONFeatureCollection<DisasterPointFeature | DisasterZoneFeature>;
+
+  const activePopulation = (populationData || layers.population || mockDistricts) as unknown as GeoJSONFeatureCollection<PopulationDistrictFeature>;
+  const activeAgriculture = (agricultureData || layers.agriculture || mockAgriculture) as unknown as GeoJSONFeatureCollection<AgricultureFeature>;
 
   const currentBasemap = BASEMAPS[activeBasemap];
 
@@ -129,7 +147,7 @@ export const MapView: React.FC<MapViewProps> = ({
       style={{ height }}
     >
       {/* Loading Spinner Overlay saat layer dimuat */}
-      {isLoading && (
+      {isAnyLoading && (
         <div className="absolute inset-0 bg-slate-900/25 backdrop-blur-[2px] z-[1050] flex items-center justify-center animate-in fade-in duration-150">
           <div className="p-3.5 bg-white/95 rounded-2xl shadow-2xl border border-slate-200 flex items-center gap-3">
             <Loader2 className="w-5 h-5 text-emerald-600 animate-spin" />
@@ -147,7 +165,8 @@ export const MapView: React.FC<MapViewProps> = ({
         <LayerControl
           visibility={layerVisibility}
           onToggleLayer={toggleLayer}
-          isLoading={isLoading}
+          isLoading={isAnyLoading}
+          metadata={metadata}
         />
       </div>
 
@@ -165,14 +184,14 @@ export const MapView: React.FC<MapViewProps> = ({
       </div>
 
       {/* Pesan Error jika terjadi kegagalan muat layer */}
-      {errorMessage && (
-        <div className="absolute bottom-4 left-4 right-4 z-[1000] bg-red-50 border border-red-200 text-red-700 p-3 rounded-xl shadow-lg flex items-center justify-between text-xs">
+      {activeError && (
+        <div className="absolute bottom-4 left-4 right-4 z-[1000] bg-red-50 border border-red-200 text-red-700 p-3 rounded-xl shadow-lg flex items-center justify-between text-xs animate-in slide-in-from-bottom-2 duration-150">
           <div className="flex items-center gap-2">
             <AlertCircle className="w-4 h-4 text-red-500 shrink-0" />
-            <span>{errorMessage}</span>
+            <span>{activeError}</span>
           </div>
           <button
-            onClick={() => setErrorMessage(null)}
+            onClick={() => setDismissedError(true)}
             className="text-red-500 hover:text-red-700 font-bold ml-2"
           >
             ✕

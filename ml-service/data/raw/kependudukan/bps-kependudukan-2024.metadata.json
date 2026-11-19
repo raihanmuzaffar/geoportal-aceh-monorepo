@@ -1,0 +1,44 @@
+{
+  "judul": "Dataset Kependudukan Kabupaten/Kota Provinsi Aceh",
+  "tahun_data": 2024,
+  "jumlah_wilayah": 23,
+  "sumber": "Badan Pusat Statistik (BPS) Provinsi Aceh - WebAPI",
+  "domain_id": 1100,
+  "indikator": {
+    "jumlah_penduduk": {
+      "var_id": 573,
+      "nama_indikator": "[SK.Kp.014] [Proyeksi SP2020] Jumlah Penduduk Hasil Proyeksi Sensus Penduduk 2020 menurut Kabupaten/Kota",
+      "satuan": "Jiwa",
+      "definisi_sumber": "Sumber: <a style=\"color: #0093dd\" href=\"https://aceh.bps.go.id/id/publication/2023/07/20/c5b064a1664cac76d5aa7ed7/proyeksi-penduduk-kabupaten-kota-provinsi-aceh-2020-2035-hasil-sensus-penduduk-2020.html\">Proyeksi Penduduk Kabupaten/Kota Provinsi Aceh 2020-2035 Hasil Sensus Penduduk 2020</a>",
+      "last_update": "2024-04-23 12:23:48",
+      "tahun": 2024,
+      "periode_id": 124
+    },
+    "kepadatan_penduduk_per_km2": {
+      "var_id": 55,
+      "nama_indikator": "[SK.Kp.022] Kepadatan Penduduk menurut Kabupaten Kota",
+      "satuan": "Jiwa",
+      "definisi_sumber": "Sumber: <a style=\"color: #0093dd\" href=\"https://aceh.bps.go.id/id/publication?keyword=aceh+dalam+angka&sort=latest\">Publikasi Provinsi Aceh Dalam Angka</a>",
+      "last_update": "2026-06-17 04:04:24",
+      "tahun": 2024,
+      "periode_id": 124
+    },
+    "laju_pertumbuhan_penduduk_persen": {
+      "var_id": 600,
+      "nama_indikator": "[SK.Kp.018] [Proyeksi SP2020] Pertumbuhan Penduduk Hasil Proyeksi Sensus Penduduk 2020 menurut Kabupaten/Kota",
+      "satuan": "Persen",
+      "definisi_sumber": "Sumber: <a style=\"color: #0093dd\" href=\"https://aceh.bps.go.id/id/publication/2023/07/20/c5b064a1664cac76d5aa7ed7/proyeksi-penduduk-kabupaten-kota-provinsi-aceh-2020-2035-hasil-sensus-penduduk-2020.html\">Proyeksi Penduduk Kabupaten/Kota Provinsi Aceh 2020-2035 Hasil Sensus Penduduk 2020</a>",
+      "last_update": "2025-10-16 10:24:26",
+      "tahun": 2024,
+      "periode_id": 124
+    }
+  },
+  "waktu_pengambilan_utc": "2026-11-16T04:47:46.175050+00:00",
+  "catatan": [
+    "Hanya 23 kabupaten/kota; agregat Provinsi Aceh tidak disertakan.",
+    "Jumlah dan pertumbuhan penduduk menggunakan Proyeksi SP2020.",
+    "Kepadatan penduduk menggunakan indikator Kepadatan Penduduk menurut Kabupaten/Kota.",
+    "Kode wilayah dipertahankan untuk pencocokan dengan data spasial.",
+    "Data pribadi seperti NIK, KK, nama individu, dan alamat tidak digunakan."
+  ]
+}

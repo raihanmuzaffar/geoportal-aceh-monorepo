@@ -17,6 +17,7 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed', // 'confirmed' butuh input password_confirmation
+            'role' => ['prohibited'],
         ]);
 
         $user = User::create([
@@ -24,6 +25,9 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        // Muat ulang nilai default dari database, termasuk role.
+        $user->refresh();
 
         $token = $user->createToken('auth_token')->plainTextToken;
 

@@ -1,0 +1,130 @@
+{
+  "model_version": "2.0.0-bps-2024",
+  "model": "KMeans",
+  "tahun_data": 2024,
+  "jumlah_wilayah": 23,
+  "jumlah_cluster": 3,
+  "features": [
+    "jumlah_penduduk",
+    "kepadatan_penduduk_per_km2",
+    "laju_pertumbuhan_penduduk_persen"
+  ],
+  "input_units": {
+    "jumlah_penduduk": "jiwa",
+    "kepadatan_penduduk_per_km2": "jiwa/km2",
+    "laju_pertumbuhan_penduduk_persen": "persen"
+  },
+  "preprocessing": {
+    "log1p_features": [
+      "jumlah_penduduk",
+      "kepadatan_penduduk_per_km2"
+    ],
+    "standard_scaler": true,
+    "growth_transform": "none"
+  },
+  "algorithm": {
+    "name": "KMeans",
+    "n_clusters": 3,
+    "random_state": 42,
+    "n_init": 50
+  },
+  "evaluation": {
+    "silhouette_score": 0.401373,
+    "davies_bouldin_index": 0.837454,
+    "calinski_harabasz_score": 15.360424,
+    "stability": {
+      "seeds": [
+        {
+          "random_state": 7,
+          "adjusted_rand_index": 1.0
+        },
+        {
+          "random_state": 21,
+          "adjusted_rand_index": 1.0
+        },
+        {
+          "random_state": 42,
+          "adjusted_rand_index": 1.0
+        },
+        {
+          "random_state": 100,
+          "adjusted_rand_index": 1.0
+        },
+        {
+          "random_state": 123,
+          "adjusted_rand_index": 1.0
+        }
+      ],
+      "mean_ari": 1.0,
+      "min_ari": 1.0
+    }
+  },
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "jumlah_wilayah": 13,
+      "wilayah": [
+        "Aceh Selatan",
+        "Aceh Tenggara",
+        "Aceh Timur",
+        "Aceh Tengah",
+        "Aceh Barat",
+        "Aceh Besar",
+        "Pidie",
+        "Bireuen",
+        "Aceh Utara",
+        "Aceh Barat Daya",
+        "Aceh Tamiang",
+        "Nagan Raya",
+        "Pidie Jaya"
+      ],
+      "median": {
+        "jumlah_penduduk": 241994.0,
+        "kepadatan_penduduk_per_km2": 107.0,
+        "laju_pertumbuhan_penduduk_persen": 1.26
+      }
+    },
+    {
+      "cluster_id": 1,
+      "jumlah_wilayah": 7,
+      "wilayah": [
+        "Simeulue",
+        "Aceh Singkil",
+        "Gayo Lues",
+        "Aceh Jaya",
+        "Bener Meriah",
+        "Sabang",
+        "Subulussalam"
+      ],
+      "median": {
+        "jumlah_penduduk": 99200.0,
+        "kepadatan_penduduk_per_km2": 62.0,
+        "laju_pertumbuhan_penduduk_persen": 1.67
+      }
+    },
+    {
+      "cluster_id": 2,
+      "jumlah_wilayah": 3,
+      "wilayah": [
+        "Banda Aceh",
+        "Langsa",
+        "Lhokseumawe"
+      ],
+      "median": {
+        "jumlah_penduduk": 200403.0,
+        "kepadatan_penduduk_per_km2": 1107.0,
+        "laju_pertumbuhan_penduduk_persen": 1.54
+      }
+    }
+  ],
+  "source": "Badan Pusat Statistik (BPS) Provinsi Aceh - WebAPI",
+  "source_metadata": "data/raw/kependudukan/bps-kependudukan-2024.metadata.json",
+  "trained_at_utc": "2026-11-16T04:54:28.716757+00:00",
+  "catatan": [
+    "Clustering bersifat eksploratif, bukan prediksi.",
+    "ID cluster merupakan label algoritmik, bukan peringkat wilayah.",
+    "Jumlah penduduk dan pertumbuhan menggunakan Proyeksi SP2020.",
+    "Kepadatan menggunakan indikator BPS Kepadatan Penduduk menurut Kabupaten/Kota.",
+    "Data pribadi tidak digunakan sebagai fitur."
+  ]
+}

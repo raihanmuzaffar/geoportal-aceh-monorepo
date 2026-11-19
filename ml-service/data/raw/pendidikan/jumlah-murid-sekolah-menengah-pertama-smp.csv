@@ -1,0 +1,254 @@
+kemendagri_kode_provinsi;kemendagri_nama_provinsi;kemendagri_kode_kabupaten_kota;kemendagri_nama_kabupaten_kota;tahun;tahun_ajaran;semester;jumlah_siswa;satuan
+11;Aceh;11.01;Kabupaten Aceh Selatan;2019;2019/2020;Ganjil;8.216;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2019;2019/2020;Genap;8.198;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2020;2020/2021;Ganjil;8.376;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2020;2020/2021;Genap;5.635;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2021;2021/2022;Ganjil;8.448;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2021;2021/2022;Genap;8.445;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2022;2022/2023;Ganjil;8.601;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2022;2022/2023;Genap;8.598;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2023;2023/2024;Ganjil;8.751;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2023;2023/2024;Genap;8.715;Jiwa
+11;Aceh;11.01;Kabupaten Aceh Selatan;2024;2024/2025;Ganjil;9.038;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2019;2019/2020;Ganjil;9.77;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2019;2019/2020;Genap;9.776;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2020;2020/2021;Ganjil;10.178;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2020;2020/2021;Genap;6.82;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2021;2021/2022;Ganjil;10.325;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2021;2021/2022;Genap;10.288;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2022;2022/2023;Ganjil;10.605;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2022;2022/2023;Genap;10.615;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2023;2023/2024;Ganjil;10.888;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2023;2023/2024;Genap;10.857;Jiwa
+11;Aceh;11.02;Kabupaten Aceh Tenggara;2024;2024/2025;Ganjil;11.258;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2019;2019/2020;Ganjil;14.466;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2019;2019/2020;Genap;14.431;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2020;2020/2021;Ganjil;15.223;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2020;2020/2021;Genap;10.388;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2021;2021/2022;Ganjil;15.135;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2021;2021/2022;Genap;15.115;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2022;2022/2023;Ganjil;15.116;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2022;2022/2023;Genap;15.094;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2023;2023/2024;Ganjil;15.181;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2023;2023/2024;Genap;15.109;Jiwa
+11;Aceh;11.03;Kabupaten Aceh Timur;2024;2024/2025;Ganjil;15.343;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2019;2019/2020;Ganjil;5.881;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2019;2019/2020;Genap;5.846;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2020;2020/2021;Ganjil;5.927;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2020;2020/2021;Genap;4.06;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2021;2021/2022;Ganjil;6.076;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2021;2021/2022;Genap;6.106;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2022;2022/2023;Ganjil;6.269;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2022;2022/2023;Genap;6.338;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2023;2023/2024;Ganjil;6.479;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2023;2023/2024;Genap;6.535;Jiwa
+11;Aceh;11.04;Kabupaten Aceh Tengah;2024;2024/2025;Ganjil;6.698;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2019;2019/2020;Ganjil;6.388;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2019;2019/2020;Genap;6.399;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2020;2020/2021;Ganjil;6.661;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2020;2020/2021;Genap;4.426;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2021;2021/2022;Ganjil;6.213;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2021;2021/2022;Genap;6.245;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2022;2022/2023;Ganjil;6.146;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2022;2022/2023;Genap;6.13;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2023;2023/2024;Ganjil;6.186;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2023;2023/2024;Genap;6.176;Jiwa
+11;Aceh;11.05;Kabupaten Aceh Barat;2024;2024/2025;Ganjil;6.586;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2019;2019/2020;Ganjil;13.694;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2019;2019/2020;Genap;13.564;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2020;2020/2021;Ganjil;15.015;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2020;2020/2021;Genap;10.291;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2021;2021/2022;Ganjil;15.144;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2021;2021/2022;Genap;15.053;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2022;2022/2023;Ganjil;14.668;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2022;2022/2023;Genap;14.511;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2023;2023/2024;Ganjil;14.236;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2023;2023/2024;Genap;14.214;Jiwa
+11;Aceh;11.06;Kabupaten Aceh Besar;2024;2024/2025;Ganjil;14.186;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2019;2019/2020;Ganjil;14.081;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2019;2019/2020;Genap;14.113;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2020;2020/2021;Ganjil;14.764;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2020;2020/2021;Genap;10.083;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2021;2021/2022;Ganjil;14.568;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2021;2021/2022;Genap;14.562;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2022;2022/2023;Ganjil;13.92;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2022;2022/2023;Genap;13.899;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2023;2023/2024;Ganjil;13.53;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2023;2023/2024;Genap;13.529;Jiwa
+11;Aceh;11.07;Kabupaten Pidie;2024;2024/2025;Ganjil;13.546;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2019;2019/2020;Ganjil;24.157;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2019;2019/2020;Genap;24.1;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2020;2020/2021;Ganjil;25.013;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2020;2020/2021;Genap;16.889;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2021;2021/2022;Ganjil;24.825;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2021;2021/2022;Genap;24.766;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2022;2022/2023;Ganjil;24.518;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2022;2022/2023;Genap;24.304;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2023;2023/2024;Ganjil;24.232;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2023;2023/2024;Genap;24.069;Jiwa
+11;Aceh;11.08;Kabupaten Aceh Utara;2024;2024/2025;Ganjil;24.843;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2019;2019/2020;Ganjil;4.474;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2019;2019/2020;Genap;4.485;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2020;2020/2021;Ganjil;4.348;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2020;2020/2021;Genap;2.822;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2021;2021/2022;Ganjil;3.997;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2021;2021/2022;Genap;4.005;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2022;2022/2023;Ganjil;3.782;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2022;2022/2023;Genap;3.762;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2023;2023/2024;Ganjil;3.81;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2023;2023/2024;Genap;3.821;Jiwa
+11;Aceh;11.09;Kabupaten Simeulue;2024;2024/2025;Ganjil;3.995;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2019;2019/2020;Ganjil;5.728;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2019;2019/2020;Genap;5.725;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2020;2020/2021;Ganjil;5.657;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2020;2020/2021;Genap;3.914;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2021;2021/2022;Ganjil;5.907;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2021;2021/2022;Genap;5.912;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2022;2022/2023;Ganjil;6.178;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2022;2022/2023;Genap;6.217;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2023;2023/2024;Ganjil;6.694;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2023;2023/2024;Genap;6.692;Jiwa
+11;Aceh;11.1;Kabupaten Aceh Singkil;2024;2024/2025;Ganjil;7.063;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2019;2019/2020;Ganjil;17.312;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2019;2019/2020;Genap;17.42;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2020;2020/2021;Ganjil;18.727;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2020;2020/2021;Genap;13.055;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2021;2021/2022;Ganjil;19.326;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2021;2021/2022;Genap;19.154;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2022;2022/2023;Ganjil;19.26;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2022;2022/2023;Genap;19.177;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2023;2023/2024;Ganjil;19.169;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2023;2023/2024;Genap;19.053;Jiwa
+11;Aceh;11.11;Kabupaten Bireuen;2024;2024/2025;Ganjil;19.403;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2019;2019/2020;Ganjil;5.277;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2019;2019/2020;Genap;5.276;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2020;2020/2021;Ganjil;5.356;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2020;2020/2021;Genap;3.712;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2021;2021/2022;Ganjil;5.42;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2021;2021/2022;Genap;5.379;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2022;2022/2023;Ganjil;5.389;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2022;2022/2023;Genap;5.353;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2023;2023/2024;Ganjil;5.408;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2023;2023/2024;Genap;5.389;Jiwa
+11;Aceh;11.12;Kabupaten Aceh Barat Daya;2024;2024/2025;Ganjil;5.756;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2019;2019/2020;Ganjil;3.96;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2019;2019/2020;Genap;4.005;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2020;2020/2021;Ganjil;3.74;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2020;2020/2021;Genap;2.377;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2021;2021/2022;Ganjil;3.481;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2021;2021/2022;Genap;3.573;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2022;2022/2023;Ganjil;3.641;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2022;2022/2023;Genap;3.647;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2023;2023/2024;Ganjil;3.745;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2023;2023/2024;Genap;3.779;Jiwa
+11;Aceh;11.13;Kabupaten Gayo Lues;2024;2024/2025;Ganjil;3.835;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2019;2019/2020;Ganjil;3.408;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2019;2019/2020;Genap;3.397;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2020;2020/2021;Ganjil;3.801;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2020;2020/2021;Genap;2.673;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2021;2021/2022;Ganjil;3.835;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2021;2021/2022;Genap;3.806;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2022;2022/2023;Ganjil;3.659;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2022;2022/2023;Genap;3.66;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2023;2023/2024;Ganjil;3.645;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2023;2023/2024;Genap;3.643;Jiwa
+11;Aceh;11.14;Kabupaten Aceh Jaya;2024;2024/2025;Ganjil;3.761;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2019;2019/2020;Ganjil;5.597;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2019;2019/2020;Genap;5.584;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2020;2020/2021;Ganjil;5.812;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2020;2020/2021;Genap;3.907;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2021;2021/2022;Ganjil;5.648;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2021;2021/2022;Genap;5.631;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2022;2022/2023;Ganjil;5.708;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2022;2022/2023;Genap;5.718;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2023;2023/2024;Ganjil;6.071;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2023;2023/2024;Genap;5.921;Jiwa
+11;Aceh;11.15;Kabupaten Nagan Raya;2024;2024/2025;Ganjil;6.662;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2019;2019/2020;Ganjil;11.993;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2019;2019/2020;Genap;12.026;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2020;2020/2021;Ganjil;12.576;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2020;2020/2021;Genap;8.541;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2021;2021/2022;Ganjil;12.829;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2021;2021/2022;Genap;12.726;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2022;2022/2023;Ganjil;12.547;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2022;2022/2023;Genap;12.485;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2023;2023/2024;Ganjil;12.289;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2023;2023/2024;Genap;12.264;Jiwa
+11;Aceh;11.16;Kabupaten Aceh Tamiang;2024;2024/2025;Ganjil;12.018;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2019;2019/2020;Ganjil;4.825;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2019;2019/2020;Genap;4.852;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2020;2020/2021;Ganjil;5.004;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2020;2020/2021;Genap;3.294;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2021;2021/2022;Ganjil;5.158;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2021;2021/2022;Genap;5.15;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2022;2022/2023;Ganjil;5.158;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2022;2022/2023;Genap;5.219;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2023;2023/2024;Ganjil;5.773;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2023;2023/2024;Genap;5.814;Jiwa
+11;Aceh;11.17;Kabupaten Bener Meriah;2024;2024/2025;Ganjil;5.947;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2019;2019/2020;Ganjil;5.098;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2019;2019/2020;Genap;5.083;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2020;2020/2021;Ganjil;5.297;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2020;2020/2021;Genap;3.625;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2021;2021/2022;Ganjil;5.263;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2021;2021/2022;Genap;5.254;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2022;2022/2023;Ganjil;5.107;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2022;2022/2023;Genap;5.089;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2023;2023/2024;Ganjil;5.004;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2023;2023/2024;Genap;5.013;Jiwa
+11;Aceh;11.18;Kabupaten Pidie Jaya;2024;2024/2025;Ganjil;5.046;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2019;2019/2020;Ganjil;10.295;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2019;2019/2020;Genap;10.261;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2020;2020/2021;Ganjil;11.125;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2020;2020/2021;Genap;7.456;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2021;2021/2022;Ganjil;10.879;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2021;2021/2022;Genap;10.919;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2022;2022/2023;Ganjil;10.712;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2022;2022/2023;Genap;10.639;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2023;2023/2024;Ganjil;10.858;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2023;2023/2024;Genap;10.892;Jiwa
+11;Aceh;11.71;Kota Banda Aceh;2024;2024/2025;Ganjil;11.413;Jiwa
+11;Aceh;11.72;Kota Sabang;2019;2019/2020;Ganjil;1.566;Jiwa
+11;Aceh;11.72;Kota Sabang;2019;2019/2020;Genap;1.542;Jiwa
+11;Aceh;11.72;Kota Sabang;2020;2020/2021;Ganjil;1.532;Jiwa
+11;Aceh;11.72;Kota Sabang;2020;2020/2021;Genap;1.012;Jiwa
+11;Aceh;11.72;Kota Sabang;2021;2021/2022;Ganjil;1.578;Jiwa
+11;Aceh;11.72;Kota Sabang;2021;2021/2022;Genap;1.588;Jiwa
+11;Aceh;11.72;Kota Sabang;2022;2022/2023;Ganjil;1.587;Jiwa
+11;Aceh;11.72;Kota Sabang;2022;2022/2023;Genap;1.567;Jiwa
+11;Aceh;11.72;Kota Sabang;2023;2023/2024;Ganjil;1.598;Jiwa
+11;Aceh;11.72;Kota Sabang;2023;2023/2024;Genap;1.602;Jiwa
+11;Aceh;11.72;Kota Sabang;2024;2024/2025;Ganjil;1.582;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2019;2019/2020;Ganjil;7.529;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2019;2019/2020;Genap;7.545;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2020;2020/2021;Ganjil;7.682;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2020;2020/2021;Genap;5.148;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2021;2021/2022;Ganjil;7.641;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2021;2021/2022;Genap;7.653;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2022;2022/2023;Ganjil;7.587;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2022;2022/2023;Genap;7.581;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2023;2023/2024;Ganjil;7.72;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2023;2023/2024;Genap;7.671;Jiwa
+11;Aceh;11.73;Kota Lhokseumawe;2024;2024/2025;Ganjil;7.806;Jiwa
+11;Aceh;11.74;Kota Langsa;2019;2019/2020;Ganjil;6.463;Jiwa
+11;Aceh;11.74;Kota Langsa;2019;2019/2020;Genap;6.475;Jiwa
+11;Aceh;11.74;Kota Langsa;2020;2020/2021;Ganjil;6.634;Jiwa
+11;Aceh;11.74;Kota Langsa;2020;2020/2021;Genap;4.411;Jiwa
+11;Aceh;11.74;Kota Langsa;2021;2021/2022;Ganjil;6.518;Jiwa
+11;Aceh;11.74;Kota Langsa;2021;2021/2022;Genap;6.531;Jiwa
+11;Aceh;11.74;Kota Langsa;2022;2022/2023;Ganjil;6.462;Jiwa
+11;Aceh;11.74;Kota Langsa;2022;2022/2023;Genap;6.491;Jiwa
+11;Aceh;11.74;Kota Langsa;2023;2023/2024;Ganjil;6.503;Jiwa
+11;Aceh;11.74;Kota Langsa;2023;2023/2024;Genap;6.519;Jiwa
+11;Aceh;11.74;Kota Langsa;2024;2024/2025;Ganjil;6.895;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2019;2019/2020;Ganjil;4.336;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2019;2019/2020;Genap;4.302;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2020;2020/2021;Ganjil;4.475;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2020;2020/2021;Genap;3.15;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2021;2021/2022;Ganjil;4.714;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2021;2021/2022;Genap;4.714;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2022;2022/2023;Ganjil;4.575;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2022;2022/2023;Genap;4.665;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2023;2023/2024;Ganjil;4.647;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2023;2023/2024;Genap;4.625;Jiwa
+11;Aceh;11.75;Kota Subulussalam;2024;2024/2025;Ganjil;4.726;Jiwa
